@@ -1,5 +1,10 @@
 @import './resets';
 
+Form {
+	margin-left: 5%;
+	padding: 0;
+}
+
 $font: (
 	"h1": 2rem,
 	"p": 20px
@@ -66,3 +71,46 @@ $font: (
      }
     }
 
+    #form-div{
+    	max-width: 300px !important;
+    	margin-right: auto !important;
+  		margin-left: auto !important;;
+  		//border: 1px solid rgba(var(--b6a,219,219,219),1);
+        border-radius: 1px;
+        margin: 0 0 10px;
+        padding: 10px 0;
+        align-items: center;
+        font-size: 1rem;
+
+    }
+
+
+/*for asessment component*/
+
+#asessment{
+	margin: 5vh 5% 5% 5%;
+	padding: 5% 5% 5% 8%;
+	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+	border-radius: 8px;
+}
+
+#a, #b, #c, #d{
+	padding: 3% 0% 3% 6%;
+	align-items: center;
+	position: flex;
+}
+
+#asessment-component{
+	#back-button{
+	margin: 0 39% 5vh 39% !important;
+}}
+
+
+/*for navbar component*/
+ 
+ nav{
+ 	min-width: 100%;
+ 	min-height: 5vh;
+ 	background-color: black;
+ 	color: white;
+ }

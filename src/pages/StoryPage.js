@@ -1,9 +1,11 @@
 import {useState} from 'react'
+import {createState, combineReducers, applyMiddleware} from "redux"
+
 import pfp from './photos/shivalika.jpg'
 
 const Story = (props) => {
 
-	let[n, setN] = useState(1)
+	const[n, setN] = useState(1)
 	return(
 		<div id="main">
 		<div id="header">
