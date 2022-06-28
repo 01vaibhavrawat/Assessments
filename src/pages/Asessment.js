@@ -10,7 +10,7 @@ import {
 
 const Asessment = (props) => {
 
-  const[quetionNumber, setQuetionNumber] = React.useState(2)
+  const[quetionNumber, setQuetionNumber] = React.useState(3)
 
   let n = quetionNumber < 0 ? quetionNumber - 1 : 0
 	return (

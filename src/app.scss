@@ -1,116 +1,137 @@
-@import './resets';
+@import "./resets";
 
-Form {
-	margin-left: 5%;
-	padding: 0;
+/*for navbar component*/
+
+nav {
+  min-width: 100%;
+  min-height: 5vh;
+  background-color: black;
+  color: white;
+  text-align: center;
 }
+
+/*navbar end*/
 
 $font: (
-	"h1": 2rem,
-	"p": 20px
-	);
+  "h1": 2rem,
+  "p": 20px,
+);
 
 @mixin h1 {
-	font-size: map-get($font, "h1");
-	font-weight: 900;
-	line-height: 40px;
-	letter-spacing: -0.02em;
-	font-family: (arial, sans-serif);
-	display: block;
-} 
-	
-
-@mixin p() {
-	font-size: map-get($font, "p");
-	font-weight: 400;
-	line-height: 32px;
-	letter-spacing: -0.003em;
-	font-family: (arial, sans-serif);
-	display: block;
-	
-} 
-
-
-
-#main{
-	margin: 4% 30% 0 30%;
+  font-size: map-get($font, "h1");
+  font-weight: 900;
+  line-height: 40px;
+  letter-spacing: -0.02em;
+  font-family: (arial, sans-serif);
+  display: block;
 }
 
+@mixin p() {
+  font-size: map-get($font, "p");
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: -0.003em;
+  font-family: (arial, sans-serif);
+  display: block;
+}
 
+#main {
+  margin: 4% 30% 0 30%;
+}
 
-#title{
-	@include h1;
-	}
+#title {
+  @include h1;
+}
 
+.text {
+  @include p;
+}
 
-.text{
-	@include p;
-	}
-
-
-	/* for profile picture and the two paragraphs floating in its left */
-#header{
-	display: inline-block;
+/* for profile picture and the two paragraphs floating in its left */
+#header {
+  display: inline-block;
 }
 
 #pfp {
-    float: left;
-    border-radius: 50%;
-	width: 48px;
-	height: 48px;
-	
-  }
+  float: left;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+}
 
 #pfp-text {
-    float: left;
-    margin-left: .5rem;
-    line-height: 60%;
+  float: left;
+  margin-left: 0.5rem;
+  line-height: 60%;
 
-    &-name:hover {
+  &-name:hover {
     font-weight: bold;
-     }
-    }
+  }
+}
 
-    #form-div{
-    	max-width: 300px !important;
-    	margin-right: auto !important;
-  		margin-left: auto !important;;
-  		//border: 1px solid rgba(var(--b6a,219,219,219),1);
-        border-radius: 1px;
-        margin: 0 0 10px;
-        padding: 10px 0;
-        align-items: center;
-        font-size: 1rem;
-
-    }
-
+#form-div {
+  max-width: 300px !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  //border: 1px solid rgba(var(--b6a,219,219,219),1);
+  border-radius: 1px;
+  margin: 0 0 10px;
+  padding: 10px 0;
+  align-items: center;
+  font-size: 1rem;
+}
 
 /*for asessment component*/
 
-#asessment{
-	margin: 5vh 5% 5% 5%;
-	padding: 5% 5% 5% 8%;
-	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-	border-radius: 8px;
+h1{
+  text-align: center;
 }
 
-#a, #b, #c, #d{
-	padding: 3% 0% 3% 6%;
-	align-items: center;
-	position: flex;
+#asessment {
+  margin: 5vh 5% 5% 5%;
+  padding: 5% 5% 5% 5%;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 8px;
+  text-align: justify;
 }
 
-#asessment-component{
-	#back-button{
-	margin: 0 39% 5vh 39% !important;
-}}
+#a,
+#b,
+#c,
+#d {
+  padding: 3% 0% 3% 6%;
+  align-items: center;
+  position: flex;
+}
 
+#asessment-component {
+  #back-button {
+    margin: auto;
+    display: block;
+    margin-bottom: 5vh;
+  }
+}
 
-/*for navbar component*/
- 
- nav{
- 	min-width: 100%;
- 	min-height: 5vh;
- 	background-color: black;
- 	color: white;
- }
+/*asessment end*/
+
+@media only screen and (min-width: 768px) {
+  //for assessment//
+  #asessment {
+  margin: 5vh 20% 3% 20%;
+  padding: 3% 5% 5% 5%;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 8px;
+  text-align: justify;
+}
+
+  #asessment-component {
+  #back-button {
+    margin: auto;
+    display: block;
+    margin-bottom: 5vh;
+  }
+}
+
+  //assessment end//
+
+}
