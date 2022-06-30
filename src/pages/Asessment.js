@@ -1,4 +1,7 @@
 import React from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import { decrement, increment } from '../counterSlice'
+
 
 import {
   Form,
@@ -10,9 +13,11 @@ import {
 
 const Asessment = (props) => {
 
-  const[quetionNumber, setQuetionNumber] = React.useState(3)
+  const count = useSelector((state) => state.counter.value)
+  const dispatch = useDispatch()
+  console.log({count}, "from asessment component")
+  const n = 1
 
-  let n = quetionNumber < 0 ? quetionNumber - 1 : 0
 	return (
     <div id="asessment-component">
     <h1>Asessment-</h1>
@@ -20,7 +25,7 @@ const Asessment = (props) => {
 
      <FormGroup tag="fieldset">
     <legend>
-       {quetionNumber}. {props.data[n].question}
+       {count}. {props.data[n].question}
     </legend>
     <FormGroup check className="check-o1.s" id="a">
       <Input
@@ -67,7 +72,7 @@ const Asessment = (props) => {
     </FormGroup>
    </FormGroup>
       </Form>
-      <Button id="back-button" onClick={()=> setQuetionNumber(n)}>{"<-back"}</Button>
+      <Button id="back-button" onClick={() => dispatch(increment())}>{"<-back"}</Button>
       </div>
  )
 }

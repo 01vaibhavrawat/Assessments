@@ -1,5 +1,4 @@
 import {useState} from 'react'
-import {createState, combineReducers, applyMiddleware} from "redux"
 
 import pfp from './photos/shivalika.jpg'
 
