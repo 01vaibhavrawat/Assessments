@@ -73,10 +73,8 @@ const Asessment = (props) => {
     </FormGroup>
    </FormGroup>
       </Form>
-      <ButtonGroup>
       <Button id="back-button" onClick={() => dispatch(decrement())}>{"<-back"}</Button>
-      <Button id="back-button" onClick={() => {if(n < 1){dispatch(increment())}}}>{n == 1 ? "Submit" : "Next->"}</Button>
-      </ButtonGroup>
+      <Button id="next-button" onClick={() => {if(n < 1){dispatch(increment())}}}>{n == 1 ? "Submit" : "Next->"}</Button>
     </div>
  )
 }

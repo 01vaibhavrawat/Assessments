@@ -1,8 +1,9 @@
 @import "./resets";
 
-*{
-  border: 1px solid red;
-}
+/*notes-
+set scroll to zero after changing question
+
+style back and next button for bigger display sizes*/
 
 /*for navbar component*/
 
@@ -37,6 +38,12 @@ $font: (
   letter-spacing: -0.003em;
   font-family: (arial, sans-serif);
   display: block;
+}
+
+@mixin back_next_button() {
+  margin: auto;
+    display: block;
+    margin-bottom: 5vh;
 }
 
 #main {
@@ -107,11 +114,17 @@ h1{
   position: flex;
 }
 
+ $button-margin: 10%;
 #asessment-component {
-  #back-button {
-    margin: auto;
-    display: block;
-    margin-bottom: 5vh;
+  #back-button{
+    @include back_next_button;
+    float: left;
+    margin-left: $button-margin;
+  }
+  #next-button{
+    @include back_next_button;
+    float: right;
+    margin-right: $button-margin;
   }
 }
 
