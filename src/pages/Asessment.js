@@ -8,19 +8,20 @@ import {
   FormGroup,
   Label,
   Input,
-  Button} 
+  Button,
+  ButtonGroup
+  } 
   from 'reactstrap'
 
 const Asessment = (props) => {
 
   const count = useSelector((state) => state.counter.value)
   const dispatch = useDispatch()
-  console.log({count}, "from asessment component")
-  const n = 1
+  let n = {count}.count - 1
+  console.log(n)
 
 	return (
     <div id="asessment-component">
-    <h1>Asessment-</h1>
     <Form id="asessment">
 
      <FormGroup tag="fieldset">
@@ -60,7 +61,7 @@ const Asessment = (props) => {
       </Label>
 
     </FormGroup>
-     <FormGroup check className="check-o1.s" id="a">
+     <FormGroup check className="check-o1.s" id="d">
       <Input
         name="radio1"
         type="radio"
@@ -72,8 +73,11 @@ const Asessment = (props) => {
     </FormGroup>
    </FormGroup>
       </Form>
-      <Button id="back-button" onClick={() => dispatch(increment())}>{"<-back"}</Button>
-      </div>
+      <ButtonGroup>
+      <Button id="back-button" onClick={() => dispatch(decrement())}>{"<-back"}</Button>
+      <Button id="back-button" onClick={() => {if(n < 1){dispatch(increment())}}}>{n == 1 ? "Submit" : "Next->"}</Button>
+      </ButtonGroup>
+    </div>
  )
 }
 
