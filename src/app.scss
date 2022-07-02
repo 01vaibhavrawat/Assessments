@@ -9,7 +9,7 @@ style back and next button for bigger display sizes*/
 
 nav {
   min-width: 100%;
-  min-height: 5vh;
+  min-height: 7vh;
   background-color: black;
   color: white;
   text-align: center;
@@ -127,6 +127,29 @@ h1{
     margin-right: $button-margin;
   }
 }
+
+/*for the about us component*/
+
+#about{
+  min-height: 500px;
+  background-color: #F5F5F5;
+}
+
+#card-title{
+  text-align: center;
+  color: green; 
+}
+
+ #team, #mission {
+  text-align: center; 
+  margin: 5% 5% 0 5%;
+  background-color: white;
+  padding: 10%;
+ //kground-color:;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+/*about us end*/
 
 /*asessment end*/
 
