@@ -1,6 +1,7 @@
  export const QUETIONS = [
 {
-    quetion: "Tshe questions below ask about anxiety and worrying. In the last 6 months, have you experienced any of the following symptoms? If so, how often?",
+    n: 1,
+    question: "era kangana kangana kangana example story tera mukhda chaand era kangana kangana kangana example story tera mukhda chaand",
     a: "./src/photos/shivalika.jfif",
     b: "The Everest of Perfectionism",
     c: "May 1",
@@ -11,6 +12,7 @@
 },
 
 {
+    n: 2,
     question: "era kangana kangana kangana example story tera mukhda chaand era kangana kangana kangana example story tera mukhda chaandBobby Rawat",
     a: "era kangana kangana kangana example story tera mukhda chaand era kangana kangana kangana example story tera mukhda chaand./src/photos/shivalika.jfif",
     b: "vera kangana kangana kangana example story tera mukhda chaand era kangana kangana kangana example story tera mukhda chaandThe Everest of OCD",
@@ -19,7 +21,8 @@
 },
 
 {
-    quetion: "Tshe questions below ask about anxiety and worrying. In the last 6 months, have you experienced any of the following symptoms? If so, how often?",
+    n: 3,
+    question: "yaar kaam karde dimaag kharab ho raha ha one kiss is all it takes falling in live with me possibilities falling in love with me",
     a: "./src/photos/shivalika.jfif",
     b: "The Everest of Perfectionism",
     c: "May 1",
@@ -30,6 +33,7 @@
 },
 
 {
+    n: 4,
     question: "era kangana kangana kangana example story tera mukhda chaand era kangana kangana kangana example story tera mukhda chaandBobby Rawat",
     a: "era kangana kangana kangana example story tera mukhda chaand era kangana kangana kangana example story tera mukhda chaand./src/photos/shivalika.jfif",
     b: "vera kangana kangana kangana example story tera mukhda chaand era kangana kangana kangana example story tera mukhda chaandThe Everest of OCD",
@@ -38,7 +42,8 @@
 },
 
 {
-    quetion: "Tshe questions below ask about anxiety and worrying. In the last 6 months, have you experienced any of the following symptoms? If so, how often?",
+    n: 5,
+    question: "yaar kaam karde dimaag kharab ho raha ha one kiss is all it takes falling in live with me possibilities falling in love with me",
     a: "./src/photos/shivalika.jfif",
     b: "The Everest of Perfectionism",
     c: "May 1",
@@ -49,6 +54,7 @@
 },
 
 {
+    n: 6,
     question: "era kangana kangana kangana example story tera mukhda chaand era kangana kangana kangana example story tera mukhda chaandBobby Rawat",
     a: "era kangana kangana kangana example story tera mukhda chaand era kangana kangana kangana example story tera mukhda chaand./src/photos/shivalika.jfif",
     b: "vera kangana kangana kangana example story tera mukhda chaand era kangana kangana kangana example story tera mukhda chaandThe Everest of OCD",
@@ -57,7 +63,8 @@
 },
 
 {
-    quetion: "Tshe questions below ask about anxiety and worrying. In the last 6 months, have you experienced any of the following symptoms? If so, how often?",
+    n: 7,
+    question: "yaar kaam karde dimaag kharab ho raha ha one kiss is all it takes falling in live with me possibilities falling in love with me",
     a: "./src/photos/shivalika.jfif",
     b: "The Everest of Perfectionism",
     c: "May 1",
@@ -68,6 +75,7 @@
 },
 
 {
+    n: 8,
     question: "era kangana kangana kangana example story tera mukhda chaand era kangana kangana kangana example story tera mukhda chaandBobby Rawat",
     a: "era kangana kangana kangana example story tera mukhda chaand era kangana kangana kangana example story tera mukhda chaand./src/photos/shivalika.jfif",
     b: "vera kangana kangana kangana example story tera mukhda chaand era kangana kangana kangana example story tera mukhda chaandThe Everest of OCD",
@@ -76,7 +84,8 @@
 },
 
 {
-    quetion: "Tshe questions below ask about anxiety and worrying. In the last 6 months, have you experienced any of the following symptoms? If so, how often?",
+    n: 9,
+    question: "yaar kaam karde dimaag kharab ho raha ha one kiss is all it takes falling in live with me possibilities falling in love with me",
     a: "./src/photos/shivalika.jfif",
     b: "The Everest of Perfectionism",
     c: "May 1",
@@ -86,6 +95,7 @@
     diet mauris. Sed quis neque imperdiet, sollicitudin sapien blandit, volutpat ante. Praesent molestie scelerisque risus at tristique. Curabitur sit amet velit vel quam tristique vulputate id ac dolor. Suspendisse pellentesque aliquam feugiat. Sed justo metus, scelerisque a congue a, venenatis lobortis nunc. Donec ut nunc eget arcu ullamcorper lobortis in at tortor.`
 },
 {
+    n: 10,
     question: "era kangana kangana kangana example story tera mukhda chaand era kangana kangana kangana example story tera mukhda chaandBobby Rawat",
     a: "era kangana kangana kangana example story tera mukhda chaand era kangana kangana kangana example story tera mukhda chaand./src/photos/shivalika.jfif",
     b: "vera kangana kangana kangana example story tera mukhda chaand era kangana kangana kangana example story tera mukhda chaandThe Everest of OCD",

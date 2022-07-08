@@ -9,7 +9,7 @@ style back and next button for bigger display sizes*/
 
 nav {
   min-width: 100%;
-  min-height: 7vh;
+  min-height: 6vh;
   background-color: black;
   color: white;
   text-align: center;
@@ -115,7 +115,7 @@ h1{
 }
 
  $button-margin: 10%;
-#asessment-component {
+
   #back-button{
     @include back_next_button;
     float: left;
@@ -126,7 +126,6 @@ h1{
     float: right;
     margin-right: $button-margin;
   }
-}
 
 /*for the about us component*/
 

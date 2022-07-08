@@ -17,16 +17,20 @@ const Asessment = (props) => {
 
   const count = useSelector((state) => state.counter.value)
   const dispatch = useDispatch()
+
   let n = {count}.count - 1
-  console.log(n)
+
+  let five_quetions = props.data.splice(0, 5)
 
 	return (
-    <div id="asessment-component">
+    <>
+    {five_quetions.map((e)=>{
+      return(
+        <div id="asessment-component" key={e.n}>
     <Form id="asessment">
 
      <FormGroup tag="fieldset">
-    <legend>
-       {count}. {props.data[n].question}
+    <legend>{e.n}. {e.question}
     </legend>
     <FormGroup check className="check-o1.s" id="a">
       <Input
@@ -35,7 +39,7 @@ const Asessment = (props) => {
         id="aa"
       />
       <Label for="aa">
-         {props.data[n].a}
+         {e.a}
       </Label>
 
     </FormGroup>
@@ -46,7 +50,7 @@ const Asessment = (props) => {
         id="bb"
       />
       <Label for="bb">
-         {props.data[n].b}
+         {e.b}
       </Label>
 
     </FormGroup>
@@ -57,7 +61,7 @@ const Asessment = (props) => {
         id="cc"
       />
       <Label for="cc">
-         {props.data[n].c}
+         {e.c}
       </Label>
 
     </FormGroup>
@@ -68,206 +72,17 @@ const Asessment = (props) => {
         id="dd"
       />
       <Label for="dd">
-         {props.data[n].d}
-      </Label>
-    </FormGroup>
-   </FormGroup>
-   <FormGroup tag="fieldset">
-    <legend>
-       {count}. {props.data[n].question}
-    </legend>
-    <FormGroup check className="check-o1.s" id="a">
-      <Input
-        name="radio1"
-        type="radio"
-        id="aa"
-      />
-      <Label for="aa">
-         {props.data[n].a}
-      </Label>
-
-    </FormGroup>
-     <FormGroup check className="check-o1.s" id="b">
-      <Input
-        name="radio1"
-        type="radio"
-        id="bb"
-      />
-      <Label for="bb">
-         {props.data[n].b}
-      </Label>
-
-    </FormGroup>
-     <FormGroup check className="check-o1.s" id="c">
-      <Input
-        name="radio1"
-        type="radio"
-        id="cc"
-      />
-      <Label for="cc">
-         {props.data[n].c}
-      </Label>
-
-    </FormGroup>
-     <FormGroup check className="check-o1.s" id="d">
-      <Input
-        name="radio1"
-        type="radio"
-        id="dd"
-      />
-      <Label for="dd">
-         {props.data[n].d}
-      </Label>
-    </FormGroup>
-   </FormGroup>
-   <FormGroup tag="fieldset">
-    <legend>
-       {count}. {props.data[n].question}
-    </legend>
-    <FormGroup check className="check-o1.s" id="a">
-      <Input
-        name="radio1"
-        type="radio"
-        id="aa"
-      />
-      <Label for="aa">
-         {props.data[n].a}
-      </Label>
-
-    </FormGroup>
-     <FormGroup check className="check-o1.s" id="b">
-      <Input
-        name="radio1"
-        type="radio"
-        id="bb"
-      />
-      <Label for="bb">
-         {props.data[n].b}
-      </Label>
-
-    </FormGroup>
-     <FormGroup check className="check-o1.s" id="c">
-      <Input
-        name="radio1"
-        type="radio"
-        id="cc"
-      />
-      <Label for="cc">
-         {props.data[n].c}
-      </Label>
-
-    </FormGroup>
-     <FormGroup check className="check-o1.s" id="d">
-      <Input
-        name="radio1"
-        type="radio"
-        id="dd"
-      />
-      <Label for="dd">
-         {props.data[n].d}
-      </Label>
-    </FormGroup>
-   </FormGroup>
-   <FormGroup tag="fieldset">
-    <legend>
-       {count}. {props.data[n].question}
-    </legend>
-    <FormGroup check className="check-o1.s" id="a">
-      <Input
-        name="radio1"
-        type="radio"
-        id="aa"
-      />
-      <Label for="aa">
-         {props.data[n].a}
-      </Label>
-
-    </FormGroup>
-     <FormGroup check className="check-o1.s" id="b">
-      <Input
-        name="radio1"
-        type="radio"
-        id="bb"
-      />
-      <Label for="bb">
-         {props.data[n].b}
-      </Label>
-
-    </FormGroup>
-     <FormGroup check className="check-o1.s" id="c">
-      <Input
-        name="radio1"
-        type="radio"
-        id="cc"
-      />
-      <Label for="cc">
-         {props.data[n].c}
-      </Label>
-
-    </FormGroup>
-     <FormGroup check className="check-o1.s" id="d">
-      <Input
-        name="radio1"
-        type="radio"
-        id="dd"
-      />
-      <Label for="dd">
-         {props.data[n].d}
-      </Label>
-    </FormGroup>
-   </FormGroup>
-   <FormGroup tag="fieldset">
-    <legend>
-       {count}. {props.data[n].question}
-    </legend>
-    <FormGroup check className="check-o1.s" id="a">
-      <Input
-        name="radio1"
-        type="radio"
-        id="aa"
-      />
-      <Label for="aa">
-         {props.data[n].a}
-      </Label>
-
-    </FormGroup>
-     <FormGroup check className="check-o1.s" id="b">
-      <Input
-        name="radio1"
-        type="radio"
-        id="bb"
-      />
-      <Label for="bb">
-         {props.data[n].b}
-      </Label>
-
-    </FormGroup>
-     <FormGroup check className="check-o1.s" id="c">
-      <Input
-        name="radio1"
-        type="radio"
-        id="cc"
-      />
-      <Label for="cc">
-         {props.data[n].c}
-      </Label>
-
-    </FormGroup>
-     <FormGroup check className="check-o1.s" id="d">
-      <Input
-        name="radio1"
-        type="radio"
-        id="dd"
-      />
-      <Label for="dd">
-         {props.data[n].d}
+         {e.d}
       </Label>
     </FormGroup>
    </FormGroup>
       </Form>
-      <Button id="back-button" onClick={() => dispatch(decrement())}>{"<-back"}</Button>
-      <Button id="next-button" onClick={() => {if(n < 1){dispatch(increment())}}}>{n == 1 ? "Submit" : "Next->"}</Button>
     </div>
+        )
+    })}
+    <Button id="back-button" onClick={() => dispatch(decrement())}>{"<-back"}</Button>
+      <Button id="next-button" onClick={() =>dispatch(increment())}>{n == 1 ? "Submit" : "Next->"}</Button>
+    </>
  )
 }
 
