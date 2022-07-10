@@ -93,16 +93,17 @@ $font: (
 
 /*for asessment component*/
 
-h1{
-  text-align: center;
+#question{
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 #asessment {
+  text-align: justify;
   margin: 5vh 5% 5% 5%;
   padding: 5% 5% 5% 5%;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   border-radius: 8px;
-  text-align: justify;
 }
 
 #a,
@@ -127,6 +128,8 @@ h1{
     margin-right: $button-margin;
   }
 
+/*asessment end*/
+
 /*for the about us component*/
 
 #about{
@@ -150,7 +153,6 @@ h1{
 
 /*about us end*/
 
-/*asessment end*/
 
 @media only screen and (min-width: 768px) {
   //for assessment//

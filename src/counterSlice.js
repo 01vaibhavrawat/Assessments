@@ -8,13 +8,14 @@ export const counterSlice = createSlice({
 
   reducers: {
     increment: (state) => {
-      state.value += 1
+      if(state.value < 5){
+      state.value += 5
+    }
     },
     decrement: (state) => {
-      if(state.value > 1){
-        state.value -= 1} else {
-         state.value = 1
-  }
+      if(state.value > 0){
+         state.value -= 5
+       }
     },
     incrementByAmount: (state, action) => {
       state.value += action.payload

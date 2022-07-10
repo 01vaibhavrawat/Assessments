@@ -18,27 +18,35 @@ const Asessment = (props) => {
   const count = useSelector((state) => state.counter.value)
   const dispatch = useDispatch()
 
-  let n = {count}.count - 1
+  let n = {count}.count
+  let five_quetions = props.data.slice(n, n+5)
+  console.log(n)
 
-  let five_quetions = props.data.splice(0, 5)
+  const scroll = () => {
+    if(n < 5){
+      window.scrollTo(0, 0)
+    }
+  }
+
 
 	return (
     <>
     {five_quetions.map((e)=>{
+     let string = toString(e.n)
       return(
         <div id="asessment-component" key={e.n}>
     <Form id="asessment">
 
      <FormGroup tag="fieldset">
-    <legend>{e.n}. {e.question}
+    <legend id="question">{e.n}. {e.question}
     </legend>
     <FormGroup check className="check-o1.s" id="a">
       <Input
         name="radio1"
         type="radio"
-        id="aa"
+        id={string}
       />
-      <Label for="aa">
+      <Label for={string}>
          {e.a}
       </Label>
 
@@ -80,8 +88,12 @@ const Asessment = (props) => {
     </div>
         )
     })}
-    <Button id="back-button" onClick={() => dispatch(decrement())}>{"<-back"}</Button>
-      <Button id="next-button" onClick={() =>dispatch(increment())}>{n == 1 ? "Submit" : "Next->"}</Button>
+    <Button id="back-button" onClick={() => {dispatch(decrement())
+      window.scroll(0, 0)}}>
+    {"<-back"}</Button>
+      <Button id="next-button" onClick={() => {dispatch(increment())
+      scroll()}}>
+      {n == 1 ? "Submit" : "Next->"}</Button>
     </>
  )
 }
