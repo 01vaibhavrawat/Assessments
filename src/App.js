@@ -8,7 +8,6 @@ import LoginForm from './pages/LoginForm'
 import NavCom from './pages/Navbar'
 import Story from './pages/StoryPage'
 import Asessment from './pages/Asessment'
-import Counter from './counter.js'
 
 import { STORIES } from './pages/shared/stories.js'
 import { QUETIONS } from './pages/shared/quetions.js'
@@ -30,7 +29,6 @@ function App() {
     <Route path='/Story' element={<Story data= {story}/>} />
     <Route path='/Login' element={<LoginForm />} />
     <Route path='/Asessment' element={<Asessment data={quetion} />} />
-    <Route path='/Counter' element={<Counter />} />
     <Route path="*" element={<Notfound />} />
     </Routes>
     </BrowserRouter>

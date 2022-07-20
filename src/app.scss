@@ -133,21 +133,20 @@ $font: (
 /*for the about us component*/
 
 #about{
-  min-height: 500px;
+  padding-top: 1px;
   background-color: #F5F5F5;
 }
 
 #card-title{
-  text-align: center;
   color: green; 
+  text-align: center;
 }
 
  #team, #mission {
-  text-align: center; 
-  margin: 5% 5% 0 5%;
-  background-color: white;
+  text-align: center;
+  margin: 5% 5% 0% 5%;
   padding: 10%;
- //kground-color:;
+  background-color: white;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
@@ -176,5 +175,26 @@ $font: (
   }
 }
   //assessment end//
+
+  // for about component
+
+  #card-title{
+    padding: 5vh 0;
+   font-size: 2rem;
+   color: green; 
+   text-align: center;
+   vertical-align: center;
+}
+
+ #team, #mission {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 5% 5% 0% 5%;
+  padding: 5% 15%;
+  background-color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+// about end
 
 }

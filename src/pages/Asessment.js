@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { decrement, increment } from '../counterSlice'
+import { decrement, increment, incrementByAmount, array } from '../asessmentSlice'
 
 
 import {
@@ -15,12 +15,12 @@ import {
 
 const Asessment = (props) => {
 
-  const count = useSelector((state) => state.counter.value)
+  console.log(useSelector((state) => state.asessment))
+  const count = useSelector((state) => state.asessment.value)
   const dispatch = useDispatch()
 
   let n = {count}.count
   let five_quetions = props.data.slice(n, n+5)
-  console.log(n)
 
   const scroll = () => {
     if(n < 5){
@@ -30,9 +30,8 @@ const Asessment = (props) => {
 
 
 	return (
-    <>
+    <div>
     {five_quetions.map((e)=>{
-     let string = toString(e.n)
       return(
         <div id="asessment-component" key={e.n}>
     <Form id="asessment">
@@ -44,20 +43,20 @@ const Asessment = (props) => {
       <Input
         name="radio1"
         type="radio"
-        id={string}
+        id= {e.n}
       />
-      <Label for={string}>
+      <Label for={e.n} >
          {e.a}
       </Label>
 
     </FormGroup>
-     <FormGroup check className="check-o1.s" id="b">
+     <FormGroup check className="check-o1.s" id="b" onClick={()=> {dispatch(array('b'))}}>
       <Input
         name="radio1"
         type="radio"
-        id="bb"
+        id={`${e.n}b`}
       />
-      <Label for="bb">
+      <Label for={`${e.n}b`}>
          {e.b}
       </Label>
 
@@ -66,9 +65,9 @@ const Asessment = (props) => {
       <Input
         name="radio1"
         type="radio"
-        id="cc"
+        id={`${e.n}c`}
       />
-      <Label for="cc">
+      <Label for={`${e.n}c`}>
          {e.c}
       </Label>
 
@@ -77,9 +76,9 @@ const Asessment = (props) => {
       <Input
         name="radio1"
         type="radio"
-        id="dd"
+        id={`${e.n}d`}
       />
-      <Label for="dd">
+      <Label for={`${e.n}d`}>
          {e.d}
       </Label>
     </FormGroup>
@@ -94,7 +93,7 @@ const Asessment = (props) => {
       <Button id="next-button" onClick={() => {dispatch(increment())
       scroll()}}>
       {n == 1 ? "Submit" : "Next->"}</Button>
-    </>
+    </div>
  )
 }
 

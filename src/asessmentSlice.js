@@ -1,9 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-export const counterSlice = createSlice({
-  name: 'counter',
+export const asessmentSlice = createSlice({
+  name: 'asessment',
   initialState: {
     value: 0,
+    ar: []
   },
 
   reducers: {
@@ -20,9 +21,15 @@ export const counterSlice = createSlice({
     incrementByAmount: (state, action) => {
       state.value += action.payload
     },
+    array: (state, action) => {
+     return {
+        ...state,
+        ar: [...state.ar, action.payload]
+     }
+    },
   },
 })
 
-export const { increment, decrement, incrementByAmount } = counterSlice.actions
+export const { increment, decrement, incrementByAmount, array } = asessmentSlice.actions
 
-export default counterSlice.reducer
+export default asessmentSlice.reducer

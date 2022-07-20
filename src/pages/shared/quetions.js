@@ -1,6 +1,6 @@
  export const QUETIONS = [
 {
-    n: 1,
+    n: '1',
     question: "era kangana kangana kangana example story tera mukhda chaand era kangana kangana kangana example story tera mukhda chaand",
     a: "./src/photos/shivalika.jfif",
     b: "The Everest of Perfectionism",
@@ -12,7 +12,7 @@
 },
 
 {
-    n: 2,
+    n: '2',
     question: "era kangana kangana kangana example story tera mukhda chaand era kangana kangana kangana example story tera mukhda chaandBobby Rawat",
     a: "era kangana kangana kangana example story tera mukhda chaand era kangana kangana kangana example story tera mukhda chaand./src/photos/shivalika.jfif",
     b: "vera kangana kangana kangana example story tera mukhda chaand era kangana kangana kangana example story tera mukhda chaandThe Everest of OCD",
@@ -21,7 +21,7 @@
 },
 
 {
-    n: 3,
+    n: '3',
     question: "yaar kaam karde dimaag kharab ho raha ha one kiss is all it takes falling in live with me possibilities falling in love with me",
     a: "./src/photos/shivalika.jfif",
     b: "The Everest of Perfectionism",
@@ -33,7 +33,7 @@
 },
 
 {
-    n: 4,
+    n: '4',
     question: "era kangana kangana kangana example story tera mukhda chaand era kangana kangana kangana example story tera mukhda chaandBobby Rawat",
     a: "era kangana kangana kangana example story tera mukhda chaand era kangana kangana kangana example story tera mukhda chaand./src/photos/shivalika.jfif",
     b: "vera kangana kangana kangana example story tera mukhda chaand era kangana kangana kangana example story tera mukhda chaandThe Everest of OCD",
@@ -42,7 +42,7 @@
 },
 
 {
-    n: 5,
+    n: '5',
     question: "yaar kaam karde dimaag kharab ho raha ha one kiss is all it takes falling in live with me possibilities falling in love with me",
     a: "./src/photos/shivalika.jfif",
     b: "The Everest of Perfectionism",
@@ -54,7 +54,7 @@
 },
 
 {
-    n: 6,
+    n: '6',
     question: "era kangana kangana kangana example story tera mukhda chaand era kangana kangana kangana example story tera mukhda chaandBobby Rawat",
     a: "era kangana kangana kangana example story tera mukhda chaand era kangana kangana kangana example story tera mukhda chaand./src/photos/shivalika.jfif",
     b: "vera kangana kangana kangana example story tera mukhda chaand era kangana kangana kangana example story tera mukhda chaandThe Everest of OCD",
@@ -63,7 +63,7 @@
 },
 
 {
-    n: 7,
+    n: '7',
     question: "yaar kaam karde dimaag kharab ho raha ha one kiss is all it takes falling in live with me possibilities falling in love with me",
     a: "./src/photos/shivalika.jfif",
     b: "The Everest of Perfectionism",
@@ -75,7 +75,7 @@
 },
 
 {
-    n: 8,
+    n: '8',
     question: "era kangana kangana kangana example story tera mukhda chaand era kangana kangana kangana example story tera mukhda chaandBobby Rawat",
     a: "era kangana kangana kangana example story tera mukhda chaand era kangana kangana kangana example story tera mukhda chaand./src/photos/shivalika.jfif",
     b: "vera kangana kangana kangana example story tera mukhda chaand era kangana kangana kangana example story tera mukhda chaandThe Everest of OCD",
@@ -84,7 +84,7 @@
 },
 
 {
-    n: 9,
+    n: '9',
     question: "yaar kaam karde dimaag kharab ho raha ha one kiss is all it takes falling in live with me possibilities falling in love with me",
     a: "./src/photos/shivalika.jfif",
     b: "The Everest of Perfectionism",
@@ -95,7 +95,7 @@
     diet mauris. Sed quis neque imperdiet, sollicitudin sapien blandit, volutpat ante. Praesent molestie scelerisque risus at tristique. Curabitur sit amet velit vel quam tristique vulputate id ac dolor. Suspendisse pellentesque aliquam feugiat. Sed justo metus, scelerisque a congue a, venenatis lobortis nunc. Donec ut nunc eget arcu ullamcorper lobortis in at tortor.`
 },
 {
-    n: 10,
+    n: '10',
     question: "era kangana kangana kangana example story tera mukhda chaand era kangana kangana kangana example story tera mukhda chaandBobby Rawat",
     a: "era kangana kangana kangana example story tera mukhda chaand era kangana kangana kangana example story tera mukhda chaand./src/photos/shivalika.jfif",
     b: "vera kangana kangana kangana example story tera mukhda chaand era kangana kangana kangana example story tera mukhda chaandThe Everest of OCD",
