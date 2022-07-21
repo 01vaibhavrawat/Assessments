@@ -15,8 +15,8 @@ import {
 
 const Asessment = (props) => {
 
-  console.log(useSelector((state) => state.asessment))
-  const count = useSelector((state) => state.asessment.value)
+  const countcomment = useSelector((state) => state.asessment.ar)
+  const count = 0
   const dispatch = useDispatch()
 
   let n = {count}.count
@@ -27,6 +27,7 @@ const Asessment = (props) => {
       window.scrollTo(0, 0)
     }
   }
+
 
 
 	return (
@@ -50,7 +51,7 @@ const Asessment = (props) => {
       </Label>
 
     </FormGroup>
-     <FormGroup check className="check-o1.s" id="b" onClick={()=> {dispatch(array('b'))}}>
+     <FormGroup check className="check-o1.s" id="b" onClick={()=> dispatch(array("b"))}>
       <Input
         name="radio1"
         type="radio"
@@ -90,7 +91,7 @@ const Asessment = (props) => {
     <Button id="back-button" onClick={() => {dispatch(decrement())
       window.scroll(0, 0)}}>
     {"<-back"}</Button>
-      <Button id="next-button" onClick={() => {dispatch(increment())
+      <Button id="next-button" onClick={() => {dispatch(increment(5))
       scroll()}}>
       {n == 1 ? "Submit" : "Next->"}</Button>
     </div>
