@@ -15,11 +15,12 @@ import {
 
 const Asessment = (props) => {
 
-  const countcomment = useSelector((state) => state.asessment.ar)
-  const count = 0
+  const count = useSelector((state) => state.asessment.count)
+  console.log(count, "count")
   const dispatch = useDispatch()
 
   let n = {count}.count
+  console.log(n)
   let five_quetions = props.data.slice(n, n+5)
 
   const scroll = () => {
@@ -91,7 +92,7 @@ const Asessment = (props) => {
     <Button id="back-button" onClick={() => {dispatch(decrement())
       window.scroll(0, 0)}}>
     {"<-back"}</Button>
-      <Button id="next-button" onClick={() => {dispatch(increment(5))
+      <Button id="next-button" onClick={() => {dispatch(increment())
       scroll()}}>
       {n == 1 ? "Submit" : "Next->"}</Button>
     </div>

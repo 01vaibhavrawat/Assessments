@@ -2,13 +2,28 @@ import { createSlice } from '@reduxjs/toolkit'
 
 export const asessmentSlice = createSlice({
   name: 'asessment',
-  initialState: [],
+  initialState: {
+    count: 0,
+    selected_options: []
+  },
 
   reducers: {
-    array(state, action) { 
-      state.push(action.payload )
+    array: (state, action) => { 
+      state.selected_options.push(action.payload)
     },
-  },
+
+    increment: (state) => {
+      if(state.count < 5){
+      state.count += 5
+      }
+    },
+
+    decrement: (state) => {
+      if(state.count > 0){
+         state.count -= 5
+      }
+    },
+},
 })
 
 export const { increment, decrement, array } = asessmentSlice.actions

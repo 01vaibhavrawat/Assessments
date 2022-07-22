@@ -3,6 +3,6 @@ import asessmentReducer from './asessmentSlice'
 
 export default configureStore({
   reducer: {
-    asessment: asessmentReducer,
+    asessment: asessmentReducer,  
   },
 })

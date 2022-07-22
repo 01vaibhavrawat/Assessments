@@ -133,24 +133,44 @@ $font: (
 /*for the about us component*/
 
 #about{
-  padding-top: 1px;
   background-color: #F5F5F5;
+  padding-top: 1px;
 }
 
 #card-title{
   color: green; 
+}
+
+ .about-box {
+  font-family: Comic Sans MS, Comic Sans, cursive;
+  background-color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+} 
+
+/*about us end*/
+
+
+@media only screen and (max-width: 768px) {
+  //for about us
+
+
+#card-title{
   text-align: center;
 }
 
- #team, #mission {
+ .about-box {
   text-align: center;
   margin: 5% 5% 0% 5%;
   padding: 10%;
-  background-color: white;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
-/*about us end*/
+.team-card{
+  padding-top: 1%;
+}
+
+//about us end
+
+}
 
 
 @media only screen and (min-width: 768px) {
@@ -174,25 +194,33 @@ $font: (
     padding-bottom: 0;
   }
 }
-  //assessment end//
+  //assessment end
 
   // for about component
 
   #card-title{
-    padding: 5vh 0;
+   padding: 2% 0% 0% 0%;
    font-size: 2rem;
    color: green; 
-   text-align: center;
-   vertical-align: center;
 }
 
- #team, #mission {
-  font-size: 1.5rem;
+ .about-box {
+  font-size: 1.2rem !important;
   text-align: center;
-  margin: 5% 5% 0% 5%;
-  padding: 5% 15%;
+  margin: 2% 10%;
   background-color: white;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.about_paragraph, #cardgroup {
+  padding: 1% 15% 5% 15%;
+
+}
+
+.team-card {
+  margin-left: 3%;
+  width: 30%;
+  display: inline-block !important;
 }
 
 // about end
