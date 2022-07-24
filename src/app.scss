@@ -106,13 +106,24 @@ $font: (
   border-radius: 8px;
 }
 
+/* #a{
+  margin-top: 3%;
+}
+
 #a,
 #b,
 #c,
-#d {
-  padding: 3% 0% 3% 6%;
+#d,
+#e {
+  padding: 0% 0% 3% 3%;
   align-items: center;
   position: flex;
+} */
+
+#a,
+#c,
+#e{
+  background-color: #F5F5F5;
 }
 
  $button-margin: 10%;

@@ -84,7 +84,19 @@ const Asessment = (props) => {
          {e.d}
       </Label>
     </FormGroup>
+
+     <FormGroup check className="check-o1.s" id="e">
+      <Input
+        name="radio1"
+        type="radio"
+        id={`${e.n}e`}
+      />
+      <Label for={`${e.n}e`}>
+         {e.e}
+      </Label>
+    </FormGroup>
    </FormGroup>
+
       </Form>
     </div>
         )
