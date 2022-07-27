@@ -1,22 +1,5 @@
 @import "./resets";
 
-/*notes-
-set scroll to zero after changing question
-
-style back and next button for bigger display sizes*/
-
-/*for navbar component*/
-
-nav {
-  min-width: 100%;
-  min-height: 6vh;
-  background-color: black;
-  color: white;
-  text-align: center;
-}
-
-/*navbar end*/
-
 $font: (
   "h1": 2rem,
   "p": 20px,
