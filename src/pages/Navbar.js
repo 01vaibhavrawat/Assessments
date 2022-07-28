@@ -22,14 +22,20 @@ const NavCom = (args) => {
       return (
         <div>
           <Navbar color="light" light expand="md">
-            <NavbarBrand href="/">reactstrap</NavbarBrand>
+            <NavbarBrand href="/home">Project Therapy</NavbarBrand>
             <NavbarToggler onClick={toggle} />
             <Collapse isOpen={isOpen} navbar>
               <Nav className="ml-auto" navbar>
                 <NavItem>
-                  <NavLink tag={Link} to="/plantInfo">Plant Info</NavLink>
+                  <NavLink tag={Link} to="/story">Story</NavLink>
                 </NavItem>
-                <UncontrolledDropdown nav inNavbar>
+                <NavItem>
+                  <NavLink tag={Link} to="/about">About Us</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink tag={Link} to="/login">Login</NavLink>
+                </NavItem>
+                {/*<UncontrolledDropdown nav inNavbar>
                   <DropdownToggle nav caret>
                     Options
                   </DropdownToggle>
@@ -45,7 +51,7 @@ const NavCom = (args) => {
                       Reset
                     </DropdownItem>
                   </DropdownMenu>
-                </UncontrolledDropdown>
+                </UncontrolledDropdown>*/}
               </Nav>
             </Collapse>
           </Navbar>

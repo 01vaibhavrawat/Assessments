@@ -1,6 +1,6 @@
           export const STORIES = [
 {
-    name: "Vaibhav Rawat",
+    name: "random name",
     pfp: "./src/photos/shivalika.jfif",
     title: "The Everest of Perfectionism",
     date: "May 1",
@@ -10,9 +10,9 @@
     diet mauris. Sed quis neque imperdiet, sollicitudin sapien blandit, volutpat ante. Praesent molestie scelerisque risus at tristique. Curabitur sit amet velit vel quam tristique vulputate id ac dolor. Suspendisse pellentesque aliquam feugiat. Sed justo metus, scelerisque a congue a, venenatis lobortis nunc. Donec ut nunc eget arcu ullamcorper lobortis in at tortor.`},
 
 {
-    name: "Bobby Rawat",
+    name: "random name 2",
     pfp: "./src/photos/shivalika.jfif",
     title: "The Everest of OCD",
     date: "May 2",
-    story: "tera kangana kangana kangana example story tera mukhda chaand da tukda ni teri enak tere shoe kya baat ay tera kajal karta ha pagal hipnotize kare jatt nu tere lak nu mardeya karachi teri aankh pet the kyaa baat ay ni tera jkajal karta ha pagal hypnotize kare jatt nu kyaa baat ay uttarakhand gramin bank luck ni paiyan paiyan badi hot mar janiye tenu tak ke menu ande gande thought mar jaane samast chhoti avyashyaktaon hetu aakarshak "
+    story: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras efficitur tellus vulputate, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras efficitur tellus vulputate Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras efficitur tellus vulputate euismod leo pulvinar, dictum nisi. Vivamus ut tellus in libero pharetra accumsan vel sit amet lacus."
 }]

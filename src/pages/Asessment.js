@@ -16,11 +16,9 @@ import {
 const Asessment = (props) => {
 
   const count = useSelector((state) => state.asessment.count)
-  console.log(count, "count")
   const dispatch = useDispatch()
 
   let n = {count}.count
-  console.log(n)
   let five_quetions = props.data.slice(n, n+5)
 
   const scroll = () => {

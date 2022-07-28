@@ -7,7 +7,7 @@ $font: (
 
 @mixin h1 {
   font-size: map-get($font, "h1");
-  font-weight: 900;
+  font-weight: 700;
   line-height: 40px;
   letter-spacing: -0.02em;
   font-family: (arial, sans-serif);
@@ -29,24 +29,23 @@ $font: (
     margin-bottom: 5vh;
 }
 
-#main {
-  margin: 4% 30% 0 30%;
-}
+//for storypage
+ #story{
+  text-align: left;
+  @include p;
+ }
 
 #title {
   @include h1;
 }
 
-.text {
-  @include p;
-}
-
 /* for profile picture and the two paragraphs floating in its left */
+
 #header {
   display: inline-block;
 }
 
-#pfp {
+ #pfp {
   float: left;
   border-radius: 50%;
   width: 48px;
@@ -63,6 +62,11 @@ $font: (
   }
 }
 
+//story end
+
+
+/*for asessment component*/
+
 #form-div {
   max-width: 300px !important;
   margin-right: auto !important;
@@ -74,7 +78,7 @@ $font: (
   font-size: 1rem;
 }
 
-/*for asessment component*/
+
 
 #question{
   font-size: 1.2rem;
@@ -88,20 +92,6 @@ $font: (
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   border-radius: 8px;
 }
-
-/* #a{
-  margin-top: 3%;
-}
-
-#a,
-#b,
-#c,
-#d,
-#e {
-  padding: 0% 0% 3% 3%;
-  align-items: center;
-  position: flex;
-} */
 
 #a,
 #c,
@@ -193,6 +183,16 @@ $font: (
 
 //login end
 
+// for story page
+
+#main{
+  margin: 4vh 5%;
+  padding: 2vh 5%;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+//story page end
+
 }
 
 
@@ -276,5 +276,14 @@ $font: (
 }
 
 //login end
+
+//for story page
+
+ #main {
+  margin: 4% 30% 0 30%;
+}
+
+
+//storypage end
 
 }
