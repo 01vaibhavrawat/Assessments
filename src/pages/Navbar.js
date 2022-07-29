@@ -21,7 +21,7 @@ const NavCom = (args) => {
 
       return (
         <div>
-          <Navbar color="light" light expand="md">
+          <Navbar color="blue" light expand="md">
             <NavbarBrand href="/home">Project Therapy</NavbarBrand>
             <NavbarToggler onClick={toggle} />
             <Collapse isOpen={isOpen} navbar>

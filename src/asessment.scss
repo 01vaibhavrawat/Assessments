@@ -1,0 +1,74 @@
+@mixin back_next_button() {
+  margin: auto;
+    display: block;
+    margin-bottom: 5vh;
+}
+
+#form-div {
+  max-width: 300px !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  border-radius: 1px;
+  margin: 0 0 10px;
+  padding: 10px 0;
+  align-items: center;
+  font-size: 1rem;
+}
+
+
+
+#question{
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+#asessment {
+  text-align: justify;
+  margin: 5vh 5% 5% 5%;
+  padding: 5% 5% 5% 5%;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 8px;
+}
+
+#a,
+#c,
+#e{
+  background-color: #F5F5F5;
+}
+
+ $button-margin: 10%;
+
+  #back-button{
+    @include back_next_button;
+    float: left;
+    margin-left: $button-margin;
+  }
+  #next-button{
+    @include back_next_button;
+    float: right;
+    margin-right: $button-margin;
+  }
+
+
+@media only screen and (min-width: 768px) {
+  //for assessment//
+  #asessment {
+  margin: 2vh 20% 1% 20%;
+  padding: 1% 2% 0 2%;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 8px;
+  text-align: justify;
+  }
+
+  #asessment-component {
+  #back-button {
+    margin: auto;
+    display: block;
+    margin-bottom: 5vh;
+  }
+
+  #a, #b, #c, #d{
+    padding-bottom: 0;
+  }
+}
+}

@@ -1,0 +1,62 @@
+#about{
+  background-color: #F5F5F5;
+  padding-top: 1px;
+}
+
+#card-title{
+  color: green; 
+}
+
+ .about-box {
+  font-family: Comic Sans MS, Comic Sans, cursive;
+  background-color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+} 
+
+
+@media only screen and (max-width: 768px) {
+
+#card-title{
+  text-align: center;
+}
+
+ .about-box {
+  text-align: center;
+  margin: 5% 5% 0% 5%;
+  padding: 10%;
+}
+
+.team-card{
+  padding-top: 1%;
+}
+}
+
+@media only screen and (min-width: 768px) {
+  
+  // for about component
+
+  #card-title{
+   padding: 2% 0% 0% 0%;
+   font-size: 2rem;
+   color: green; 
+}
+
+ .about-box {
+  font-size: 1.2rem !important;
+  text-align: center;
+  margin: 2% 10%;
+  background-color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.about_paragraph, #cardgroup {
+  padding: 1% 15% 5% 15%;
+
+}
+
+.team-card {
+  margin-left: 3%;
+  width: 30%;
+  display: inline-block !important;
+}
+}

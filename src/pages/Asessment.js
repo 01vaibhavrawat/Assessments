@@ -104,7 +104,7 @@ const Asessment = (props) => {
     {"<-back"}</Button>
       <Button id="next-button" onClick={() => {dispatch(increment())
       scroll()}}>
-      {n == 1 ? "Submit" : "Next->"}</Button>
+      {n > 2  ? "Submit" : "Next->"}</Button>
     </div>
  )
 }

@@ -6,7 +6,8 @@ const Story = (props) => {
 
 	const[n, setN] = useState(1)
 	return(
-		<div id="main">
+		<div id="story_body">
+		<div id="story_body2">
 		<div id="header">
 		<img id="pfp" src={pfp} alt="profile photo"/>
 
@@ -21,6 +22,8 @@ const Story = (props) => {
 		<p className="text" id="story">{props.data[n].story}</p>
 
 		<button onClick={()=> n=1 ? setN(0) : setN(1)}>change</button>
+
+		</div>
 		</div>
 		)
 }

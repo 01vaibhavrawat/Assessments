@@ -15,17 +15,15 @@ const Home = () => {
 		window.scroll(0,0)
 	},[])
 	return(
-		<div>
+		<div id="home">
+
 		<div>Click below button to give the asesment-</div>
 		<button>
 		<Link to="/asessment">Asessment</Link>
 		</button>
 
-		<div id="mission" className="about-box">
-		<h3 id="card-title">Our Mission</h3>
-		<div className="about_paragraph">
+		<div className="home_container">
 		<Story data= {story} />
-		</div>
 		</div>
 
 		<About />
