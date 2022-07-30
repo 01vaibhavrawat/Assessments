@@ -17,10 +17,13 @@ const Home = () => {
 	return(
 		<div id="home">
 
-		<div>Click below button to give the asesment-</div>
+		<div className="home_container2">
+		Click below button to give the asesment-
+
 		<button>
 		<Link to="/asessment">Asessment</Link>
 		</button>
+		</div>
 
 		<div className="home_container">
 		<Story data= {story} />
