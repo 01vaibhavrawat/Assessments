@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { decrement, increment, incrementByAmount, array } from '../asessmentSlice'
+import { decrement, increment, array } from '../asessmentSlice'
 
 
 import {
@@ -16,10 +16,15 @@ import {
 const Asessment = (props) => {
 
   const count = useSelector((state) => state.asessment.count)
+  const answers = useSelector((state) => state.asessment.selected_options)
   const dispatch = useDispatch()
 
   let n = {count}.count
   let five_quetions = props.data.slice(n, n+5)
+
+  const get = () => {
+    window.location.href = `http://localhost:8080/process_get?answers=${answers}`;
+  }
 
   const scroll = () => {
     if(n < 5){
@@ -34,12 +39,12 @@ const Asessment = (props) => {
     {five_quetions.map((e)=>{
       return(
         <div id="asessment-component" key={e.n}>
-    <Form id="asessment">
+    <Form id="asessment" action="http://127.0.0.1:8080/process_post" method="POST">
 
      <FormGroup tag="fieldset">
     <legend id="question">{e.n}. {e.question}
     </legend>
-    <FormGroup check className="check-o1.s" id="a">
+    <FormGroup check className="check-o1.s" id="a" onClick={()=> dispatch(array([1, e.n - 1]))}>
       <Input
         name="radio1"
         type="radio"
@@ -50,7 +55,7 @@ const Asessment = (props) => {
       </Label>
 
     </FormGroup>
-     <FormGroup check className="check-o1.s" id="b" onClick={()=> dispatch(array("b"))}>
+     <FormGroup check className="check-o1.s" id="b" onClick={()=> dispatch(array([2, e.n - 1]))}>
       <Input
         name="radio1"
         type="radio"
@@ -61,7 +66,7 @@ const Asessment = (props) => {
       </Label>
 
     </FormGroup>
-     <FormGroup check className="check-o1.s" id="c">
+     <FormGroup check className="check-o1.s" id="c" onClick={()=> dispatch(array([3, e.n - 1]))}>
       <Input
         name="radio1"
         type="radio"
@@ -72,7 +77,7 @@ const Asessment = (props) => {
       </Label>
 
     </FormGroup>
-     <FormGroup check className="check-o1.s" id="d">
+     <FormGroup check className="check-o1.s" id="d" onClick={()=> dispatch(array([4, e.n - 1]))}>
       <Input
         name="radio1"
         type="radio"
@@ -83,7 +88,7 @@ const Asessment = (props) => {
       </Label>
     </FormGroup>
 
-     <FormGroup check className="check-o1.s" id="e">
+     <FormGroup check className="check-o1.s" id="e" onClick={()=> dispatch(array([5, e.n - 1]))}>
       <Input
         name="radio1"
         type="radio"
@@ -102,8 +107,17 @@ const Asessment = (props) => {
     <Button id="back-button" onClick={() => {dispatch(decrement())
       window.scroll(0, 0)}}>
     {"<-back"}</Button>
-      <Button id="next-button" onClick={() => {dispatch(increment())
-      scroll()}}>
+     <Button id="next-button" onClick={
+      () => {
+
+      if(count > 2){
+        dispatch(get());
+      }
+
+      dispatch(increment());
+      scroll();
+    }
+    } >
       {n > 2  ? "Submit" : "Next->"}</Button>
     </div>
  )

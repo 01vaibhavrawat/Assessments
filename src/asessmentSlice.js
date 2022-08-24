@@ -9,7 +9,7 @@ export const asessmentSlice = createSlice({
 
   reducers: {
     array: (state, action) => { 
-      state.selected_options.push(action.payload)
+      state.selected_options[action.payload[1]] = (action.payload[0])
     },
 
     increment: (state) => {
