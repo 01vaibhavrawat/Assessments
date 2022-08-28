@@ -39,7 +39,7 @@ const Asessment = (props) => {
     {five_quetions.map((e)=>{
       return(
         <div id="asessment-component" key={e.n}>
-    <Form id="asessment" action="http://127.0.0.1:8080/process_post" method="POST">
+    <Form id="asessment">
 
      <FormGroup tag="fieldset">
     <legend id="question">{e.n}. {e.question}

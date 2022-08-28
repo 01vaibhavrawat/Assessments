@@ -1,9 +1,10 @@
 @import "./styles/asessment";
 @import "./styles/about";
+@import "./styles/home";
 
 $font: (
-  "h1": 2rem,
-  "p": 20px,
+  "h1": 1.7rem,
+  "p": 18px,
 );
 
 @mixin h1 {
@@ -25,23 +26,21 @@ $font: (
 }
 
 
-//for homepage
-
-.home_container2{
-  background-color: white;
-  margin: 5% 10%;
+//for navbar
+#nav-icon{
+  max-width: 20px;
+}
+#navbar{
+  position: sticky;
+  top: 0;
+  background-color: #5072A7;
+  }
+.nav-link, .navbar-brand{
+  color: white !important;
 }
 
+//navbar end
 
-#home{
-  background-color: #F5F5F5;
-}
-
-.home_container{
-  min-width: 100%;
-}
-
-//home end
 
 //for storypage
 
@@ -49,12 +48,12 @@ $font: (
   background-color: white;
 }
 
- #story{
+ .story{
   text-align: left;
   @include p;
  }
 
-#title {
+.title {
   @include h1;
 }
 

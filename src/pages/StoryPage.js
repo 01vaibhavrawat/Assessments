@@ -17,9 +17,9 @@ const Story = (props) => {
 		</div>
 		</div>
 
-		<h1 id="title" data-selectable-paragraph>{props.data[n].title}</h1>
+		<h1 className="title" data-selectable-paragraph>{props.data[n].title}</h1>
 
-		<p className="text" id="story">{props.data[n].story}</p>
+		<p className="text" className="story">{props.data[n].story}</p>
 
 		<button onClick={()=> n=1 ? setN(0) : setN(1)}>change</button>
 

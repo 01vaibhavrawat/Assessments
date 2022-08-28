@@ -20,10 +20,9 @@ const NavCom = (args) => {
   const toggle = () => setIsOpen(!isOpen);
 
       return (
-        <div>
-          <Navbar color="blue" light expand="md">
+          <Navbar id="navbar" expand="md" variant="light">
             <NavbarBrand href="/home">Project Therapy</NavbarBrand>
-            <NavbarToggler onClick={toggle} />
+            <NavbarToggler id="toggler" onClick={toggle}><img id="nav-icon" src={require('../images/menu.png')} /></NavbarToggler>
             <Collapse isOpen={isOpen} navbar>
               <Nav className="ml-auto" navbar>
                 <NavItem>
@@ -55,7 +54,6 @@ const NavCom = (args) => {
               </Nav>
             </Collapse>
           </Navbar>
-        </div>
       );
     }
   export default NavCom
