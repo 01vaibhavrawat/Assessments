@@ -4,10 +4,10 @@ import {useEffect, useState} from 'react'
 import About from './About'
 import Story from './StoryPage'
 
-import { STORIES } from './shared/stories.js'
+import { STORIES } from '../shared/stories.js'
 
 
-const Home = () => {
+const Home = (props) => {
 
 	const[story, setStory] = useState(STORIES)
 
@@ -18,14 +18,14 @@ const Home = () => {
 		<div id="home">
 
 		<div  className="intro">
-		<h1 className="title">Obsessive Compulsive Disorder (OCD) Test & Self-Assessment</h1>
+		<h1 className="title">{props.data.h}</h1>
+		<p className="story">{props.data.p}</p>
 
-		<p className="story">Do I have OCD? Use this quiz to help determine if you might need to consult a mental health professional for diagnosis and treatment of Obsessive-Compulsive Disorder.</p>
-		<h1 className="title">Who Is This Obsessive Compulsive Disorder Quiz For?</h1>
+		<h1 className="second_h">{props.data.h1}</h1>
+		<p className="story">{props.data.p1}</p>
 
-		<p className="story">Below is a list of eight questions designed for people who are experiencing anxiety-inducing thoughts or repetitive behaviors they believe to be uncontrollable. The questions relate to life experiences common among people who have been diagnosed with obsessive compulsive disorder (OCD).
-
-Please read each question carefully, and indicate how often you have experienced the same or similar challenges in the past few months.</p>
+		<h1 className="second_h">{props.data.h2}</h1>
+		<p className="story">{props.data.p2}</p>
 		
 		</div>
 

@@ -9,14 +9,16 @@ import NavCom from './pages/Navbar'
 import Story from './pages/StoryPage'
 import Asessment from './pages/Asessment'
 
-import { STORIES } from './pages/shared/stories.js'
-import { QUETIONS } from './pages/shared/quetions.js'
+import { STORIES } from './shared/stories.js'
+import { QUETIONS } from './shared/quetions.js'
+import { HP } from './shared/intro_data.js'
 
 
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import {useState} from 'react'
 
 function App() {
+  const[hp, setHp] = useState(HP)
   const[story, setStory] = useState(STORIES)
   const[quetion, setQuetion] = useState(QUETIONS)
   return (
@@ -24,7 +26,7 @@ function App() {
     <NavCom />
     <Routes>
     <Route path='/' element={<Home />} />
-    <Route path='/Home' element={<Home />} />
+    <Route path='/Home' element={<Home data={hp}/>} />
     <Route path='/About' element={<About />} />
     <Route path='/Story' element={<Story data= {story}/>} />
     <Route path='/Login' element={<LoginForm />} />
