@@ -1,9 +1,8 @@
-import {useState} from 'react'
+import {useState} from 'react';
 
-import pfp from './photos/shivalika.jpg'
+import pfp from './photos/shivalika.jpg';
 
 const Story = (props) => {
-
 	const[n, setN] = useState(1)
 	return(
 		<div id="story_body">

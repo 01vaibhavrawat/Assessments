@@ -1,5 +1,6 @@
 import {Link} from 'react-router-dom'
 import {useEffect, useState} from 'react'
+import {Button} from 'reactstrap'
 
 import About from './About'
 import Story from './StoryPage'
@@ -8,6 +9,7 @@ import { STORIES } from '../shared/stories.js'
 
 
 const Home = (props) => {
+	console.log(props)
 
 	const[story, setStory] = useState(STORIES)
 
@@ -26,13 +28,9 @@ const Home = (props) => {
 
 		<h1 className="second_h">{props.data.h2}</h1>
 		<p className="story">{props.data.p2}</p>
-		
-		</div>
 
-		<div>
-		<button>
-		<Link to="/asessment">Asessment</Link>
-		</button>
+		<Link to="/signup"><Button color="primary" id='start-assessment-button'>Start the Asessment</Button></Link>
+		
 		</div>
 
 		<div className="home_container">

@@ -8,6 +8,7 @@ import LoginForm from './pages/LoginForm'
 import NavCom from './pages/Navbar'
 import Story from './pages/StoryPage'
 import Asessment from './pages/Asessment'
+import SignUp from './pages/SignUp'
 
 import { STORIES } from './shared/stories.js'
 import { QUETIONS } from './shared/quetions.js'
@@ -30,6 +31,7 @@ function App() {
     <Route path='/About' element={<About />} />
     <Route path='/Story' element={<Story data= {story}/>} />
     <Route path='/Login' element={<LoginForm />} />
+    <Route path='/Signup' element={<SignUp />} />
     <Route path='/Asessment' element={<Asessment data={quetion} />} />
     <Route path="*" element={<Notfound />} />
     </Routes>
