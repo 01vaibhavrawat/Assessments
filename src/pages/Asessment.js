@@ -29,6 +29,14 @@ const Asessment = (props) => {
       {five_quetions.map((e) => {
         return (
           <div id="asessment-component" key={e.n}>
+          <Button onClick={()=>{
+            fetch('http://localhost:5000/store-data', {
+        method: 'POST',
+        // We convert the React state to JSON and send it as the POST body
+        body: JSON.stringify({ name: 'vaibhav' })
+      })
+
+          }}>trying post</Button>
             <Form id="asessment">
               <FormGroup tag="fieldset">
                 <legend id="question">
@@ -98,7 +106,7 @@ const Asessment = (props) => {
         id="next-button"
         onClick={() => {
           if (count > 2) {
-            dispatch(get());
+            get();
           }
 
           dispatch(increment());
