@@ -15,7 +15,11 @@ const Asessment = (props) => {
   let five_quetions = props.data.slice(n, n + 5);
 
   const get = () => {
-    window.location.href = `http://localhost:8080/process_get?answers=${answers}`;
+    window.location.href = `http://localhost:5000/process_get?answers=${answers}`;
+    fetch('http://localhost:5000/store-data', {
+        method: 'POST',
+        body: JSON.stringify({ name: signup })
+      })
   };
 
   const scroll = () => {
@@ -29,14 +33,6 @@ const Asessment = (props) => {
       {five_quetions.map((e) => {
         return (
           <div id="asessment-component" key={e.n}>
-          <Button onClick={()=>{
-            fetch('http://localhost:5000/store-data', {
-        method: 'POST',
-        // We convert the React state to JSON and send it as the POST body
-        body: JSON.stringify({ name: 'vaibhav' })
-      })
-
-          }}>trying post</Button>
             <Form id="asessment">
               <FormGroup tag="fieldset">
                 <legend id="question">
@@ -106,7 +102,7 @@ const Asessment = (props) => {
         id="next-button"
         onClick={() => {
           if (count > 2) {
-            get();
+            dispatch(get());
           }
 
           dispatch(increment());

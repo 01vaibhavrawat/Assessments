@@ -1,6 +1,6 @@
 import {useState} from 'react';
 
-import pfp from './photos/shivalika.jpg';
+import pfp from './photos/pfp.jfif';
 
 const Story = (props) => {
 	const[n, setN] = useState(1)

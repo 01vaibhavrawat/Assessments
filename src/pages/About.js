@@ -9,6 +9,8 @@ import {
   Button,
 } from "reactstrap";
 
+import pfp from './photos/pfp2.jfif';
+
 const About = (props) => {
   return (
     <div id="about">
@@ -38,7 +40,7 @@ const About = (props) => {
           <Card className="team-card">
             <CardImg
               alt="Card image cap"
-              src="https://picsum.photos/318/180"
+              src={pfp}
               top
               width="100%"
             />
@@ -57,7 +59,7 @@ const About = (props) => {
           <Card className="team-card">
             <CardImg
               alt="Card image cap"
-              src="https://picsum.photos/318/180"
+              src={pfp}
               top
               width="33%"
             />
@@ -76,7 +78,7 @@ const About = (props) => {
           <Card className="team-card">
             <CardImg
               alt="Card image cap"
-              src="https://picsum.photos/318/180"
+              src={pfp}
               top
               width="33%"
             />

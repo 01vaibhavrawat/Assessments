@@ -77,7 +77,8 @@ const SignUp = (props) => {
             </Input>
           </FormGroup>{" "}
           <Link to="/asessment">
-            <Button id="login-submit" onClick={()=> dispatch(signup_data(form))}>Next</Button>
+            <Button id="login-submit" onClick={()=> {dispatch(signup_data(form))
+              console.log()}}>Next</Button>
           </Link>
         </Form>
       </div>
