@@ -9,7 +9,6 @@ const Asessment = (props) => {
   const answers = useSelector((state) => state.asessment.selected_options);
   const signup = useSelector((state) => state.asessment.signup_data);
   const dispatch = useDispatch();
-  console.log(signup, `let's go`)
 
   let n = { count }.count;
   let five_quetions = props.data.slice(n, n + 5);
@@ -28,6 +27,23 @@ const Asessment = (props) => {
     }
   };
 
+ /* const fifthOption = (obj) => {
+    console.log(obj.length)
+    if(obj.length > 4){
+      return(
+         <FormGroup
+                    check
+                    className="check-o1.s"
+                    id="e"
+                    onClick={() => dispatch(array([5, obj.n - 1]))}
+                  >
+                    <Input name="radio1" type="radio" id={`${obj.n}e`} />
+                    <Label for={`${obj.n}e`}>{obj.e}</Label>
+                  </FormGroup>
+                )
+  }
+  }
+*/
   return (
     <div>
       {five_quetions.map((e) => {
@@ -74,17 +90,17 @@ const Asessment = (props) => {
                   <Input name="radio1" type="radio" id={`${e.n}d`} />
                   <Label for={`${e.n}d`}>{e.d}</Label>
                 </FormGroup>
-
-                <FormGroup
-                  check
-                  className="check-o1.s"
-                  id="e"
-                  onClick={() => dispatch(array([5, e.n - 1]))}
-                >
-                  <Input name="radio1" type="radio" id={`${e.n}e`} />
-                  <Label for={`${e.n}e`}>{e.e}</Label>
+                {console.log(Object.keys(e).length)}
+                {Object.keys(e).length > 6 ?   <FormGroup
+                    check
+                    className="check-o1.s"
+                    id="e"
+                    onClick={() => dispatch(array([5, e.n - 1]))}
+                  >
+                    <Input name="radio1" type="radio" id={`${e.n}e`} />
+                    <Label for={`${e.n}e`}>{e.e}</Label>
+                  </FormGroup> : ""}
                 </FormGroup>
-              </FormGroup>
             </Form>
           </div>
         );
