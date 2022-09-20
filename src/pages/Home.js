@@ -16,6 +16,7 @@ const Home = (props) => {
   return (
     <div id="home">
       <div className="intro">
+        <img id="procrastionation_img" src={require('../images/procrastination.png')} />
         <h1 className="title">{props.data.heading}</h1>
         <p className="story">{props.data.para}</p>
 

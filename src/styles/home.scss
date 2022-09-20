@@ -23,17 +23,28 @@
 
 @media only screen and (max-width: 768px) {
   .intro{
-  padding: 10% 5%;
+  padding: 7% 5% 10% 5%;
   margin: 2% 4%;
+}
+
+#procrastionation_img{
+  max-width: 100%;
+  margin-bottom: 3vh;
 }
 }
 
 
 @media only screen and (min-width: 768px) {
     .intro{
-  padding: 4% 15% 2% 15%;
+  padding: 2% 15% 2% 15%;
   margin: 2% 10%;
 }
+
+#procrastionation_img{
+  max-width: 80%;
+  margin-bottom: 3vh;
+}
+
 }
 
 //home end
