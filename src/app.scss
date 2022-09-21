@@ -1,6 +1,7 @@
 @import "./styles/asessment";
 @import "./styles/about";
 @import "./styles/home";
+@import "./styles/story";
 
 $font: (
   "h1": 2rem,
@@ -63,42 +64,32 @@ $font: (
 
 //navbar end
 
+//for complete
 
-//for storypage
-
-#story_body{
+#complete{
+  color: green;
+  line-height: 1.42857;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
   background-color: white;
+  box-shadow: 0 5px 10px rgb(154 160 185 / 5%), 0 15px 40px rgb(166 173 201 / 20%);
 }
-
-
-/* for profile picture and the two paragraphs floating in its left */
-
-#header {
-  display: inline-block;
-}
-
- #pfp {
-  float: left;
-  border-radius: 50%;
-  width: 48px;
-  height: 48px;
-}
-
-#pfp-text {
-  float: left;
-  margin-left: 0.5rem;
-  line-height: 60%;
-
-  &-name:hover {
-    font-weight: bold;
-  }
-}
-
-//story end
-
+//complete end
 
 
 @media only screen and (max-width: 768px) {
+
+
+
+//for complete
+
+#complete{
+  padding: 10%;
+  margin: 10% 10% 0% 10%;
+}
+//complete end
+
 
 //for login component
 
@@ -129,19 +120,8 @@ $font: (
 
 //login end
 
-// for story page
 
-#story_body{
-  margin: 4vh 5%;
-  padding: 2vh 5%;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  background-color: white;
-}
-
-//story page end
-
-}
-
+}// end of max width 768
 
 @media only screen and (min-width: 768px) {
 
@@ -174,17 +154,13 @@ $font: (
 
 //login end
 
-//for story page
 
-#story_body{
-  margin: 0 10%;
+//for complete
+
+#complete{
+  padding: 5% 7%;
+  margin: 10% 20% 0% 20%;
 }
+//complete end
 
- #story_body2 {
-  padding: 4% 20% 2% 20%;
-}
-
-
-//storypage end
-
-}
+}// end of min-width 768
