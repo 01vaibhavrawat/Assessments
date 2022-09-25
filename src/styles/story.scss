@@ -1,62 +1,53 @@
-$font: (
-  "h1": 2rem,
-  "p": 18px,
-  "h2": 1.6rem,
-);
-
-#story_body {
-  text-align: left;
+#story_body{
   background-color: white;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  font-size: map-get($font, "p");
-  padding: 0 105px;
-  line-height: 32px;
-  letter-spacing: -0.003em;
 }
+
 
 /* for profile picture and the two paragraphs floating in its left */
 
 #header {
   display: inline-block;
-  font-size: map-get($font, "h2");
-  padding: 15px;
 }
 
-#pfp {
+ #pfp {
   float: left;
   border-radius: 50%;
   width: 48px;
   height: 48px;
-  object-fit: cover;
 }
 
 #pfp-text {
   float: left;
   margin-left: 0.5rem;
   line-height: 60%;
-  cursor: pointer;
+
   &-name:hover {
     font-weight: bold;
   }
 }
 
+
 @media only screen and (max-width: 768px) {
-  #story_body {
-    margin: 4vh 5%;
-    padding: 2vh 5%;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    background-color: white;
-  }
+
+#story_body{
+  margin: 4vh 5%;
+  padding: 2vh 5%;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background-color: white;
+}
+
 }
 
 @media only screen and (min-width: 768px) {
-  #story_body {
-    margin: 0 10%;
-  }
 
-  #story_body2 {
-    padding: 4% 20% 2% 20%;
-  }
+#story_body{
+  margin: 0 10%;
 }
+
+ #story_body2 {
+  padding: 4% 20% 2% 20%;
+}
+
+}
+
+

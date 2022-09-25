@@ -9,7 +9,7 @@ import {
   Button,
 } from "reactstrap";
 
-import pfp from "./photos/pfp2.jfif";
+import pfp from './photos/pfp2.jfif';
 
 const About = (props) => {
   return (
@@ -38,7 +38,12 @@ const About = (props) => {
         <h3 id="card-title">Our Team</h3>
         <div id="cardgroup">
           <Card className="team-card">
-            <CardImg alt="Card image cap" src={pfp} top width="100%" />
+            <CardImg
+              alt="Card image cap"
+              src={pfp}
+              top
+              width="100%"
+            />
             <CardBody>
               <CardTitle tag="h5">Card title</CardTitle>
               <CardSubtitle className="mb-2 text-muted" tag="h6">
@@ -52,7 +57,12 @@ const About = (props) => {
             </CardBody>
           </Card>
           <Card className="team-card">
-            <CardImg alt="Card image cap" src={pfp} top width="33%" />
+            <CardImg
+              alt="Card image cap"
+              src={pfp}
+              top
+              width="33%"
+            />
             <CardBody>
               <CardTitle tag="h5">Card title</CardTitle>
               <CardSubtitle className="mb-2 text-muted" tag="h6">
@@ -66,7 +76,12 @@ const About = (props) => {
             </CardBody>
           </Card>
           <Card className="team-card">
-            <CardImg alt="Card image cap" src={pfp} top width="33%" />
+            <CardImg
+              alt="Card image cap"
+              src={pfp}
+              top
+              width="33%"
+            />
             <CardBody>
               <CardTitle tag="h5">Card title</CardTitle>
               <CardSubtitle className="mb-2 text-muted" tag="h6">
