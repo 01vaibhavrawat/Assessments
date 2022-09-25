@@ -13,7 +13,6 @@
     "popper.js": "^1.16.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
-    "react-read-more-read-less": "^1.0.7",
     "react-redux": "^8.0.2",
     "react-scripts": "5.0.1",
     "reactstrap": "^9.1.1",
