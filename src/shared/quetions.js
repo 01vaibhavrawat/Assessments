@@ -28,29 +28,29 @@
 },
 {
     n: '4',
-    question: " Which of the following statements best describes your attitude to deadlines?",
-    a: "I like having a good time reserve in case something goes wrong.",
-    b: "I like the pressure of an oncoming deadline, but I still need to have a solid time reserve.",
-    c: "I work best when I know there's a deadline coming soon (within a week).",
-    d: "I have the utmost disrespect for deadlines, so I barely finish anything on time.",
-    e: "I love the feeling of racing against the clock to see if I can meet the deadline."
+    question: "I can accurately estimate how long a task will take me to complete.",
+    a: "Most of the time",
+    b: "Often",
+    c: "Sometimes",
+    d: "Rarely",
+    e: "Never"
 },
 {
     n: '5',
-    question: " When I have something pressing to do that isn't really appealing (cleaning my room, organizing CD's, doing my taxes), I typically:",
-    a: "    find something else more interesting to work on.",
-    b: "    immediately start working on that particular task.",
+    question: "When I have something pressing to do that isn't really appealing (cleaning my room, organizing CD's, doing my taxes), I typically:",
+    a: "find something else more interesting to work on.",
+    b: "immediately start working on that particular task.",
     c: "start working on it but drag it out with other distractions (phone calls, making trips to the bathroom, getting something to eat, etc).",
     d: "start working on it for a little while, but move on to something else if I get bored or frustrated.",
 },
 {
     n: '6',
-    question: " Which of the following statements best describes your attitude to deadlines?",
-    a: "I like having a good time reserve in case something goes wrong.",
-    b: "I like the pressure of an oncoming deadline, but I still need to have a solid time reserve.",
-    c: "I work best when I know there's a deadline coming soon (within a week).",
-    d: "I have the utmost disrespect for deadlines, so I barely finish anything on time.",
-    e: "I love the feeling of racing against the clock to see if I can meet the deadline."
+    question: "How clean do you keep your living quarters?",
+    a: "I clean up after myself as I go.",
+    b: "I clean up every couple of days.",
+    c: "I clean once a week.",
+    d: "I let things build up until I can't stand it anymore.",
+    e: "I clean only when someone is coming over"
 },
 {
     n: '7',
