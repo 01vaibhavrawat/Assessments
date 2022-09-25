@@ -5,6 +5,7 @@ $font: (
 );
 
 #story_body {
+  // transform: translate(0, 50%);
   text-align: left;
   background-color: white;
   display: flex;
@@ -15,14 +16,13 @@ $font: (
   line-height: 32px;
   letter-spacing: -0.003em;
 }
-#date{
-    font-size: 18px;
-    color: rgb(93, 90, 90); 
+#date {
+  font-size: 18px;
+  color: rgb(93, 90, 90);
 }
 /* for profile picture and the two paragraphs floating in its left */
-#text{
+#text {
   padding: 5px;
- 
 }
 #header {
   display: inline-block;
