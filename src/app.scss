@@ -57,12 +57,13 @@ $font: (
 #navbar {
   position: sticky;
   top: 0;
-  background-color: #5072a7;
+  background-color: #78ceca;
   z-index: 1;
 }
 .nav-link,
 .navbar-brand {
-  color: white !important;
+  color: rgb(35, 34, 34) !important;
+  font-weight: 500;
 }
 
 //navbar end
