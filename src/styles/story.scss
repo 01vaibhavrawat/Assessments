@@ -5,14 +5,14 @@ $font: (
 );
 
 #story_body {
-  // transform: translate(0, 50%);
+  
   text-align: left;
   background-color: white;
   display: flex;
   flex-direction: column;
   text-align: center;
   font-size: map-get($font, "p");
-  padding: 0 105px;
+  padding: 80px 105px;
   line-height: 32px;
   letter-spacing: -0.003em;
 }
