@@ -15,13 +15,20 @@ $font: (
   line-height: 32px;
   letter-spacing: -0.003em;
 }
-
+#date{
+    font-size: 18px;
+    color: rgb(93, 90, 90); 
+}
 /* for profile picture and the two paragraphs floating in its left */
-
+#text{
+  padding: 5px;
+ 
+}
 #header {
   display: inline-block;
   font-size: map-get($font, "h2");
   padding: 15px;
+  align-self: center;
 }
 
 #pfp {
