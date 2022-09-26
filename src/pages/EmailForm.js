@@ -10,7 +10,7 @@ export default function EmailForm() {
     function handleChange(e){
         setForm(e.target.value)
     }
-    const { email, username, password } = form;
+    const { email, username } = form;
   return (
     <div>
       <FormGroup>
@@ -38,6 +38,7 @@ export default function EmailForm() {
             type="text"
             class="form-control"
             id="exampleInputPassword1"
+            value={username}
           ></Input>
         </div>
         <div class="mb-3 form-check">

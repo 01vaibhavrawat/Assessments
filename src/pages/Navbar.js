@@ -41,6 +41,12 @@ const NavCom = (args) => {
               Login
             </NavLink>
           </NavItem>
+          <NavItem>
+            {/* <NavLink tag={Link} to="/email">
+              Contact us
+            </NavLink> */}
+          </NavItem>
+
           {/*<UncontrolledDropdown nav inNavbar>
                   <DropdownToggle nav caret>
                     Options
