@@ -1,19 +1,19 @@
-import React from "react";
+// import React from "react";
 import { useState } from "react";
 import { FormGroup, Form, Label, Input, Button } from "reactstrap";
 
 export default function EmailForm() {
-    const [form, setForm] = useState({
-        name:'',
-        email:''
-    });
-    function handleChange(e){
-        setForm(e.target.value)
-    }
-    const { email, username } = form;
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+  });
+  function handleChange(e) {
+    setForm(e.target.value);
+  }
+  const { email, username } = form;
   return (
-    <div>
-      <FormGroup>
+    <div className="formcontainer">
+      <FormGroup className="groupcontainer">
         <div class="mb-3">
           <Label for="exampleInputEmail1" class="form-label">
             Email address
@@ -41,6 +41,10 @@ export default function EmailForm() {
             value={username}
           ></Input>
         </div>
+        <FormGroup>
+          <Label for="exampleText">Write your message here</Label>
+          <Input type="textarea" name="text" id="exampleText" />
+        </FormGroup>
         <div class="mb-3 form-check">
           <Input
             type="checkbox"

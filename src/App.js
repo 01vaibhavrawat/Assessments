@@ -20,6 +20,7 @@ import { useState } from "react";
 import EmailForm from "./pages/EmailForm";
 
 function App() {
+  
   const [hp, setHp] = useState(HP);
   const [story, setStory] = useState(STORIES);
   const [quetion, setQuetion] = useState(QUETIONS);
