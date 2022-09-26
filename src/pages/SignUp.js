@@ -2,7 +2,7 @@ import { FormGroup, Form, Label, Input, Button } from "reactstrap";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { signup_data } from "../asessmentSlice";
+import { signup_data } from "../redux/asessmentSlice";
 
 const SignUp = (props) => {
   useEffect(() => {
@@ -14,7 +14,6 @@ const SignUp = (props) => {
 
     const handleChange = (event) => {
       form[event.target.name] = event.target.value;
-      console.log(form)
   };
 
   return (

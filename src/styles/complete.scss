@@ -1,0 +1,27 @@
+#complete{
+  color: green;
+  line-height: 1.42857;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 5px 10px rgb(154 160 185 / 5%), 0 15px 40px rgb(166 173 201 / 20%);
+}
+
+
+@media only screen and (max-width: 768px) {
+
+#complete{
+  padding: 10%;
+  margin: 10% 10% 0% 10%;
+}
+}
+
+@media only screen and (min-width: 768px) {
+
+#complete{
+  padding: 5% 7%;
+  margin: 10% 20% 0% 20%;
+}
+
+}

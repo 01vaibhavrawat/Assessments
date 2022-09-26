@@ -1,6 +1,6 @@
 import {useState} from 'react';
 
-import pfp from './photos/pfp.jfif';
+import pfp from '../images/pfp2.jfif';
 
 const Story = (props) => {
 	const[n, setN] = useState(1)
@@ -18,7 +18,7 @@ const Story = (props) => {
 
 		<h1 className="title" data-selectable-paragraph>{props.data[n].title}</h1>
 
-		<p className="text" className="story">{props.data[n].story}</p>
+		<p className="story">{props.data[n].story}</p>
 
 		<button onClick={()=> n=1 ? setN(0) : setN(1)}>change</button>
 

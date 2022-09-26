@@ -1,0 +1,56 @@
+@media only screen and (max-width: 768px) {
+
+#login-body{
+  background-color: #F5F5F5;
+  padding: 1px 1px 100vh 1px; 
+}
+
+#login-box{
+  background-color: white;
+  margin: 10% 15%;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+#login-form{
+  min-height: 25vh;
+  padding: 25% 10%;
+}
+
+#login-submit{
+  min-width: 100%;
+}
+
+#forgot {
+  text-align: center;
+  padding-top: 2vh;       
+}
+}
+
+@media only screen and (min-width: 768px) {
+
+#login-body{
+  background-color: rgba(var(--b3f,250,250,250),1);
+  padding: 1px 1px 100vh 1px; 
+}
+
+#login-box{
+  background-color: white;
+  margin: 5% 40%;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+#login-form{
+  min-height: 25vh;
+  padding: 25% 10%;
+}
+
+#login-submit{
+  min-width: 100%;
+}
+
+#forgot {
+  text-align: center;
+  padding-top: 2vh;       
+}
+
+}
