@@ -1,6 +1,12 @@
 import { FormGroup, Form, Label, Input, Button } from "reactstrap";
 
+import { useEffect } from "react";
+
 const LoginForm = (props) => {
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
+
   return (
     <div id="login-body">
       <div id="login-box">

@@ -1,0 +1,57 @@
+@import "./about";
+@import "./asessment";
+@import "./complete";
+@import "./home";
+@import "./loginform";
+@import "./navbar";
+@import "./notfound";
+@import "./signup";
+@import "./storypage";
+
+$font: (
+  "h1": 2rem,
+  "p": 18px,
+  "h2": 1.6rem,
+);
+
+@mixin h1 {
+  font-size: map-get($font, "h1");
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: -0.02em;
+  font-family: (arial, sans-serif);
+  display: block;
+}
+@mixin second_h {
+  font-size: map-get($font, "h2");
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: -0.02em;
+  font-family: (arial, sans-serif);
+  display: block;
+}
+
+@mixin p() {
+  font-size: map-get($font, "p");
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: -0.003em;
+  font-family: (arial, sans-serif);
+  display: block;
+}
+
+
+ .story{
+  text-align: left;
+  @include p;
+ }
+
+.title {
+  @include h1;
+}
+
+.second_h{
+  @include second_h;
+}
+
+

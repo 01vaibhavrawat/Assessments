@@ -1,5 +1,4 @@
-import "./App.css";
-import "./app.scss";
+import "./styles/app.scss";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -13,7 +12,7 @@ import Complete from "./pages/Complete";
 
 import { STORIES } from "./shared/stories.js";
 import { QUETIONS } from "./shared/quetions.js";
-import { HP } from "./shared/intro_data.js";
+import { HP } from "./shared/homePageText.js";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useState } from "react";

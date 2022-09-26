@@ -6,21 +6,28 @@
 #card-title {
   color: green;
 }
+
 .firstperson {
   object-fit: cover;
-  
 }
 .about-box {
   // font-family: Comic Sans MS, Comic Sans, cursive;
   background-color: white;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
-@media only screen and (max-width: 100px){
+@media only screen and (max-width: 100px) {
   .firstperson {
     object-fit: cover;
     height: 255px;
   }
+
+  .about-box {
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    background-color: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
 }
+
 @media only screen and (max-width: 768px) {
   #card-title {
     text-align: center;
@@ -41,7 +48,6 @@
 
 @media only screen and (min-width: 768px) {
   // for about component
-
 
   #card-title {
     padding-top: 2%;

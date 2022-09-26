@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { decrement, increment, array } from "../asessmentSlice";
+import { decrement, increment, array } from "../redux/asessmentSlice";
 
 import { Form, FormGroup, Label, Input, Button, ButtonGroup } from "reactstrap";
 

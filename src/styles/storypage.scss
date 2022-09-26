@@ -1,0 +1,53 @@
+#story_body{
+  background-color: white;
+}
+
+
+/* for profile picture and the two paragraphs floating in its left */
+
+#header {
+  display: inline-block;
+}
+
+ #pfp {
+  float: left;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+}
+
+#pfp-text {
+  float: left;
+  margin-left: 0.5rem;
+  line-height: 60%;
+
+  &-name:hover {
+    font-weight: bold;
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+
+#story_body{
+  margin: 4vh 5%;
+  padding: 2vh 5%;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background-color: white;
+}
+
+}
+
+@media only screen and (min-width: 768px) {
+
+#story_body{
+  margin: 0 10%;
+}
+
+ #story_body2 {
+  padding: 4% 20% 2% 20%;
+}
+
+}
+
+
