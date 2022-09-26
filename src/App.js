@@ -9,7 +9,7 @@ import NavCom from "./pages/Navbar";
 import Story from "./pages/StoryPage";
 import Asessment from "./pages/Asessment";
 import SignUp from "./pages/SignUp";
-import Complete from "./pages/Complete"
+import Complete from "./pages/Complete";
 
 import { STORIES } from "./shared/stories.js";
 import { QUETIONS } from "./shared/quetions.js";
@@ -17,6 +17,7 @@ import { HP } from "./shared/intro_data.js";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useState } from "react";
+import EmailForm from "./pages/EmailForm";
 
 function App() {
   const [hp, setHp] = useState(HP);
@@ -34,6 +35,7 @@ function App() {
         <Route path="/Asessment" element={<Asessment data={quetion} />} />
         <Route path="/Complete" element={<Complete />} />
         <Route path="*" element={<Notfound />} />
+        <Route path="/EmailForm" element={<EmailForm />} />
       </Routes>
     </BrowserRouter>
   );
