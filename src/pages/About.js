@@ -9,7 +9,7 @@ import {
   Button,
 } from "reactstrap";
 
-import pfp from './photos/pfp2.jfif';
+import pfp from '../images/pfp2.jfif';
 
 const About = (props) => {
   return (

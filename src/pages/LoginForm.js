@@ -4,9 +4,14 @@ import {
 	Label,
 	Input,
 	Button
-} from 'reactstrap'
+} from 'reactstrap';
+import { useEffect } from 'react';
 
 const LoginForm = (props) => {
+
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
 
 
 return(
@@ -54,4 +59,4 @@ return(
 )
 }
 	
-export default LoginForm
+export default LoginForm;
