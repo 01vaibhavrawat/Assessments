@@ -1,40 +1,53 @@
-import {useState} from 'react'
-import {Link} from 'react-router-dom';
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import {
-    Collapse,
-    Navbar,
-    NavbarToggler,
-    NavbarBrand,
-    Nav,
-    NavLink,
-    NavItem,
-    UncontrolledDropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem } from 'reactstrap';
-
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavLink,
+  NavItem,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+} from "reactstrap";
 
 const NavCom = (args) => {
-  
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
 
-      return (
-          <Navbar id="navbar" expand="md" variant="light">
-            <NavbarBrand href="/">Project Therapy</NavbarBrand>
-            <NavbarToggler id="toggler" onClick={toggle}><img id="nav-icon" src={require('../images/menu.png')} /></NavbarToggler>
-            <Collapse isOpen={isOpen} navbar>
-              <Nav className="ml-auto" navbar>
-                <NavItem>
-                  <NavLink tag={Link} to="/story">Story</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink tag={Link} to="/about">About Us</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink tag={Link} to="/login">Login</NavLink>
-                </NavItem>
-                {/*<UncontrolledDropdown nav inNavbar>
+  return (
+    <Navbar id="navbar" expand="md" variant="light">
+      <NavbarBrand href="/">Project Therapy</NavbarBrand>
+      <NavbarToggler id="toggler" onClick={toggle}>
+        <img id="nav-icon" src={require("../images/menu.png")} />
+      </NavbarToggler>
+      <Collapse isOpen={isOpen} navbar>
+        <Nav className="ml-auto" navbar>
+          <NavItem>
+            <NavLink tag={Link} to="/story">
+              Story
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink tag={Link} to="/about">
+              About Us
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink tag={Link} to="/login">
+              Login
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink tag={Link} to="/EmailForm">
+              Contact us
+            </NavLink>
+          </NavItem>
+
+          {/*<UncontrolledDropdown nav inNavbar>
                   <DropdownToggle nav caret>
                     Options
                   </DropdownToggle>
@@ -51,9 +64,9 @@ const NavCom = (args) => {
                     </DropdownItem>
                   </DropdownMenu>
                 </UncontrolledDropdown>*/}
-              </Nav>
-            </Collapse>
-          </Navbar>
-      );
-    }
-  export default NavCom
+        </Nav>
+      </Collapse>
+    </Navbar>
+  );
+};
+export default NavCom;

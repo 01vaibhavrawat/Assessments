@@ -9,7 +9,14 @@ import {
   Button,
 } from "reactstrap";
 
+
+// import pfp from "./photos/pfp2.jfif";
+import person1 from "./photos/person1.jpg";
+import person2 from "./photos/person2.jpg";
+import person3 from "./photos/person3.jpg";
+
 import pfp from '../images/pfp2.jfif';
+
 
 const About = (props) => {
   return (
@@ -37,6 +44,10 @@ const About = (props) => {
       <div id="team" className="about-box">
         <h3 id="card-title">Our Team</h3>
         <div id="cardgroup">
+
+          <Card className="team-card" id="firstcard" />
+            <CardImg alt="Card image cap" src={person1} className="firstperson"/>
+
           <Card className="team-card">
             <CardImg
               alt="Card image cap"
@@ -44,6 +55,7 @@ const About = (props) => {
               top
               width="100%"
             />
+
             <CardBody>
               <CardTitle tag="h5">Card title</CardTitle>
               <CardSubtitle className="mb-2 text-muted" tag="h6">
@@ -57,12 +69,16 @@ const About = (props) => {
             </CardBody>
           </Card>
           <Card className="team-card">
+
+            <CardImg alt="Card image cap" src={person2} />
+
             <CardImg
               alt="Card image cap"
               src={pfp}
               top
               width="33%"
             />
+
             <CardBody>
               <CardTitle tag="h5">Card title</CardTitle>
               <CardSubtitle className="mb-2 text-muted" tag="h6">
@@ -76,12 +92,16 @@ const About = (props) => {
             </CardBody>
           </Card>
           <Card className="team-card">
+
+            <CardImg alt="Card image cap" src={person3} top width="33%" />
+
             <CardImg
               alt="Card image cap"
               src={pfp}
               top
               width="33%"
             />
+
             <CardBody>
               <CardTitle tag="h5">Card title</CardTitle>
               <CardSubtitle className="mb-2 text-muted" tag="h6">

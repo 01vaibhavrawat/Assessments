@@ -1,0 +1,163 @@
+@import "./styles/asessment";
+@import "./styles/about";
+@import "./styles/home";
+@import "./styles/story";
+@import "./styles/emailform.scss";
+
+*{
+  box-sizing: border-box;
+}
+$font: (
+  "h1": 2rem,
+  "p": 18px,
+  "h2": 1.6rem,
+);
+
+@mixin h1 {
+  font-size: map-get($font, "h1");
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: -0.02em;
+  font-family: (arial, sans-serif);
+  display: block;
+}
+@mixin second_h {
+  font-size: map-get($font, "h2");
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: -0.02em;
+  font-family: (arial, sans-serif);
+  display: block;
+}
+
+@mixin p() {
+  font-size: map-get($font, "p");
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: -0.003em;
+  font-family: (arial, sans-serif);
+  display: block;
+}
+
+.story {
+  text-align: left;
+  @include p;
+}
+
+.title {
+  @include h1;
+}
+
+.second_h {
+  @include second_h;
+}
+
+//for navbar
+#nav-icon {
+  max-width: 20px;
+}
+#navbar {
+  position: sticky;
+  top: 0;
+  background-color: #f2cc8f;
+  z-index: 1;
+}
+.nav-link,
+.navbar-brand {
+  color: rgb(100, 94, 94) !important;
+  font-weight: 500;
+}
+
+//navbar end
+
+//for complete
+
+#complete {
+  color: green;
+  line-height: 1.42857;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 5px 10px rgb(154 160 185 / 5%),
+    0 15px 40px rgb(166 173 201 / 20%);
+}
+//complete end
+
+@media only screen and (max-width: 768px) {
+  //for complete
+
+  #complete {
+    padding: 10%;
+    margin: 10% 10% 0% 10%;
+  }
+  //complete end
+
+  //for login component
+
+  #login-body {
+    background-color: #f5f5f5;
+    padding: 1px 1px 100vh 1px;
+  }
+
+  #login-box {
+    background-color: white;
+    margin: 10% 15%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+
+  #login-form {
+    min-height: 25vh;
+    padding: 25% 10%;
+  }
+
+  #login-submit {
+    min-width: 100%;
+  }
+
+  #forgot {
+    text-align: center;
+    padding-top: 2vh;
+  }
+
+  //login end
+} // end of max width 768
+
+@media only screen and (min-width: 768px) {
+  //for login component
+
+  #login-body {
+    background-color: rgba(var(--b3f, 250, 250, 250), 1);
+    padding: 1px 1px 100vh 1px;
+  }
+
+  #login-box {
+    background-color: white;
+    margin: 5% 40%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+
+  #login-form {
+    min-height: 25vh;
+    padding: 25% 10%;
+  }
+
+  #login-submit {
+    min-width: 100%;
+  }
+
+  #forgot {
+    text-align: center;
+    padding-top: 2vh;
+  }
+
+  //login end
+
+  //for complete
+
+  #complete {
+    padding: 5% 7%;
+    margin: 10% 20% 0% 20%;
+  }
+  //complete end
+} // end of min-width 768
