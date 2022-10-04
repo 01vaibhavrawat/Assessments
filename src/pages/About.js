@@ -15,6 +15,17 @@ const About = (props) => {
   return (
     <div id="about">
       <div id="mission" className="about-box">
+        <h3 id="card-title">About Us</h3>
+        <p className="about_paragraph">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+          efficitur tellus vulputate, euismod leo pulvinar, dictum nisi. Vivamus
+          ut tellus in libero pharetra accumsan vel sit amet lacus. Vivamus
+          dapibus dui at neque mollis, ut mollis mi dignissim. Aliquam erat
+          volutpat. Fusce sit amet ex ac velit euismod sollicitudin.
+        </p>
+      </div>
+
+      <div id="mission" className="about-box">
         <h3 id="card-title">Our Mission</h3>
         <p className="about_paragraph">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
@@ -34,7 +45,7 @@ const About = (props) => {
         </p>
       </div>
 
-      <div id="team" className="about-box">
+      {/*<div id="team" className="about-box">
         <h3 id="card-title">Our Team</h3>
         <div id="cardgroup">
           <Card className="team-card">
@@ -95,7 +106,7 @@ const About = (props) => {
             </CardBody>
           </Card>
         </div>
-      </div>
+      </div>*/} 
     </div>
   );
 };

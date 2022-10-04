@@ -33,9 +33,9 @@ const Home = (props) => {
         </Link>
       </div>
 
-      <div className="home_container">
+      {/*<div className="home_container">
         <Story data={story} />
-      </div>
+      </div>*/}
       <About />
     </div>
   );

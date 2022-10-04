@@ -26,24 +26,7 @@ const Asessment = (props) => {
       window.scrollTo(0, 0);
     }
   };
-
- /* const fifthOption = (obj) => {
-    console.log(obj.length)
-    if(obj.length > 4){
-      return(
-         <FormGroup
-                    check
-                    className="check-o1.s"
-                    id="e"
-                    onClick={() => dispatch(array([5, obj.n - 1]))}
-                  >
-                    <Input name="radio1" type="radio" id={`${obj.n}e`} />
-                    <Label for={`${obj.n}e`}>{obj.e}</Label>
-                  </FormGroup>
-                )
-  }
-  }
-*/
+  
   return (
     <div>
       {five_quetions.map((e) => {
