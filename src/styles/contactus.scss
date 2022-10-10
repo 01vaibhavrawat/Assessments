@@ -1,0 +1,51 @@
+#contactus{
+	margin: 0 10vw;
+	background-color: white;
+	padding: 2% 3% 5% 3%;
+	border-radius: 5%;
+  	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  	font-size: 80%;
+}
+.contactDetails{
+	font-size: 1.1rem;
+	font-weight: 500;
+	color: grey;
+	margin-left: 10%;
+}
+
+.contactDetails, .contactIconsa, .contactIconsb{
+	display: inline;
+}
+
+.contactIconsa, .contactIconsb{
+	margin-left: 5%;
+}
+
+.contactIconsa{
+	width: 13vw;
+}
+
+.contactIconsb{
+	width: 10vw;
+}
+
+#contactus-body{
+	background-color: #F5F5F5;
+	height: 93vh;
+	padding-top: 5vh;
+}
+
+@media only screen and (min-width: 768px) {
+ 	#contactus{
+	margin: 0 30vw;
+}
+
+.contactIconsa{
+	width: 4vw;
+}
+
+.contactIconsb{
+	width: 3vw;
+}
+
+}

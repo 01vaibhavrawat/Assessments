@@ -25,9 +25,9 @@ const NavCom = (args) => {
             <NavbarToggler id="toggler" onClick={toggle}><img id="nav-icon" src={require('../images/menu.png')} /></NavbarToggler>
             <Collapse isOpen={isOpen} navbar>
               <Nav className="ml-auto" navbar>
-                {/*<NavItem>
-                  <NavLink tag={Link} to="/story">Story</NavLink>
-                </NavItem>*/}
+                <NavItem>
+                  <NavLink tag={Link} to="/contactus">Contact Us</NavLink>
+                </NavItem>
                 <NavItem>
                   <NavLink tag={Link} to="/about">About Us</NavLink>
                 </NavItem>
