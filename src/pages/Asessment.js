@@ -94,8 +94,9 @@ const Asessment = (props) => {
           dispatch(decrement());
           window.scroll(0, 0);
         }}
+        title="back"
       >
-        {"<-back"}
+        {"<"}
       </Button>
       <Button
         id="next-button"
@@ -107,8 +108,9 @@ const Asessment = (props) => {
           dispatch(increment());
           scroll();
         }}
+        title="next"
       >
-        {n > 2 ? "Submit" : "Next->"}
+        {n > 2 ? "Submit" : ">"}
       </Button>
     </div>
   );

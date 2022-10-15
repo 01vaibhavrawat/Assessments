@@ -9,15 +9,6 @@
     e: "I love the feeling of racing against the clock to see if I can meet the deadline."
 },
 {
-    n: '2',
-    question: "When I'm at work or studying, I find myself daydreaming.",
-    a: "Most of the time",
-    b: "Often",
-    c: "Sometimes",
-    d: "Rarely",
-    e: "Never"
-},
-{
     n: '3',
     question: `It is Wednesday and the deadline for a rather important assignment is Friday, but you're just not "in the zone". What do you do?`,
     a: "I figure that I'm just not going to get in the groove, and try again tomorrow",
@@ -42,6 +33,19 @@
     b: " immediately start working on that particular task.",
     c: "start working on it but drag it out with other distractions (phone calls, making trips to the bathroom, getting something to eat, etc).",
     d: "start working on it for a little while, but move on to something else if I get bored or frustrated.",
+},
+{
+    n: '',
+    question: "H"
+},
+{
+    n: '2',
+    question: "When I'm at work or studying, I find myself daydreaming.",
+    a: "Most of the time",
+    b: "Often",
+    c: "Sometimes",
+    d: "Rarely",
+    e: "Never"
 },
 {
     n: '6',

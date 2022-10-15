@@ -35,8 +35,8 @@ const Home = (props) => {
 
       {/*<div className="home_container">
         <Story data={story} />
-      </div>*/}
-      <About />
+      </div>
+      <About />*/}
     </div>
   );
 };
