@@ -26,20 +26,16 @@ const About = (props) => {
       <div id="mission" className="about-box">
         <h3 id="card-title">Our Mission</h3>
         <p className="about_paragraph">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
-          efficitur tellus vulputate, euismod leo pulvinar, dictum nisi. Vivamus
-          ut tellus in libero pharetra accumsan vel sit amet lacus. Vivamus
-          dapibus dui at neque mollis, ut mollis mi dignissim. Aliquam erat
-          volutpat. Fusce sit amet ex ac velit euismod sollicitudin.
+          We are determined to spread awareness about mental health issues and help people live happy lives. 
+          We are creating resources for people to understand their particular disorders and the process of healing.
         </p>
       </div>
 
       <div id="vision" className="about-box">
         <h3 id="card-title">Our Vision</h3>
-        <p className="about_paragraph">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
-          efficitur tellus vulputate, euismod leo pulvinar, dictum nisi. Vivamus
-          ut tellus in libero pharetra accumsan vel sit amet lacus.
+        <p className="about_paragraph">Our vision is to change people's perception of mental health
+          and provide a supportive environment for people who are suffering from it.
+          We want to see a world where diagnosis and treatment of mental health are convenient for everyone.  
         </p>
       </div>
 
