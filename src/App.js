@@ -26,7 +26,7 @@ function App() {
     <BrowserRouter>
       <NavCom />
       <Routes>
-        <Route path="/procrastination-test" element={<Home data={hp} />} />
+        <Route path="/" element={<Home data={hp} />} />
         <Route path="/About" element={<About />} />
         <Route path="/Story" element={<Story data={story} />} />
         <Route path="/Login" element={<LoginForm />} />
