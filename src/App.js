@@ -26,11 +26,11 @@ function App() {
     <BrowserRouter>
       <NavCom />
       <Routes>
-        <Route path="/" element={<Home data={hp} />} />
+        <Route path="/procrastination-test" element={<Home data={hp} />} />
         <Route path="/About" element={<About />} />
         <Route path="/Story" element={<Story data={story} />} />
         <Route path="/Login" element={<LoginForm />} />
-        <Route path="/Signup" element={<SignUp />} />
+        <Route path="/Details" element={<SignUp />} />
         <Route path="/Asessment" element={<Asessment data={quetion} />} />
         <Route path="/ContactUs" element={<ContactUs />} /> 
         <Route path="/Complete" element={<Complete />} />

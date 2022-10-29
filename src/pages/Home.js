@@ -26,7 +26,7 @@ const Home = (props) => {
         <h1 className="second_h">{props.data.heading2}</h1>
         <p className="story">{props.data.para2}</p>
 
-        <Link to="/signup">
+        <Link to="/Details">
           <Button color="primary" id="start-assessment-button">
             Start the Asessment
           </Button>
