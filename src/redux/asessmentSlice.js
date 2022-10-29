@@ -18,9 +18,7 @@ export const asessmentSlice = createSlice({
     },
 
     increment: (state) => {
-      if (state.count < 5) {
         state.count += 5;
-      }
     },
 
     decrement: (state) => {

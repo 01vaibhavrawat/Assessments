@@ -1,7 +1,8 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { decrement, increment, array } from "../redux/asessmentSlice";
-import emailjs from 'emailjs-com'
+import emailjs from 'emailjs-com';
+import { useNavigate } from "react-router-dom";
 import {  Form,
           FormGroup,
           Label,
@@ -16,6 +17,8 @@ const Asessment = (props) => {
   const answers = useSelector((state) => state.asessment.selected_options);
   const signup = useSelector((state) => state.asessment.signup_data);
   const dispatch = useDispatch();
+
+  let navigate = useNavigate();
 
   let n = { count }.count;
   let five_quetions = props.data.slice(n, n + 5);
@@ -121,9 +124,9 @@ const Asessment = (props) => {
       <Button
         id="next-button"
         onClick={() => {
-          if (count > 2) {
+          if (count > 14) {
             handleSubmit();
-            // dispatch(get());
+            navigate("/complete");
           }
 
           dispatch(increment());
@@ -131,7 +134,7 @@ const Asessment = (props) => {
         }}
         title="next"
       >
-        {n > 2 ? "Submit" : ">"}
+        {n > 14 ? "Submit" : ">"}
       </Button>
     </div>
   );
