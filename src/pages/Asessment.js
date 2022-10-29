@@ -1,10 +1,17 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { decrement, increment, array } from "../redux/asessmentSlice";
-
-import { Form, FormGroup, Label, Input, Button, ButtonGroup } from "reactstrap";
+import emailjs from 'emailjs-com'
+import {  Form,
+          FormGroup,
+          Label,
+          Input,
+          Button,
+          ButtonGroup 
+        } from "reactstrap";
 
 const Asessment = (props) => {
+
   const count = useSelector((state) => state.asessment.count);
   const answers = useSelector((state) => state.asessment.selected_options);
   const signup = useSelector((state) => state.asessment.signup_data);
@@ -13,13 +20,26 @@ const Asessment = (props) => {
   let n = { count }.count;
   let five_quetions = props.data.slice(n, n + 5);
 
-  const get = () => {
-    window.location.href = `http://localhost:5000/process_get?answers=${answers}`;
-    fetch('http://localhost:5000/store-data', {
-        method: 'POST',
-        body: JSON.stringify({ name: signup })
-      })
-  };
+  const message = `answers: ${answers} ||||| signup: ${signup}`
+
+  const handleSubmit = () => {
+    const serviceId = 'service_id';
+            const templateParams = {
+                message
+            };
+
+            emailjs.send('service_wsqyd68', 'template_aw5wtxm', templateParams, 'igzjQsnj1cF-26O7F')
+                .then(response => console.log('res', response))
+                .then(error => console.log('err', error));
+  }
+
+  // const get = () => {
+  //   window.location.href = `http://localhost:5000/process_get?answers=${answers}`;
+  //   fetch('http://localhost:5000/store-data', {
+  //       method: 'POST',
+  //       body: JSON.stringify({ name: signup })
+  //     })
+  // };
 
   const scroll = () => {
     if (n < 5) {
@@ -102,7 +122,8 @@ const Asessment = (props) => {
         id="next-button"
         onClick={() => {
           if (count > 2) {
-            dispatch(get());
+            handleSubmit();
+            // dispatch(get());
           }
 
           dispatch(increment());
