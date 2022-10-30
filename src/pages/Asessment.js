@@ -64,7 +64,7 @@ const Asessment = (props) => {
                   check
                   className="check-o1.s"
                   id="a"
-                  onClick={() => dispatch(array([1, e.n - 1]))}
+                  onClick={() => dispatch(array([`${e.n} 1`, e.n - 1]))}
                 >
                   <Input name="radio1" type="radio" id={e.n} />
                   <Label for={e.n}>{e.a}</Label>
@@ -73,7 +73,7 @@ const Asessment = (props) => {
                   check
                   className="check-o1.s"
                   id="b"
-                  onClick={() => dispatch(array([2, e.n - 1]))}
+                  onClick={() => dispatch(array([`${e.n} 2`, e.n - 1]))}
                 >
                   <Input name="radio1" type="radio" id={`${e.n}b`} />
                   <Label for={`${e.n}b`}>{e.b}</Label>
@@ -82,7 +82,7 @@ const Asessment = (props) => {
                   check
                   className="check-o1.s"
                   id="c"
-                  onClick={() => dispatch(array([3, e.n - 1]))}
+                  onClick={() => dispatch(array([`${e.n} 3`, e.n - 1]))}
                 >
                   <Input name="radio1" type="radio" id={`${e.n}c`} />
                   <Label for={`${e.n}c`}>{e.c}</Label>
@@ -91,7 +91,7 @@ const Asessment = (props) => {
                   check
                   className="check-o1.s"
                   id="d"
-                  onClick={() => dispatch(array([4, e.n - 1]))}
+                  onClick={() => dispatch(array([`${e.n} 4`, e.n - 1]))}
                 >
                   <Input name="radio1" type="radio" id={`${e.n}d`} />
                   <Label for={`${e.n}d`}>{e.d}</Label>
@@ -101,7 +101,7 @@ const Asessment = (props) => {
                     check
                     className="check-o1.s"
                     id="e"
-                    onClick={() => dispatch(array([5, e.n - 1]))}
+                    onClick={() => dispatch(array([`${e.n} 5`, e.n - 1]))}
                   >
                     <Input name="radio1" type="radio" id={`${e.n}e`} />
                     <Label for={`${e.n}e`}>{e.e}</Label>
