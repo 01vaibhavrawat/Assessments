@@ -75,7 +75,7 @@ const SignUp = (props) => {
               <option>They/them</option>
             </Input>
           </FormGroup>{" "}
-          <Link to="/asessment">
+          <Link to="/Details">
             <Button id="login-submit" onClick={()=> {dispatch(signup_data(form))
               console.log()}}>Next</Button>
           </Link>
