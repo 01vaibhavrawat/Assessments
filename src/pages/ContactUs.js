@@ -13,7 +13,7 @@ const ContactUs = () => {
 			<p className="contactDetails">+91 7505645311</p>
 			<br /> <br /> <br />
 			<img className="contactIconsb" src={email} alt="email icon" />
-			<p className="contactDetails"> example@email.com</p>
+			<p className="contactDetails"> bobby.projecttherapy@gmail.com</p>
 			<br />
 			<br/>
 			</div>

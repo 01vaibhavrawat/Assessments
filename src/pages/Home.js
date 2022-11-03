@@ -1,18 +1,19 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Button } from "reactstrap";
+import { STORIES } from "../shared/stories.js";
 
 import About from "./About";
 import Story from "./StoryPage";
 
-import { STORIES } from "../shared/stories.js";
-
 const Home = (props) => {
+
   const [story, setStory] = useState(STORIES);
 
   useEffect(() => {
     window.scroll(0, 0);
   }, []);
+
   return (
     <div id="home">
       <div className="intro">
