@@ -20,6 +20,10 @@ const Asessment = (props) => {
     }
   };
 
+  React.useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
+
   let navigate = useNavigate();
   let n = { count }.count;
   let five_quetions = props.data.slice(n, n + 5);

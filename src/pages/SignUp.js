@@ -96,14 +96,12 @@ const SignUp = (props) => {
               <option>They/them</option>
             </Input>
           </FormGroup>{" "}
-          <Link to="/Details">
             <Button id="login-submit" onClick={()=> {
-              navigate("/Complete");
               dispatch(signup_data(form));
               handleSubmit();
+              navigate("/Complete");
             }}
               >Submit</Button>
-          </Link>
         </Form>
       </div>
     </div>
