@@ -1,20 +1,41 @@
 import { FormGroup, Form, Label, Input, Button } from "reactstrap";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { signup_data } from "../redux/asessmentSlice";
+import emailjs from 'emailjs-com';
+import { useNavigate } from "react-router-dom";
 
 const SignUp = (props) => {
+
+  let navigate = useNavigate();
+
+
+  const answers = useSelector((state) => state.asessment.selected_options);
+  const signup = useSelector((state) => state.asessment.signup_data);
+  const [form, setForm] = useState(['', '', '', '', '']);
+  const dispatch = useDispatch();
+  const handleChange = (event) => {
+      form[event.target.name] = event.target.value;
+  };
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const [form, setForm] = useState(['', '', '', '', '']);
-  const dispatch = useDispatch();
+  const message = `answers: ${answers} ||||| signup: ${signup}`
 
-    const handleChange = (event) => {
-      form[event.target.name] = event.target.value;
-  };
+  const handleSubmit = () => {
+    const serviceId = 'service_id';
+            const templateParams = {
+                message
+            };
+
+            emailjs.send('service_wsqyd68', 'template_aw5wtxm', templateParams, 'igzjQsnj1cF-26O7F')
+                .then(response => console.log('res', response))
+                .then(error => console.log('err', error));
+  }
+    
 
   return (
     <div id="login-body">
@@ -76,8 +97,12 @@ const SignUp = (props) => {
             </Input>
           </FormGroup>{" "}
           <Link to="/Details">
-            <Button id="login-submit" onClick={()=> {dispatch(signup_data(form))
-              console.log()}}>Next</Button>
+            <Button id="login-submit" onClick={()=> {
+              navigate("/Complete");
+              dispatch(signup_data(form));
+              handleSubmit();
+            }}
+              >Submit</Button>
           </Link>
         </Form>
       </div>
