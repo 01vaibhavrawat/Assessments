@@ -1,0 +1,53 @@
+@media only screen and (max-width: 768px) {
+
+.check{
+	width: 20px;
+	margin-right: 20px;
+}
+
+#pricing{
+	z-index: 0;
+	width: 95%;
+	margin: 5% auto;
+}
+
+#pricing-icon-text{
+	display: grid;
+  	grid-template-columns: 5% 90%;
+  	gap: 5%;
+  	}
+
+ .pricing-button{
+ 	margin-bottom: 4%;
+ }
+
+#pricing-col{
+ 	margin-bottom: 4%;	
+}
+}
+
+ @media only screen and (min-width: 768px) {
+
+ .check{
+	width: 20px;
+	margin-right: 20px;
+}
+
+#pricing{
+	z-index: 0;
+	width: 95%;
+	margin: 2% 25%;
+}
+
+#pricing-icon-text{
+	display: grid;
+  	grid-template-columns: 5% 90%;
+  	gap: 5%;
+  	}
+
+ .pricing-button{
+ 	margin-bottom: 4%;
+ }
+
+ }
+

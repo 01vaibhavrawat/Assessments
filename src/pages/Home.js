@@ -10,10 +10,6 @@ const Home = (props) => {
 
   const [story, setStory] = useState(STORIES);
 
-  useEffect(() => {
-    window.scroll(0, 0);
-  }, []);
-
   return (
     <div id="home">
       <div className="intro">

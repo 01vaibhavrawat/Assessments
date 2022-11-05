@@ -10,6 +10,7 @@ import Asessment from "./pages/Asessment";
 import SignUp from "./pages/SignUp";
 import Complete from "./pages/Complete"
 import ContactUs from "./pages/ContactUs"
+import Pricing from "./pages/Pricing"
 
 import { STORIES } from "./shared/stories.js";
 import { QUETIONS } from "./shared/quetions.js";
