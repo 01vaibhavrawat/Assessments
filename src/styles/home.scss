@@ -1,52 +1,6 @@
-//for homepage
-
-#start-assessment-button{
-  margin: 3vh 0;
-  font-weight: 500;
-  width: 70vw;
-  font-size: 1.5rem;
-}
-
-
-.intro{
-  background-color: white;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-}
-
-
-#home{
-  background-color: #F5F5F5;
-  padding-top: 1px;
-}
-
-.home_container{
-  min-width: 100%;
-}
-
-@media only screen and (max-width: 768px) {
-  .intro{
-  padding: 7% 5% 10% 5%;
-  margin: 2% 4%;
-}
-
 #procrastionation_img{
-  max-width: 100%;
-  margin-bottom: 3vh;
-}
-}
-
-
-@media only screen and (min-width: 768px) {
-    .intro{
-  padding: 2% 15% 2% 15%;
-  margin: .5% 10% 2% 10%;
-}
-
-#procrastionation_img{
-  max-width: 90%;
-  margin-bottom: 3vh;
-  -webkit-animation: bounce-in-top 1.1s 2s both;
-          animation: bounce-in-top 1.1s 2s both;
+  -webkit-animation: bounce-in-top 1.1s 1s both;
+          animation: bounce-in-top 1.1s 1s both;
 }
 
 @-webkit-keyframes bounce-in-top {
@@ -156,9 +110,54 @@
 
 
 #start-assessment-button{
+  margin: 3vh 0;
+  font-weight: 500;
+  width: 70vw;
+  font-size: 1.5rem;
+}
+
+
+.intro{
+  background-color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+
+#home{
+  background-color: #F5F5F5;
+  padding-top: 1px;
+}
+
+.home_container{
+  min-width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  .intro{
+  padding: 7% 5% 10% 5%;
+  margin: 2% 4%;
+}
+
+#procrastionation_img{
+  max-width: 100%;
+  margin-bottom: 3vh;
+}
+}
+
+
+@media only screen and (min-width: 768px) {
+    .intro{
+  padding: 2% 15% 2% 15%;
+  margin: .5% 10% 2% 10%;
+}
+
+#procrastionation_img{
+  max-width: 90%;
+  margin-bottom: 3vh;
+}
+
+#start-assessment-button{
   width: 30vw;
 }
 
 }
-
-//home end
