@@ -8,9 +8,11 @@ import NavCom from "./pages/Navbar";
 import Story from "./pages/StoryPage";
 import Asessment from "./pages/Asessment";
 import SignUp from "./pages/SignUp";
-import Complete from "./pages/Complete"
-import ContactUs from "./pages/ContactUs"
-import Pricing from "./pages/Pricing"
+import Complete from "./pages/Complete";
+import ContactUs from "./pages/ContactUs";
+import Pricing from "./pages/Pricing";
+import WelcomeBox from "./pages/WelcomeBox";
+import Footer from "./pages/Footer";
 
 import { STORIES } from "./shared/stories.js";
 import { QUETIONS } from "./shared/quetions.js";
@@ -26,6 +28,9 @@ function App() {
   return (
     <BrowserRouter>
       <NavCom />
+      <WelcomeBox />
+      <Pricing />
+      <Footer />
       <Routes>
         <Route path="/" element={<Home data={hp} />} />
         <Route path="/About" element={<About />} />

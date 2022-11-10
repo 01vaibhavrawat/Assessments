@@ -21,8 +21,6 @@ export default function Pricing() {
     "Special Title Treatment",
     "Special Title Treatment Special Title Treatment",
     "Special Title Treatment",
-    "Special Title",
-    "Special Title Treatment",
     ]
   },
   {
@@ -37,19 +35,18 @@ export default function Pricing() {
     "Special Title",
     "Special Title Treatment",
     "Special Title Treatment",
-    "Special Title",
-    "Special Title Treatment",
     ]
   }]
 
 
   return(
+    <div id="pricing-div">
+    <h1 id="pricing-header">Pricing</h1>
     <Row id="pricing">
 
      {text.map((obj, index)=>{
        return(
-
-        <Col id="pricing-col" sm="3" key={index}>
+        <Col id="pricing-col" sm="6" key={index}>
           <Card body>
             <CardTitle tag="h5">
               {obj.title}
@@ -77,5 +74,6 @@ export default function Pricing() {
         )
     })}
       </Row>
+      </div>
     )
 }

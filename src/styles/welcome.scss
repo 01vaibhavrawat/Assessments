@@ -1,0 +1,31 @@
+#welcome{
+	background-image: url("../images/landing2.jpg");
+	background-size: cover;
+	background-position: 30% center;
+  	height: 85vh;
+  	color: white;
+  	p{	
+  		font-family: verdana;
+  		background-color: #00000007;
+  		text-align: center;
+  		text-shadow: 2px 2px 5px black;
+  		font-weight: 600;
+  		color: FFFDFA;
+  		width: 50%;
+  		float: right;
+  		margin: 10% 5% 0 0;
+  		width: 45%;
+  		font-size: 1.4rem;
+  	}
+	}
+
+@media only screen and (max-width: 768px) {
+	#welcome{
+		p{	
+  			background-color: #00000005;
+			font-weight: bold;
+  			margin: 30% 5% 0 0;
+			font-size: 100%;
+		}
+	}
+}

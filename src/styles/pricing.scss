@@ -1,3 +1,15 @@
+#pricing-div{
+	background: rgb(2,0,36);
+	padding: 2%;
+	background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(9, 43, 121) 0%, rgb(12 49 57) 100%);
+}
+
+#pricing-header{
+	text-align: center;
+	color: white;
+	margin-bottom: 3%;
+}
+
 @media only screen and (max-width: 768px) {
 
 .check{
@@ -6,9 +18,7 @@
 }
 
 #pricing{
-	z-index: 0;
-	width: 95%;
-	margin: 5% auto;
+	margin: 5% 0;
 }
 
 #pricing-icon-text{
@@ -34,8 +44,6 @@
 }
 
 #pricing{
-	z-index: 0;
-	width: 95%;
 	margin: 2% 25%;
 }
 

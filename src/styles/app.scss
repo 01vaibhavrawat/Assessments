@@ -9,12 +9,15 @@
 @import "./storypage";
 @import "./contactus";
 @import "./pricing";
+@import "./welcome";
+@import "./footer";
 
 $font: (
   "h1": 2.2rem,
   "p": 18px,
   "h2": 1.6rem,
 );
+
 
 @mixin h1 {
   font-size: map-get($font, "h1");
@@ -41,7 +44,6 @@ $font: (
   font-family: (arial, sans-serif);
   display: block;
 }
-
 
  .story{
   text-align: left;
