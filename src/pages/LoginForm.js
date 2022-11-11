@@ -6,6 +6,7 @@ import {
 	Button
 } from 'reactstrap';
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const LoginForm = (props) => {
 
@@ -49,10 +50,13 @@ return(
     />
   </FormGroup>
   {' '}
-  <Button id="login-submit">
+  <Button id="login-submit" onClick={(event)=>{
+    event.preventDefault();
+    setTimeout(() => window.alert(`couldn't login`), 3000);
+  }}>
     Submit
   </Button>
-  <div id="forgot">Forgot password?</div> 
+  <div id="forgot"><Link to="/forgotPassword">Forgot password?</Link></div> 
 </Form>
 </div>
 </div>

@@ -13,6 +13,7 @@ import ContactUs from "./pages/ContactUs";
 import Pricing from "./pages/Pricing";
 import WelcomeBox from "./pages/WelcomeBox";
 import Footer from "./pages/Footer";
+import HowItWorks from "./pages/HowItWorks";
 
 import { STORIES } from "./shared/stories.js";
 import { QUETIONS } from "./shared/quetions.js";

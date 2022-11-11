@@ -1,13 +1,13 @@
 #pricing-div{
 	background: rgb(2,0,36);
-	padding: 2%;
-	background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(9, 43, 121) 0%, rgb(12 49 57) 100%);
+	background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(240,96,208,0.8410714627647934) 100%, rgba(0,212,255,1) 100%);
 }
 
 #pricing-header{
 	text-align: center;
 	color: white;
-	margin-bottom: 3%;
+	padding-top: 2%;
 }
 
 @media only screen and (max-width: 768px) {
@@ -44,7 +44,7 @@
 }
 
 #pricing{
-	margin: 2% 25%;
+	padding: 2% 25%;
 }
 
 #pricing-icon-text{

@@ -97,7 +97,7 @@ export default function Footr(props) {
           </div>
           <div className='col-md-3 col-md-offset-1 contact-info'>
             <div className='contact-item'>
-              <h3>Contact Info</h3>
+              <h3>Navigate</h3>
               <p>
                 About Us
               </p>
@@ -135,10 +135,7 @@ export default function Footr(props) {
       <div id='footer'>
         <div className='container text-center'>
           <p>
-            &copy; 2020 Issaaf Kattan React Land Page Template. Design by{' '}
-            <a href='http://www.templatewire.com' rel='nofollow'>
-              TemplateWire
-            </a>
+            &copy; 2020 CruelMe.com. All rights reserved.
           </p>
         </div>
       </div>
