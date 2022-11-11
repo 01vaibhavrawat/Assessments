@@ -1,5 +1,12 @@
 #contact{
 
+label {
+  font-size: 12px;
+  font-weight: 400;
+  font-family: "Open Sans", sans-serif;
+  float: left;
+}
+
 html {
   font-family: "Open Sans", sans-serif;
   text-rendering: optimizeLegibility !important;
@@ -121,12 +128,6 @@ hr {
 #contact .btn-custom:hover {
   color: #1f386e;
   background: #fff;
-}
-label {
-  font-size: 12px;
-  font-weight: 400;
-  font-family: "Open Sans", sans-serif;
-  float: left;
 }
 #contact .form-control {
   display: block;

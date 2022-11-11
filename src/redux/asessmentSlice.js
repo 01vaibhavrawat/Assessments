@@ -9,9 +9,6 @@ export const asessmentSlice = createSlice({
   },
 
   reducers: {
-    signup_data: (state, action) => {
-      state.signup_data = action.payload
-    },
 
     array: (state, action) => {
       state.selected_options[action.payload[1]] = action.payload[0];

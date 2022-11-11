@@ -10,11 +10,8 @@ const SignUp = (props) => {
 
   let navigate = useNavigate();
 
-
   const answers = useSelector((state) => state.asessment.selected_options);
-  const signup = useSelector((state) => state.asessment.signup_data);
   const [form, setForm] = useState(['', '', '', '', '']);
-  const dispatch = useDispatch();
   const handleChange = (event) => {
       form[event.target.name] = event.target.value;
   };
@@ -23,9 +20,8 @@ const SignUp = (props) => {
     window.scrollTo(0, 0);
   }, []);
 
-  const message = `answers: ${answers} ||||| signup: ${signup}`
-
   const handleSubmit = () => {
+    const message = `answers: ${answers} ||||| signup: ${form}`
     const serviceId = 'service_id';
             const templateParams = {
                 message
@@ -97,7 +93,6 @@ const SignUp = (props) => {
             </Input>
           </FormGroup>{" "}
             <Button id="login-submit" onClick={()=> {
-              dispatch(signup_data(form));
               handleSubmit();
               navigate("/Complete");
             }}

@@ -28,9 +28,6 @@ function App() {
   return (
     <BrowserRouter>
       <NavCom />
-      <WelcomeBox />
-      <Pricing />
-      <Footer />
       <Routes>
         <Route path="/" element={<Home data={hp} />} />
         <Route path="/About" element={<About />} />
