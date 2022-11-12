@@ -13,28 +13,27 @@ export default function Pricing() {
 
   const text = [
   {
-    title: "Special Title Treatment",
-    text: "With supporting text below as a natural lead-in to additional content.",
+    title: "Free to get started",
+    text: "The assessments, daily tasks and resources for self help.",
     button: "Go somewhere",
     arr : [
-    "An item",
-    "Special Title Treatment",
-    "Special Title Treatment Special Title Treatment",
-    "Special Title Treatment",
+    "Daily tasks",
+    "Self-help resources",
+    "Assessments",
+    "Connect with other members",
     ]
   },
   {
-    title: "Special Title Treatment",
-    text: "With supporting text below as a natural lead-in to additional content.",
+    title: "$79 per member /month",
+    text: "A custom plan with services tailored to individual requirements.",
     button: "Go somewhere",
     arr : [
-    "An item",
-    "Special Title Treatment",
-    "Special Title Treatment Special Title Treatment",
-    "Special Title Treatment",
-    "Special Title",
-    "Special Title Treatment",
-    "Special Title Treatment",
+    "24×7×365 sessions with guides",
+    "Consultation sessions with professional therapists",
+    "Daily tasks",
+    "Self-help resources",
+    "Assessments",
+    "Connect with other members",
     ]
   }]
 

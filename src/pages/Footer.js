@@ -17,15 +17,20 @@ export default function Footr(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(name, email, message)
+    const templateParams = {
+                name,
+                email,
+                message
+            };
     emailjs
-      .sendForm(
-        'YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target, 'YOUR_USER_ID'
+      .send(
+        'service_wsqyd68', 'template_k1q1wla', templateParams, 'igzjQsnj1cF-26O7F'
       )
       .then(
         (result) => {
           console.log(result.text)
           clearState()
+          window.alert('Your message has been sent successfully.')
         },
         (error) => {
           console.log(error.text)
@@ -97,7 +102,7 @@ export default function Footr(props) {
           </div>
           <div className='col-md-3 col-md-offset-1 contact-info'>
             <div className='contact-item'>
-              <h3>Navigate</h3>
+              <h3>CruelMe.com</h3>
               <p>
                 About Us
               </p>
