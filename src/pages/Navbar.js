@@ -7,11 +7,7 @@ import {
     NavbarBrand,
     Nav,
     NavLink,
-    NavItem,
-    UncontrolledDropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem } from 'reactstrap';
+    NavItem, } from 'reactstrap';
 
 
 const NavCom = (args) => {

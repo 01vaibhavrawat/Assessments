@@ -6,6 +6,7 @@ import { STORIES } from "../shared/stories.js";
 const Procrastination = (props) => {
 
   const [story, setStory] = useState(STORIES);
+  console.log(props.data, "solving")
 
   return (
     <div id="home">

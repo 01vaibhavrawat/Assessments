@@ -28,8 +28,18 @@ const SignUp = (props) => {
             };
 
             emailjs.send('service_wsqyd68', 'template_aw5wtxm', templateParams, 'igzjQsnj1cF-26O7F')
-                .then(response => console.log('res', response))
-                .then(error => console.log('err', error));
+                .then(response => {
+                  if(response.status == 200){
+                  console.log('res', response);
+                  navigate("/Complete");}
+                      })
+                .then(error => {
+                  if(error){
+                  console.log('err', error);
+                  window.alert('Something went wrong, please try again.')
+                }
+                        }
+                  );
   }
     
 
@@ -94,7 +104,6 @@ const SignUp = (props) => {
           </FormGroup>{" "}
             <Button id="login-submit" onClick={()=> {
               handleSubmit();
-              navigate("/Complete");
             }}
               >Submit</Button>
         </Form>

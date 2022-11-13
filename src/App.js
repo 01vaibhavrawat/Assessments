@@ -9,11 +9,6 @@ import Story from "./pages/StoryPage";
 import Asessment from "./pages/Asessment";
 import SignUp from "./pages/SignUp";
 import Complete from "./pages/Complete";
-import ContactUs from "./pages/ContactUs";
-import Pricing from "./pages/Pricing";
-import WelcomeBox from "./pages/WelcomeBox";
-import Footer from "./pages/Footer";
-import HowItWorks from "./pages/HowItWorks";
 import Procrastination from "./pages/Procrastination";
 import { STORIES } from "./shared/stories.js";
 import { QUETIONS } from "./shared/quetions.js";
@@ -30,14 +25,13 @@ function App() {
     <BrowserRouter>
       <NavCom />
       <Routes>
-        <Route path="/" element={<Procrastination />} />
-        <Route path="/Home" element={<Home data={hp} />} />
+        <Route path="/" element={<Procrastination data={hp}/>} />
+        <Route path="/Home" element={<Home />} />
         <Route path="/About" element={<About />} />
         <Route path="/Story" element={<Story data={story} />} />
         <Route path="/Login" element={<LoginForm />} />
         <Route path="/Details" element={<SignUp />} />
         <Route path="/Asessment" element={<Asessment data={quetion} />} />
-        <Route path="/ContactUs" element={<ContactUs />} /> 
         <Route path="/Complete" element={<Complete />} />
         <Route path="*" element={<Notfound />} />
       </Routes>
