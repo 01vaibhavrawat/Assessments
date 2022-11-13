@@ -21,7 +21,7 @@ const NavCom = (args) => {
 
       return (
           <Navbar id="navbar" expand="md" variant="light">
-            <NavbarBrand id="logo" href="/">CruelMe.com</NavbarBrand>
+            <NavbarBrand id="logo" href="/home">CruelMe.com</NavbarBrand>
             <NavbarToggler id="toggler" onClick={toggle}><img id="nav-icon" src={require('../images/menu.png')} /></NavbarToggler>
             <Collapse isOpen={isOpen} navbar>
               <Nav className="ml-auto" navbar>
