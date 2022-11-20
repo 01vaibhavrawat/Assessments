@@ -26,11 +26,6 @@ const Procrastination = (props) => {
           </Button>
         </Link>
       </div>
-
-      {/*<div className="home_container">
-        <Story data={story} />
-      </div>
-      <About />*/}
     </div>
   );
 };

@@ -12,9 +12,11 @@ import Complete from "./pages/Complete";
 import ContactUs from "./pages/ContactUs";
 import Pricing from "./pages/Pricing";
 import WelcomeBox from "./pages/WelcomeBox";
+import JoinProgram from "./pages/JoinProgram";
 import Footer from "./pages/Footer";
 import HowItWorks from "./pages/HowItWorks";
 import Procrastination from "./pages/Procrastination";
+
 import { STORIES } from "./shared/stories.js";
 import { QUETIONS } from "./shared/quetions.js";
 import { HP } from "./shared/homePageText.js";
@@ -31,8 +33,9 @@ function App() {
       <NavCom />
       <Routes>
         <Route path="/" element={<Home data={hp} />} />
-        <Route path="/procrastination-assessment" element={<Procrastination />} />
+        <Route path="/procrastination-assessment" element={<Procrastination data={hp}/>} />
         <Route path="/About" element={<About />} />
+        <Route path="/joinProgram" element={<JoinProgram />} />
         <Route path="/Story" element={<Story data={story} />} />
         <Route path="/Login" element={<LoginForm />} />
         <Route path="/Details" element={<SignUp />} />
