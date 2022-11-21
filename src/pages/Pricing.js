@@ -13,9 +13,9 @@ export default function Pricing() {
 
   const text = [
   {
-    title: "Free to get started",
+    title: "$15 per member /month",
     text: "The assessments, daily tasks and resources for self help.",
-    button: "Go somewhere",
+    button: "Join now",
     arr : [
     "Daily tasks",
     "Self-help resources",
@@ -26,7 +26,7 @@ export default function Pricing() {
   {
     title: "$79 per member /month",
     text: "A custom plan with services tailored to individual requirements.",
-    button: "Go somewhere",
+    button: "Join now",
     arr : [
     "24×7×365 sessions with guides",
     "Consultation sessions with professional therapists",

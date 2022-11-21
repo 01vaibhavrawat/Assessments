@@ -22,7 +22,6 @@ const SignUp = (props) => {
 
   const handleSubmit = () => {
     const message = `answers: ${answers} ||||| signup: ${form}`
-    const serviceId = 'service_id';
             const templateParams = {
                 message
             };
