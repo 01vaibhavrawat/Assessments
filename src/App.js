@@ -32,10 +32,10 @@ function App() {
     <BrowserRouter>
       <NavCom />
       <Routes>
-        <Route path="/" element={<Home data={hp} />} />
+        <Route path="/" element={<JoinProgram />} />
         <Route path="/procrastination-assessment" element={<Procrastination data={hp}/>} />
         <Route path="/About" element={<About />} />
-        <Route path="/joinProgram" element={<JoinProgram />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/Story" element={<Story data={story} />} />
         <Route path="/Login" element={<LoginForm />} />
         <Route path="/Details" element={<SignUp />} />
