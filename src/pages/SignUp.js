@@ -12,6 +12,7 @@ const SignUp = (props) => {
 
   const answers = useSelector((state) => state.asessment.selected_options);
   const [form, setForm] = useState(['', '', '', '', '']);
+  
   const handleChange = (event) => {
       form[event.target.name] = event.target.value;
   };
@@ -22,24 +23,23 @@ const SignUp = (props) => {
 
   const handleSubmit = () => {
     const message = `answers: ${answers} ||||| signup: ${form}`
-    const serviceId = 'service_id';
             const templateParams = {
                 message
             };
 
             emailjs.send('service_wsqyd68', 'template_aw5wtxm', templateParams, 'igzjQsnj1cF-26O7F')
                 .then(response => {
-                  if(response.status == 200){
                   console.log('res', response);
-                  navigate("/Complete");}
-                      })
-                .then(error => {
-                  if(error){
-                  console.log('err', error);
-                  window.alert('Something went wrong, please try again.')
+                  if(response.status == 200){
+                  navigate('/Complete')
                 }
-                        }
-                  );
+                })
+                .then(error => {
+                  console.log('err', error);
+                  if(error){
+                  window.alert('Something went wrong, please try again.');
+                }
+              });
   }
     
 
@@ -96,14 +96,23 @@ const SignUp = (props) => {
           <FormGroup>
             <Label for="exampleSelect">What are your pronouns?</Label>
             <Input type="select" name="4" id="exampleSelect" onChange={handleChange} required>
-              <option>I prefer not to say</option>
+              <option>Click to select</option>
               <option>She/her</option>
               <option>He/him</option>
               <option>They/them</option>
             </Input>
           </FormGroup>{" "}
             <Button id="login-submit" onClick={()=> {
+              for(let x of form){
+                if(x == ""){
+                  var stop = true;
+                }
+              }
+              if(stop){
+              window.alert('Please make sure all fields are filled in correctly.')
+              }else{
               handleSubmit();
+              }
             }}
               >Submit</Button>
         </Form>

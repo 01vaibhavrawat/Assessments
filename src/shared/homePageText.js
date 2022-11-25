@@ -6,5 +6,5 @@ export const HP = {
     "Twenty questions that relate to common thoughts and behaviors experienced by people struggling with procrastination.",
   heading2: "What after this assessment?",
   para2:
-    "Someone from our team will contact you to discuss your reports, and to guide you through the process of overcoming procrastination.",
+    "Our team will contact you to discuss your reports, and to guide you through the process of overcoming procrastination.",
 };
