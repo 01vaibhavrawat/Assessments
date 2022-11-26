@@ -61,9 +61,9 @@ export default function HowItWorks(argument) {
                 <CardText>
                   {obj.text}
                 </CardText>
-                <Button color="primary">
-                  Learn more
-                </Button>
+                {/*<Button color="primary">
+                                  Learn more
+                                </Button>*/}
               </Card>
               </Col>
               )

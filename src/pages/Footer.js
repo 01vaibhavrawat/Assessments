@@ -1,5 +1,6 @@
-import { useState } from 'react'
-import emailjs from 'emailjs-com'
+import { useState } from 'react';
+import emailjs from 'emailjs-com';
+import { Link, useNavigate } from 'react-router-dom';
 
 const initialState = {
   name: '',
@@ -7,6 +8,9 @@ const initialState = {
   message: '',
 }
 export default function Footr(props) {
+
+  const navigate = useNavigate();
+
   const [{ name, email, message }, setState] = useState(initialState)
 
   const handleChange = (e) => {
@@ -103,7 +107,7 @@ export default function Footr(props) {
           <div className='col-md-3 col-md-offset-1 contact-info'>
             <div className='contact-item'>
               <h3>CruelMe.com</h3>
-              <p>
+              <p onClick={()=> navigate('/about')}>
                 About Us
               </p>
             </div>
@@ -113,7 +117,7 @@ export default function Footr(props) {
               </p>
             </div>
             <div className='contact-item'>
-              <p>
+              <p onClick={()=> navigate('/login')}>
                 Login
               </p>
             </div>

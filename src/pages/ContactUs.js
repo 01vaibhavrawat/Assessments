@@ -1,7 +1,13 @@
 import whatsapp from "../images/whatsapp.png";
 import email from "../images/email.png";
+import { useEffect } from 'react';
 
 const ContactUs = () => {
+	
+useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
 	return(
 		<div id="contactus-body">
 		<div id="contactus">

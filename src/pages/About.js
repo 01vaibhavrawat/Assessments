@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import {
   Card,
   CardBody,
@@ -12,6 +13,11 @@ import {
 import pfp from '../images/pfp2.jfif';
 
 const About = (props) => {
+
+useEffect(() => {
+    window.scrollTo(-100, -500);
+  }, []);
+
   return (
     <div id="about">
       <div id="mission" className="about-box">
