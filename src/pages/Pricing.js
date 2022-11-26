@@ -8,6 +8,7 @@ import {
     ListGroupItem,
     ListGroup,
      } from 'reactstrap';
+  import { Link } from 'react-router-dom'; 
 
 export default function Pricing() {
 
@@ -16,7 +17,7 @@ export default function Pricing() {
     title: "$15 per member /month",
     text: "The assessments, daily tasks and resources for self help.",
     button: "Join now",
-    dest: "https://join-program.cruelme.com/",
+    dest: "join-basic-plan",
     arr : [
     "Limited sessions with guides",
     "Daily tasks",
@@ -29,7 +30,7 @@ export default function Pricing() {
     title: "$79 per member /month",
     text: "A custom plan with services tailored to individual requirements.",
     button: "Join now",
-    dest: "https://join-program.cruelme.com/",
+    dest: "join-premium-plan",
     arr : [
     "24×7×365 sessions with guides",
     "Consultation sessions with professional therapists",
@@ -56,7 +57,7 @@ export default function Pricing() {
             <CardText>
               {obj.text}
             </CardText>
-            <Button className="pricing-button" color="primary" href={obj.dest} >
+            <Button className="pricing-button" color="primary" tag={Link} to={obj.dest} >
               {obj.button}
             </Button>
             <ListGroup flush>

@@ -36,7 +36,8 @@ function App() {
         <Route path="/procrastination-assessment" element={<Procrastination data={hp}/>} />
         <Route path="/About" element={<About />} />
         <Route path="/ContactUs" element={<Footer />} />
-        <Route path="/joinProgram" element={<JoinProgram />} />
+        <Route path="/join-basic-plan" element={<JoinProgram plan="basic"/>} />
+        <Route path="/join-premium-plan" element={<JoinProgram plan="premium"/>} />
         <Route path="/Story" element={<Story data={story} />} />
         <Route path="/Login" element={<LoginForm />} />
         <Route path="/Details" element={<SignUp />} />

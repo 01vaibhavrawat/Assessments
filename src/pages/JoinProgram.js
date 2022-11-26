@@ -3,12 +3,13 @@ import { Link } from "react-router-dom";
 import { Row, Col, Button, Input } from "reactstrap";
 import emailjs from 'emailjs-com';
 
-const JoinProgram = () => {
+const JoinProgram = (plan={plan: 'free'}) => {
 
   //because it has to be named message for the emaailjs
-  const [message, setMessage] = React.useState('');
+  const [text, setText] = React.useState('');
 
   const handleSubmit = () => {
+      const message = `${text}, ${plan.plan}`;
       const templateParams = {
                 message
             };
@@ -20,7 +21,7 @@ const JoinProgram = () => {
                                   });
   }
 
-  const text = {
+  const data = {
   heading: "Overcome Procrastination Program",
   para: `Do you find yourself delaying or avoiding certain tasks or goals, 
   then criticizing yourself for it? Contrary to common belief, 
@@ -40,20 +41,20 @@ const JoinProgram = () => {
     <div id="home">
       <div className="intro">
         <img id="procrastionation_img" src={require('../images/program.jpg')} />
-        <h1 className="title">{text.heading}</h1>
-        <p className="story">{text.para}</p>
+        <h1 className="title">{data.heading}</h1>
+        <p className="story">{data.para}</p>
 
-        <h1 className="second_h">{text.heading1}</h1>
-        <p className="story">{text.para1}</p>
+        <h1 className="second_h">{data.heading1}</h1>
+        <p className="story">{data.para1}</p>
 
-        <h1 className="second_h">{text.email}</h1>
+        <h1 className="second_h">{data.email}</h1>
         <Row id="email-submit">
         <Col>
         <Input
           id="exampleEmail"
           name="email"
-          value={message}
-          onChange={(e)=> setMessage(e.target.value)}
+          value={text}
+          onChange={(e)=> setText(e.target.value)}
           placeholder="type email here"
           type="email"
         />
