@@ -33,7 +33,7 @@ const JoinProgram = () => {
   this program offers a comprehensive plan to help readers lower their stress and increase their time to enjoy guilt-free play. 
   These techniques will help any busy person start tasks sooner and accomplish them more quickly, 
   without the anxiety brought on by the negative habits of procrastination and perfectionism.`,
-  email: 'Join the program by submitting the email you used for the assessment'
+  email: 'Join the program by submitting the email, you used for the assessment'
 };
 
   return (
