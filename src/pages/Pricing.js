@@ -57,7 +57,7 @@ export default function Pricing() {
             <CardText>
               {obj.text}
             </CardText>
-            <Button onClick={()=> window.scroollTo(0, 0)} className="pricing-button" color="primary" tag={Link} to={obj.dest} >
+            <Button onClick={()=> window.scroollTo(0, 0)} className="pricing-button" color="primary" component={Link} to={obj.dest} >
               {obj.button}
             </Button>
             <ListGroup flush>
