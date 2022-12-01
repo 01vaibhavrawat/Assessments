@@ -8,9 +8,11 @@ import {
     ListGroupItem,
     ListGroup,
      } from 'reactstrap';
-  import { Link } from 'react-router-dom'; 
+  import { useNavigate } from 'react-router-dom'; 
 
 export default function Pricing() {
+
+  const navigate = useNavigate();
 
   const text = [
   {
@@ -57,7 +59,10 @@ export default function Pricing() {
             <CardText>
               {obj.text}
             </CardText>
-            <Button onClick={()=> window.scroollTo(0, 0)} className="pricing-button" color="primary" component={Link} to={obj.dest} >
+            <Button onClick={()=> {
+              window.scroollTo(0, 0);
+              navigate('/contactus');
+            } className="pricing-button" color="primary" >
               {obj.button}
             </Button>
             <ListGroup flush>
