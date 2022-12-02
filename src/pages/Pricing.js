@@ -60,9 +60,9 @@ export default function Pricing() {
               {obj.text}
             </CardText>
             <Button onClick={()=> {
-              window.scroollTo(0, 0);
+              window.scrollTo(0, 0);
               navigate('/contactus');
-            } className="pricing-button" color="primary" >
+            }} className="pricing-button" color="primary" >
               {obj.button}
             </Button>
             <ListGroup flush>
