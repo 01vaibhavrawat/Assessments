@@ -1,7 +1,10 @@
 #pricing-div{
+	padding: 0 1%;
+  border-radius: 2%; /* NEW */
+  box-shadow: 0 0 0 1% #522d5b;
 	background: rgb(2,0,36);
 	background: rgb(2,0,36);
-background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(240,96,208,0.8410714627647934) 100%, rgba(0,212,255,1) 100%);
+	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(240,96,208,0.8410714627647934) 100%, rgba(0,212,255,1) 100%);
 }
 
 #pricing-header{

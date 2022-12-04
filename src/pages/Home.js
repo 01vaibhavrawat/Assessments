@@ -9,6 +9,8 @@ import HowItWorks from "./HowItWorks";
 import Pricing from "./Pricing";
 import Footer from "./Footer";
 
+import Testimonials from "./Testimonials";
+
 const Home = (props) => {
 
   const [story, setStory] = useState(STORIES);
@@ -17,6 +19,7 @@ const Home = (props) => {
       <React.Fragment>
       <WelcomeBox />
       <HowItWorks />
+      <Testimonials />
       <Pricing />
       <Footer />
       </React.Fragment>
