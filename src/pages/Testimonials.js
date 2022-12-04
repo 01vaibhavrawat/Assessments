@@ -1,12 +1,12 @@
 import { Row, Col} from 'reactstrap';
 
-export default function Testimonials(testimonial) {
+export default function Testimonials() {
 		const arr = [
 		
 		{
 			src: "https://i.insider.com/5a80a178433c01ee018b46d9?width=1000&format=jpeg&auto=webp",
 			h2: "Crystal Peng",
-			h4: "Poland",
+			h4: "",
 			blockquote: "It's a very great program, my guide has already helped with my confidence in the short amount of time I’ve been seeing him and he is very encouraging.",
 		},
 		{
@@ -23,7 +23,9 @@ export default function Testimonials(testimonial) {
 		},
 		]
 	return(
-		<Row id="Testimonials">
+		<div id="Testimonials">
+    	<h1 id="testimonials-header">Read our reviews</h1>
+		<Row>	
 		{arr.map((obj)=>{
 			return(
 		<Col>
@@ -40,6 +42,7 @@ export default function Testimonials(testimonial) {
 		})
 	}
 		</Row>
+		</div>
 		)
 
 }
