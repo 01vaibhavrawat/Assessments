@@ -22,7 +22,7 @@ const SignUp = (props) => {
   }, []);
 
   const handleSubmit = () => {
-    const message = `answers: ${answers} ||||| signup: ${form}`
+    const message = `answers: ${answers} ||||| signup: ${form}, influencer1`
             const templateParams = {
                 message
             };

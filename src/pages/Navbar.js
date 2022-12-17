@@ -22,28 +22,8 @@ const NavCom = (args) => {
             <Collapse isOpen={isOpen} navbar>
               <Nav className="ml-auto" navbar>
                 <NavItem>
-                  <NavLink tag={Link} to="/about">About Us</NavLink>
-                </NavItem>
-                <NavItem>
                   <NavLink tag={Link} to="/login">Sign In</NavLink>
                 </NavItem>
-                {/*<UncontrolledDropdown nav inNavbar>
-                  <DropdownToggle nav caret>
-                    Options
-                  </DropdownToggle>
-                  <DropdownMenu end>
-                    <DropdownItem>
-                      Option 1
-                    </DropdownItem>
-                    <DropdownItem>
-                      Option 2
-                    </DropdownItem>
-                    <DropdownItem divider />
-                    <DropdownItem>
-                      Reset
-                    </DropdownItem>
-                  </DropdownMenu>
-                </UncontrolledDropdown>*/}
               </Nav>
             </Collapse>
           </Navbar>
