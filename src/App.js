@@ -16,6 +16,7 @@ import JoinProgram from "./pages/JoinProgram";
 import Footer from "./pages/Footer";
 import HowItWorks from "./pages/HowItWorks";
 import Procrastination from "./pages/Procrastination";
+import Conversion from "./pages/Conversion";
 
 import { STORIES } from "./shared/stories.js";
 import { QUETIONS } from "./shared/quetions.js";
@@ -34,16 +35,17 @@ function App() {
       <Routes>
         <Route path="/" element={<Home data={hp} />} />
         <Route path="/procrastination-assessment" element={<Procrastination data={hp}/>} />
-        <Route path="/About" element={<About />} />
-        <Route path="/ContactUs" element={<Footer />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contactUs" element={<Footer />} />
         <Route path="/join-basic-plan" element={<JoinProgram plan="basic"/>} />
         <Route path="/join-premium-plan" element={<JoinProgram plan="premium"/>} />
-        <Route path="/Story" element={<Story data={story} />} />
-        <Route path="/Login" element={<LoginForm />} />
-        <Route path="/Details" element={<SignUp />} />
-        <Route path="/Asessment" element={<Asessment data={quetion} />} />
-        <Route path="/ContactUs" element={<ContactUs />} /> 
-        <Route path="/Complete" element={<Complete />} />
+        <Route path="/story" element={<Story data={story} />} />
+        <Route path="/login" element={<LoginForm />} />
+        <Route path="/details" element={<SignUp />} />
+        <Route path="/conversion" element={<Conversion />} />
+        <Route path="/asessment" element={<Asessment data={quetion} />} />
+        <Route path="/contactUs" element={<ContactUs />} /> 
+        <Route path="/complete" element={<Complete />} />
         <Route path="*" element={<Notfound />} />
       </Routes>
     </BrowserRouter>
