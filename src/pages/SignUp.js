@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 
 const SignUp = (props) => {
 
-  let navigate = useNavigate();
+  let Navigate = useNavigate();
 
   const answers = useSelector((state) => state.asessment.selected_options);
   const [form, setForm] = useState(['', '', '', '', '']);
@@ -93,7 +93,7 @@ const SignUp = (props) => {
           </FormGroup>{" "}
             <Button id="login-submit" onClick={()=> {
               handleSubmit();
-              navigate("/Complete");
+              Navigate("/Complete");
             }}
               >Submit</Button>
         </Form>

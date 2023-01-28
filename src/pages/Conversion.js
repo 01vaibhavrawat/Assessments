@@ -1,8 +1,19 @@
-import React from 'react'
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Table, Button, Badge } from "reactstrap"
+import { Table, Button, Badge } from "reactstrap";
+import { useSelector, useDispatch } from "react-redux";
+
+import { getUsersByReferAction } from "../store/actions";
   
 function Conversion() {
+
+    const dispatch = useDispatch();
+    const { usersByRefer } = useSelector((state)=> state.Category);
+
+    React.useEffect(()=>{
+            dispatch(getUsersByReferAction({refer: "self"}));
+    }, [])
+
     return (
         <>
         <div style={{
@@ -19,12 +30,16 @@ function Conversion() {
                     </tr>
                 </thead>
                 <tbody>
+                {usersByRefer && usersByRefer.map((user, i)=>{
+                    return(
                     <tr>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
+                        <td>{user.fullname}</td>
+                        <td>{user.country}</td>
+                        <td>{user.createdAt}</td>
                         <td>0</td>
                     </tr>
+                    )
+                })}
                 </tbody>
             </Table>
         <br />
@@ -32,7 +47,9 @@ function Conversion() {
         <Badge>Total commission earned: 0</Badge>
         <br />
         <br />
-        <Button onClick={()=> window.alert("No commission earned yet.")}>Withdrawal your commission</Button>
+        <Button onClick={()=> {
+            window.alert("No commission earned yet.");
+        }}>Withdrawal your commission</Button>
         </div>
         </>
     );

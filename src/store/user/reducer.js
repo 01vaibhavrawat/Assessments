@@ -1,15 +1,9 @@
 import * as actionTypes from "./actionTypes";
 
 const initialState = {
-  categoryList: [],
-  couponsList: [],
-  error: null,
-  errorMessage: "",
-  success: false,
-  successMessage: "",
+  usersByRefer: [],
   loading: false,
-  totalRecords:0,
-  totalPages:0,
+  error: false,
 };
 
 const Category = (state = initialState, action) => {
@@ -18,50 +12,20 @@ const Category = (state = initialState, action) => {
       return {
         ...state,
         loading: true,
-        error: false,
-        errorMessage: "",
       };
-    case actionTypes.GET_ALL_CATEGORY_SUCCESS:
+    case actionTypes.GET_USERS_BY_REFER_SUCCESS:
       return {
         ...state,
         loading: false,
-        categoryList: action.payload,
+        usersByRefer: action.payload,
       };
-    case actionTypes.GET_ALL_CATEGORY_FAILURE:
-      return {
-        ...state,
-        loading: false,
-        error: true,
-        errorMessage: action.payload,
-        categoryList: [],
-      };
-    case actionTypes.GET_COUPONS_BY_CATEGORY_SUCCESS:
-      return {
-        ...state,
-        loading: false,
-        couponsList: action.payload,
-        totalRecords:action.payload.total_records,
-        totalPages:action.payload.total_pages
-      };
-    case actionTypes.GET_COUPONS_BY_CATEGORY_FAILURE:
+    case actionTypes.GET_USERS_BY_REFER_FAILURE:
       return {
         ...state,
         loading: false,
         error: true,
-        errorMessage: action.payload,
-        couponsList: [],
+        usersByRefer: [],
       };
-    case actionTypes.RESET_CATEGORY_STATUS:
-      return {
-        ...state,
-        loading: false,
-        error: false,
-        errorMessage: "",
-        successMessage: "",
-        success: false,
-      };
-    case actionTypes.RESET_COUPONS_LIST:
-      return { ...state, couponsList: [] };
     default:
       return { ...state };
   }

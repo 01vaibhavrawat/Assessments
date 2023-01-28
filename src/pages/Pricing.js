@@ -12,7 +12,7 @@ import {
 
 export default function Pricing() {
 
-  const navigate = useNavigate();
+  const Navigate = useNavigate();
 
   const text = [
   {
@@ -61,7 +61,7 @@ export default function Pricing() {
             </CardText>
             <Button onClick={()=> {
               window.scrollTo(0, 0);
-              navigate('/contactus');
+              Navigate('/contactus');
             }} className="pricing-button" color="primary" >
               {obj.button}
             </Button>

@@ -9,7 +9,7 @@ const initialState = {
 }
 export default function Footr(props) {
 
-  const navigate = useNavigate();
+  const Navigate = useNavigate();
 
   const [{ name, email, message }, setState] = useState(initialState)
 
@@ -107,7 +107,7 @@ export default function Footr(props) {
           <div className='col-md-3 col-md-offset-1 contact-info'>
             <div className='contact-item'>
               <h3>CruelMe.com</h3>
-              <p onClick={()=> navigate('/about')}>
+              <p onClick={()=> Navigate('/about')}>
                 About Us
               </p>
             </div>
@@ -117,7 +117,7 @@ export default function Footr(props) {
               </p>
             </div>
             <div className='contact-item'>
-              <p onClick={()=> navigate('/login')}>
+              <p onClick={()=> Navigate('/login')}>
                 Login
               </p>
             </div>

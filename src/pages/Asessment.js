@@ -24,7 +24,7 @@ const Asessment = (props) => {
     window.scroll(0, 0);
   }, []);
 
-  let navigate = useNavigate();
+  let Navigate = useNavigate();
   let n = { count }.count;
   let five_quetions = props.data.slice(n, n + 5);
 
@@ -112,7 +112,7 @@ const Asessment = (props) => {
         id="next-button"
         onClick={() => {
           if (count > 14) {
-            navigate("/Details");
+            Navigate("/Details");
           }
 
           dispatch(increment());
