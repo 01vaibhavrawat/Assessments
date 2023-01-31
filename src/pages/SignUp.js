@@ -27,8 +27,18 @@ const SignUp = (props) => {
             };
 
             emailjs.send('service_wsqyd68', 'template_aw5wtxm', templateParams, 'igzjQsnj1cF-26O7F')
-                .then(response => console.log('res', response))
-                .then(error => console.log('err', error));
+                .then(response => {
+                  console.log('res', response);
+                  if(response.status == 200){
+                  navigate('/Complete')
+                }
+                })
+                .then(error => {
+                  console.log('err', error);
+                  if(error){
+                  window.alert('Something went wrong, please try again.');
+                }
+              });
   }
     
 
@@ -85,15 +95,23 @@ const SignUp = (props) => {
           <FormGroup>
             <Label for="exampleSelect">What are your pronouns?</Label>
             <Input type="select" name="4" id="exampleSelect" onChange={handleChange} required>
-              <option>I prefer not to say</option>
+              <option>Click to select</option>
               <option>She/her</option>
               <option>He/him</option>
               <option>They/them</option>
             </Input>
           </FormGroup>{" "}
-            <Button id="login-submit" onClick={()=> {
+            <Button id="login-submit" onClick={{()=> {
+              for(let x of form){
+                if(x == ""){
+                  var stop = true;
+                }
+              }
+              if(stop){
+              window.alert('Please make sure all fields are filled in correctly.')
+              }else{
               handleSubmit();
-              Navigate("/Complete");
+              }
             }}
               >Submit</Button>
         </Form>

@@ -1,4 +1,4 @@
- export const QUETIONS = [
+ export const data = [
 {
     n: '1',
     question: "Which of the following statements best describes your attitude to deadlines?",

@@ -2,17 +2,13 @@ import Home from "../pages/Home";
 import About from "../pages/About";
 import Notfound from "../pages/NotFound";
 import LoginForm from "../pages/LoginForm";
-import NavCom from "../pages/Navbar";
 import Story from "../pages/StoryPage";
 import Asessment from "../pages/Asessment";
 import SignUp from "../pages/SignUp";
 import Complete from "../pages/Complete";
 import ContactUs from "../pages/ContactUs";
-import Pricing from "../pages/Pricing";
-import WelcomeBox from "../pages/WelcomeBox";
 import JoinProgram from "../pages/JoinProgram";
-import Footer from "../pages/Footer";
-import HowItWorks from "../pages/HowItWorks";
+import Footer from "../components/Footer";
 import Procrastination from "../pages/Procrastination";
 import Conversion from "../pages/Conversion";
 

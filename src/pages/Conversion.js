@@ -4,11 +4,13 @@ import { Table, Button, Badge } from "reactstrap";
 import { useSelector, useDispatch } from "react-redux";
 
 import { getUsersByReferAction } from "../store/actions";
+
+import Loader from "../components/Loader";
   
 function Conversion() {
 
     const dispatch = useDispatch();
-    const { usersByRefer } = useSelector((state)=> state.Category);
+    const { usersByRefer, loading } = useSelector((state)=> state.Category);
 
     React.useEffect(()=>{
             dispatch(getUsersByReferAction({refer: "self"}));
@@ -16,13 +18,16 @@ function Conversion() {
 
     return (
         <>
+        {loading ? <Loader /> :
+            
         <div style={{
-            display: 'block', width: 700, padding: 30, margin: "auto"
+            display: 'block', margin: "2% 5%",
         }}>
-            <h4>All users who joined from your link. ( Can take upto 24 hours to update. )</h4>
+            <p>All users who joined from your link. (Can take upto 24 hours to update.)</p>
+            <div style={{ overflow: "scroll", margin:"2% 0 0 0"}}>
             <Table>
                 <thead>
-                    <tr>
+                    <tr className="table-primary">
                         <th>Name</th>
                         <th>Country</th>
                         <th>Time</th>
@@ -30,9 +35,16 @@ function Conversion() {
                     </tr>
                 </thead>
                 <tbody>
+                {usersByRefer.length < 1 && 
+                    <tr className="table-info">
+                        <td>NA</td>
+                        <td>NA</td>
+                        <td>NA</td>
+                        <td>NA</td>
+                    </tr>}
                 {usersByRefer && usersByRefer.map((user, i)=>{
                     return(
-                    <tr>
+                    <tr className="table-info">
                         <td>{user.fullname}</td>
                         <td>{user.country}</td>
                         <td>{user.createdAt}</td>
@@ -42,6 +54,7 @@ function Conversion() {
                 })}
                 </tbody>
             </Table>
+            </div>
         <br />
         <br />
         <Badge>Total commission earned: 0</Badge>
@@ -51,6 +64,7 @@ function Conversion() {
             window.alert("No commission earned yet.");
         }}>Withdrawal your commission</Button>
         </div>
+    }
         </>
     );
 }
