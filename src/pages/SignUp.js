@@ -5,32 +5,53 @@ import { useDispatch, useSelector } from "react-redux";
 import { signup_data } from "../redux/asessmentSlice";
 import emailjs from 'emailjs-com';
 import { useNavigate } from "react-router-dom";
+import {postAssessmentAction} from "../store/actions";
+import useLocalStorage from "../shared/useLocalStorage";
+import Loader from "../components/Loader";
 
 const SignUp = (props) => {
 
   let Navigate = useNavigate();
+  const dispatch = useDispatch();
 
-  const answers = useSelector((state) => state.asessment.selected_options);
   const [form, setForm] = useState(['', '', '', '', '']);
+
+  const { data, loading, success } = useSelector((state)=> state.Assessment);
+
+  const [answers01, setAnswers01] = useLocalStorage();
+  
   const handleChange = (event) => {
-      form[event.target.name] = event.target.value;
+     window.localStorage.setItem(event.target.name, event.target.value);
   };
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+  useEffect(()=>{
+    if(success){
+        Navigate("/complete");
+        return(()=>{
+          console.log("reset success to false");
+        })}
+  }, [success])
+
+  let answers = "" // will get this from uselocalstorage
+
   const handleSubmit = () => {
+
+    dispatch(postAssessmentAction({answers: JSON.stringify(answers01)}));
+ /*   
     const message = `answers: ${answers} ||||| signup: ${form}`
             const templateParams = {
                 message
             };
-
+            //need to put credentials in environment variables
             emailjs.send('service_wsqyd68', 'template_aw5wtxm', templateParams, 'igzjQsnj1cF-26O7F')
                 .then(response => {
                   console.log('res', response);
                   if(response.status == 200){
-                  navigate('/Complete')
+                  Navigate('/Complete')
                 }
                 })
                 .then(error => {
@@ -38,11 +59,14 @@ const SignUp = (props) => {
                   if(error){
                   window.alert('Something went wrong, please try again.');
                 }
-              });
+              });*/
   }
     
 
   return (
+
+    loading ?  <Loader /> : 
+
     <div id="login-body">
       <div id="login-box">
         <Form inline id="login-form">
@@ -101,13 +125,13 @@ const SignUp = (props) => {
               <option>They/them</option>
             </Input>
           </FormGroup>{" "}
-            <Button id="login-submit" onClick={{()=> {
+            <Button id="login-submit" onClick={()=> {
               for(let x of form){
                 if(x == ""){
                   var stop = true;
                 }
               }
-              if(stop){
+              if(false){
               window.alert('Please make sure all fields are filled in correctly.')
               }else{
               handleSubmit();
@@ -117,6 +141,7 @@ const SignUp = (props) => {
         </Form>
       </div>
     </div>
+    
   );
 };
 

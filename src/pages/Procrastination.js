@@ -28,7 +28,7 @@ const Procrastination = () => {
         <h1 className="second_h">{data.heading2}</h1>
         <p className="story">{data.para2}</p>
 
-        <Link to="/asessment">
+        <Link to="/assessment">
           <Button color="primary" id="start-assessment-button">
             Start the Asessment
           </Button>

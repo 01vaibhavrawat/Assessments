@@ -3,7 +3,7 @@ import About from "../pages/About";
 import Notfound from "../pages/NotFound";
 import LoginForm from "../pages/LoginForm";
 import Story from "../pages/StoryPage";
-import Asessment from "../pages/Asessment";
+import Assessment from "../pages/Assessment";
 import SignUp from "../pages/SignUp";
 import Complete from "../pages/Complete";
 import ContactUs from "../pages/ContactUs";
@@ -23,7 +23,7 @@ const authProtectedRoutes = [
         { path:"/login" , exact : true , component: <LoginForm/> },
         { path:"/details" , exact : true , component: <SignUp/> },
         { path:"/conversion" , exact : true , component: <Conversion/> },
-        { path:"/asessment" , exact : true , component: <Asessment/> },
+        { path:"/assessment" , exact : true , component: <Assessment/> },
         { path:"/contactUs" , exact : true , component: <ContactUs/> }, 
         { path:"/complete" , exact : true , component: <Complete/> }, 
         { path:"*" , exact : true , component: <Notfound/> },
