@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://192.168.150.105:3500",
+  baseURL: "https://healgratefully.onrender.com",
 });
 
 API.interceptors.request.use((request) => {

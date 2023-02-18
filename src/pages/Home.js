@@ -4,12 +4,12 @@ import { useEffect, useState } from "react";
 import { Button } from "reactstrap";
 import { STORIES } from "../shared/stories.js";
 
-import WelcomeBox from "./WelcomeBox";
-import HowItWorks from "./HowItWorks";
-import Pricing from "./Pricing";
-import Footer from "./Footer";
+import WelcomeBox from "../components/WelcomeBox";
+import HowItWorks from "../components/HowItWorks";
+import Pricing from "../components/Pricing";
+import Footer from "../components/Footer";
 
-import Testimonials from "./Testimonials";
+import Testimonials from "../components/Testimonials";
 
 const Home = (props) => {
 

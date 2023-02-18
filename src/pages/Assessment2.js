@@ -9,6 +9,7 @@ import {  Form,
           Button,
           ButtonGroup 
         } from "reactstrap";
+import {data} from "../shared/questions"
 
 const Asessment = (props) => {
 
@@ -26,15 +27,7 @@ const Asessment = (props) => {
 
   let Navigate = useNavigate();
   let n = { count }.count;
-  let five_quetions = props.data.slice(n, n + 5);
-
-  // const get = () => {
-  //   window.location.href = `http://localhost:5000/process_get?answers=${answers}`;
-  //   fetch('http://localhost:5000/store-data', {
-  //       method: 'POST',
-  //       body: JSON.stringify({ name: signup })
-  //     })
-  // };
+  let five_quetions = data.slice(n, n + 5);
 
   
   return (

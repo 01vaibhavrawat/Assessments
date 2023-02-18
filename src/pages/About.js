@@ -1,14 +1,4 @@
 import { useEffect } from 'react';
-import {
-  Card,
-  CardBody,
-  CardText,
-  CardTitle,
-  CardImg,
-  CardGroup,
-  CardSubtitle,
-  Button,
-} from "reactstrap";
 
 import pfp from '../images/pfp2.jfif';
 
@@ -44,69 +34,6 @@ useEffect(() => {
           We want to see a world where diagnosis and treatment of mental health are convenient for everyone.  
         </p>
       </div>
-
-      {/*<div id="team" className="about-box">
-        <h3 id="card-title">Our Team</h3>
-        <div id="cardgroup">
-          <Card className="team-card">
-            <CardImg
-              alt="Card image cap"
-              src={pfp}
-              top
-              width="100%"
-            />
-            <CardBody>
-              <CardTitle tag="h5">Card title</CardTitle>
-              <CardSubtitle className="mb-2 text-muted" tag="h6">
-                Card subtitle
-              </CardSubtitle>
-              <CardText>
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </CardText>
-            </CardBody>
-          </Card>
-          <Card className="team-card">
-            <CardImg
-              alt="Card image cap"
-              src={pfp}
-              top
-              width="33%"
-            />
-            <CardBody>
-              <CardTitle tag="h5">Card title</CardTitle>
-              <CardSubtitle className="mb-2 text-muted" tag="h6">
-                Card subtitle
-              </CardSubtitle>
-              <CardText>
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </CardText>
-            </CardBody>
-          </Card>
-          <Card className="team-card">
-            <CardImg
-              alt="Card image cap"
-              src={pfp}
-              top
-              width="33%"
-            />
-            <CardBody>
-              <CardTitle tag="h5">Card title</CardTitle>
-              <CardSubtitle className="mb-2 text-muted" tag="h6">
-                Card subtitle
-              </CardSubtitle>
-              <CardText>
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </CardText>
-            </CardBody>
-          </Card>
-        </div>
-      </div>*/} 
     </div>
   );
 };

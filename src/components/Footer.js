@@ -106,7 +106,7 @@ export default function Footr(props) {
           </div>
           <div className='col-md-3 col-md-offset-1 contact-info'>
             <div className='contact-item'>
-              <h3>CruelMe.com</h3>
+              <h3>HealGratefully.com</h3>
               <p onClick={()=> Navigate('/about')}>
                 About Us
               </p>
@@ -144,7 +144,7 @@ export default function Footr(props) {
       <div id='footer'>
         <div className='container text-center'>
           <p>
-            &copy; 2020 CruelMe.com. All rights reserved.
+            &copy; 2020 HealGratefully.com. All rights reserved.
           </p>
         </div>
       </div>
