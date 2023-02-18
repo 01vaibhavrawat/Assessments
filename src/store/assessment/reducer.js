@@ -29,6 +29,11 @@ const Assessment = (state = initialState, action) => {
         data: [],
   success: false,
       };
+    case actionTypes.RESET_ASSESSMENT:
+      return {
+        ...state,
+        success: false,
+      };
     default:
       return { ...state };
   }

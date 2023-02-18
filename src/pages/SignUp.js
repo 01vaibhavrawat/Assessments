@@ -5,9 +5,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { signup_data } from "../redux/asessmentSlice";
 import emailjs from 'emailjs-com';
 import { useNavigate } from "react-router-dom";
-import {postAssessmentAction} from "../store/actions";
+import {postAssessmentAction, resetAssessmentAction} from "../store/actions";
 import useLocalStorage from "../shared/useLocalStorage";
 import Loader from "../components/Loader";
+import {useLocation} from "react-router-dom";
 
 const SignUp = (props) => {
 
@@ -19,6 +20,8 @@ const SignUp = (props) => {
   const { data, loading, success } = useSelector((state)=> state.Assessment);
 
   const [answers01, setAnswers01] = useLocalStorage();
+
+  const location = useLocation();
   
   const handleChange = (event) => {
      window.localStorage.setItem(event.target.name, event.target.value);
@@ -29,11 +32,14 @@ const SignUp = (props) => {
   }, []);
 
   useEffect(()=>{
-    if(success){
-        Navigate("/complete");
+    if(success && (location.pathname == "/details")){
+        Navigate("/complete");}
+        if(success && (location.pathname !== "/details")) {
+        Navigate("/signedup");
+        }
         return(()=>{
-          console.log("reset success to false");
-        })}
+          dispatch(resetAssessmentAction())
+        })
   }, [success])
 
   let answers = "" // will get this from uselocalstorage

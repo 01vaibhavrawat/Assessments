@@ -144,7 +144,7 @@ export default function Footr(props) {
       <div id='footer'>
         <div className='container text-center'>
           <p>
-            &copy; 2020 CruelMe.com. All rights reserved.
+            &copy; 2020 HealGratefully.com. All rights reserved.
           </p>
         </div>
       </div>
