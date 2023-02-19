@@ -1,8 +1,13 @@
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Button } from "reactstrap";
 
 const Procrastination = () => {
+
+  const {refer} = useParams();
+  if(refer){
+    window.localStorage.setItem("rfr", refer)
+  }
 
   const data = {
       heading: "Test & Self-Assessment For Procrastination",

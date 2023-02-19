@@ -17,6 +17,7 @@ import Conversion from "../pages/Conversion";
 const authProtectedRoutes = [
         { path:"/" , exact : true , component: <SignUp/> },
         { path:"/procrastination-assessment" , exact : true , component: <Procrastination/> },
+        { path:"/procrastination-assessment/:refer" , exact : true , component: <Procrastination/> },
         { path:"/about" , exact : true , component: <About/> },
         { path:"/contactUs" , exact : true , component: <Footer/> },
         { path:"/join-basic-plan" , exact : true , component: <JoinProgram/> },
