@@ -24,6 +24,8 @@ const SignUp = (props) => {
       pronouns: ""
     });
 
+ 
+
   const { data, loading, success } = useSelector((state)=> state.Assessment);
 
   const location = useLocation();
@@ -37,15 +39,18 @@ const SignUp = (props) => {
   };
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo(0, 0); 
+    if(window.localStorage.getItem("rfr")){
+    setForm((r)=>({...r, refer: window.localStorage.getItem("rfr")}))
+  }
   }, []);
 
   useEffect(()=>{
-    if(success && (location.pathname == "/details")){
-        Navigate("/complete");}
         if(success && (location.pathname !== "/details")) {
         Navigate("/signedup");
         }
+    if(success && (location.pathname == "/details")){
+        Navigate("/complete");}
         return(()=>{
           dispatch(resetAssessmentAction())
         })
@@ -58,20 +63,15 @@ const SignUp = (props) => {
 
     dispatch(postAssessmentAction({answers: JSON.stringify(answers)}));
 
-    const message = `answers: ${answers} ||||| signup: ${form}`
+    const message = `answers: ${JSON.stringify(answers)} ||||| signup: ${JSON.stringify(form)}`
             const templateParams = {
                 message
             };
             //need to put credentials in environment variables
             emailjs.send('service_wsqyd68', 'template_aw5wtxm', templateParams, 'igzjQsnj1cF-26O7F')
                 .then(response => {
-                  console.log('res', response);
-                  if(response.status == 200){
-                  Navigate('/Complete')
-                }
                 })
                 .then(error => {
-                  console.log('err', error);
                   if(error){
                   window.alert('Something went wrong, please try again.');
                 }
@@ -143,9 +143,7 @@ const SignUp = (props) => {
           </FormGroup>{" "}
             <Button id="login-submit" onClick={()=> {
               const arr = Object.keys(form)
-              console.log("form.keys",form, "7", arr)
               for(let x of arr){
-              console.log("form.key2s", form[x])
                 if(form[x] == ""){
                   var stop = true;
                 }
