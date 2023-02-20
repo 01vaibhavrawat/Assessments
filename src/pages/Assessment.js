@@ -19,6 +19,12 @@ const Asessment = () => {
   const [currentPart01, setCurrentPart01] = useLocalStorage("currentPart01", 0);
   const [answers01, setAnswers01] = useLocalStorage();
 
+  useEffect(()=>{
+    if(!answers01){
+      setAnswers01([]);
+    }
+  })
+
   const handleSelect = (questionN, option)=>{
     let temp = {...answers01}
     temp[questionN] = option;
