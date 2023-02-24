@@ -6,7 +6,7 @@ import {
 	Button
 } from 'reactstrap';
 import { useEffect } from 'react';
-import { Link, Navigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const LoginForm = (props) => {
 
@@ -56,7 +56,7 @@ return(
   }}>
     Submit
   </Button>
-  <div id="forgot"><Link to="/ForgetPassword">Forgot password?</Link></div> 
+  <div id="forgot"><Link to="/forgotPassword">Forgot password?</Link></div> 
 </Form>
 </div>
 </div>
