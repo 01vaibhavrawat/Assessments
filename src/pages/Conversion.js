@@ -13,7 +13,7 @@ function Conversion() {
     const { usersByRefer, loading } = useSelector((state)=> state.Category);
 
     React.useEffect(()=>{
-            dispatch(getUsersByReferAction({refer: "self"}));
+            dispatch(getUsersByReferAction({refer: "hw"}));
     }, [])
 
     return (

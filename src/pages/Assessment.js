@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap";
@@ -13,36 +13,26 @@ const Asessment = () => {
 
   React.useEffect(() => {
     window.scroll(0, 0);
+
+    return ()=>{
+      localStorage.setItem("answers", JSON.stringify(answers));
+    }
   }, []);
 
-  // 01 is the assessment id to prevent from possible future coflicts with other assessments
-  const [currentPart01, setCurrentPart01] = useLocalStorage("currentPart01", 0);
-  const [answers01, setAnswers01] = useLocalStorage();
-
-  React.useEffect(()=>{
-    if(!answers01){
-      setAnswers01([]);
-    }
-  })
+  const [answers, setAnswers] = useState({})
 
   const handleSelect = (questionN, option)=>{
-    let temp = {...answers01}
+    let temp = {...answers}
     temp[questionN] = option;
-   setAnswers01(temp);
+   setAnswers(temp);
   };
+
   const handleNext = ()=>{
     window.scrollTo(0, 0);
-    if(currentPart01 < 13){
-      setCurrentPart01(p => p += 5);
-    }else{
       Navigate("/details");
-    }
   };
   const handleBack = (e, option)=>{
     window.scrollTo(0, 0);
-    if(currentPart01 > 3){
-      setCurrentPart01(p => p -= 5);
-    }
   };
 
 const memoized = React.useMemo(()=>{
@@ -63,7 +53,7 @@ const memoized = React.useMemo(()=>{
                   onClick={()=>handleSelect(i+"", j+"")}
                 >
                   <Label name="radio1" type="radio" check>
-                  <Input type="radio" name="radio1" checked={answers01[i+""] == j+""} />
+                  <Input type="radio" name="radio1" checked={answers[i+""] == j+""} />
                   {option}
                   </Label>
                 </FormGroup>
@@ -74,7 +64,7 @@ const memoized = React.useMemo(()=>{
           </div>
         );
       }))
-}, [data])
+}, [data, answers])
   return (
     <div>
       {memoized}
