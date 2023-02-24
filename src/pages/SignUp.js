@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { signup_data } from "../redux/asessmentSlice";
 import emailjs from 'emailjs-com';
 import { useNavigate } from "react-router-dom";
-import {postAssessmentAction, resetAssessmentAction} from "../store/actions";
+import {postAssessmentAction, resetAssessmentAction, postUserAction} from "../store/actions";
 import useLocalStorage from "../shared/useLocalStorage";
 import Loader from "../components/Loader";
 import {useLocation} from "react-router-dom";
@@ -23,6 +23,11 @@ const SignUp = (props) => {
       dob: "",
       pronouns: ""
     });
+
+  const [assessment, setAssessment] = useState({
+    answers: "",
+    email: "",
+  })
 
  
 
@@ -43,6 +48,9 @@ const SignUp = (props) => {
     if(window.localStorage.getItem("rfr")){
     setForm((r)=>({...r, refer: window.localStorage.getItem("rfr")}))
   }
+    if(window.localStorage.getItem("answers")){
+    setAssessment((r)=>({...assessment, answers: window.localStorage.getItem("answers")}))
+  }
   }, []);
 
   useEffect(()=>{
@@ -59,11 +67,15 @@ const SignUp = (props) => {
 
   const handleSubmit = () => {
 
-    const answers = form;
+  setAssessment((r)=>({...assessment, email: form.email}))
 
-    dispatch(postAssessmentAction({answers: JSON.stringify(answers)}));
+if(window.localStorage.getItem("answers")){
+    dispatch(postAssessmentAction(assessment));
+}
 
-    const message = `answers: ${JSON.stringify(answers)} ||||| signup: ${JSON.stringify(form)}`
+dispatch(postUserAction(form));
+
+    const message = `answers: ${JSON.stringify(assessment)} ||||| signup: ${JSON.stringify(form)}`
             const templateParams = {
                 message
             };
