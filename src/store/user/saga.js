@@ -25,9 +25,27 @@ function* getUsersByReferActionSaga({ payload }) {
   }
 }
 
+function* postUserActionSaga({ payload }) {
+  try {
+    yield put({ type: actionTypes.SET_CATEGORY_LOADING });
+    const { data } = yield API.post(
+      "/user", payload
+    );
+    yield put({
+      type: actionTypes.POST_USER_SUCCESS,
+      payload: data.data,
+    });
+  } catch (error) {
+    yield put({
+      type: actionTypes.POST_USER_FAILURE,
+    });
+  }
+}
+
 function* CategorySaga() {
   yield all([
     takeLatest(actionTypes.GET_USERS_BY_REFER, getUsersByReferActionSaga),
+    takeLatest(actionTypes.POST_USER, postUserActionSaga),
   ]);
 }
 

@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { signup_data } from "../redux/asessmentSlice";
 import emailjs from 'emailjs-com';
 import { useNavigate } from "react-router-dom";
-import {postAssessmentAction, resetAssessmentAction} from "../store/actions";
+import {postAssessmentAction, resetAssessmentAction, postUserAction} from "../store/actions";
 import useLocalStorage from "../shared/useLocalStorage";
 import Loader from "../components/Loader";
 import {useLocation} from "react-router-dom";
@@ -15,57 +15,79 @@ const SignUp = (props) => {
   let Navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const [form, setForm] = useState(['', '', '', '', '']);
+  const [form, setForm] = useState(
+    {
+      fullname: "",
+      email: "",
+      coutry: "",
+      dob: "",
+      pronouns: ""
+    });
+
+  const [assessment, setAssessment] = useState({
+    answers: "",
+    email: "",
+  })
+
+ 
 
   const { data, loading, success } = useSelector((state)=> state.Assessment);
-
-  const [answers01, setAnswers01] = useLocalStorage();
 
   const location = useLocation();
   
   const handleChange = (event) => {
-     window.localStorage.setItem(event.target.name, event.target.value);
+     setForm((o)=>{
+     return(
+      {...o, [event.target.name]: event.target.value}
+     ) 
+     } )
   };
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo(0, 0); 
+    if(window.localStorage.getItem("rfr")){
+    setForm((r)=>({...r, refer: window.localStorage.getItem("rfr")}))
+  }
+    if(window.localStorage.getItem("answers")){
+    setAssessment((r)=>({...assessment, answers: window.localStorage.getItem("answers")}))
+  }
   }, []);
 
   useEffect(()=>{
-    if(success && (location.pathname == "/details")){
-        Navigate("/complete");}
         if(success && (location.pathname !== "/details")) {
         Navigate("/signedup");
         }
+    if(success && (location.pathname == "/details")){
+        Navigate("/complete");}
         return(()=>{
           dispatch(resetAssessmentAction())
         })
   }, [success])
-
-  let answers = "" // will get this from uselocalstorage
+ // will get this from uselocalstorage
 
   const handleSubmit = () => {
 
-    dispatch(postAssessmentAction({answers: JSON.stringify(answers01)}));
- /*   
-    const message = `answers: ${answers} ||||| signup: ${form}`
+  setAssessment((r)=>({...assessment, email: form.email}))
+
+if(window.localStorage.getItem("answers")){
+    dispatch(postAssessmentAction(assessment));
+}
+
+dispatch(postUserAction(form));
+
+    const message = `answers: ${JSON.stringify(assessment)} ||||| signup: ${JSON.stringify(form)}`
             const templateParams = {
                 message
             };
             //need to put credentials in environment variables
             emailjs.send('service_wsqyd68', 'template_aw5wtxm', templateParams, 'igzjQsnj1cF-26O7F')
                 .then(response => {
-                  console.log('res', response);
-                  if(response.status == 200){
-                  Navigate('/Complete')
-                }
                 })
                 .then(error => {
-                  console.log('err', error);
                   if(error){
                   window.alert('Something went wrong, please try again.');
                 }
-              });*/
+              });
   }
     
 
@@ -80,7 +102,7 @@ const SignUp = (props) => {
             <Label for="exampleEmail" hidden></Label>
             <Input
               id="name"
-              name='0'
+              name='fullname'
               placeholder="Full Name"
               type="text"
               onChange={handleChange}
@@ -93,7 +115,7 @@ const SignUp = (props) => {
             </Label>
             <Input
               id="exampleEmail"
-              name="1"
+              name="email"
               placeholder="Email"
               type="email"
               onChange={handleChange}
@@ -104,7 +126,7 @@ const SignUp = (props) => {
             <Label for="exampleEmail" hidden></Label>
             <Input
               id="country"
-              name="2"
+              name="country"
               placeholder="Country Name"
               type="text"
               onChange={handleChange}
@@ -115,7 +137,7 @@ const SignUp = (props) => {
             <Label for="exampleDate">Date of Birth</Label>
             <Input
               type="date"
-              name="3"
+              name="dob"
               id="exampleDate"
               placeholder="date placeholder"
               onChange={handleChange}
@@ -124,7 +146,7 @@ const SignUp = (props) => {
           </FormGroup>{" "}
           <FormGroup>
             <Label for="exampleSelect">What are your pronouns?</Label>
-            <Input type="select" name="4" id="exampleSelect" onChange={handleChange} required>
+            <Input type="select" name="pronouns" id="exampleSelect" onChange={handleChange} required>
               <option>Click to select</option>
               <option>She/her</option>
               <option>He/him</option>
@@ -132,8 +154,9 @@ const SignUp = (props) => {
             </Input>
           </FormGroup>{" "}
             <Button id="login-submit" onClick={()=> {
-              for(let x of form){
-                if(x == ""){
+              const arr = Object.keys(form)
+              for(let x of arr){
+                if(form[x] == ""){
                   var stop = true;
                 }
               }

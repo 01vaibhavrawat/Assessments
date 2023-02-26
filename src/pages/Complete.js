@@ -7,7 +7,8 @@ const Complete = () => {
 		]
 
 	const path = useLocation();
-console.log(path, "sdjflsakjdfsajdfusdfu98sd")
+
+    console.log(">>>>>>>>>", path.pathname)
 	return(
 			<p id="complete"> {path.pathname == "/complete" ? data[1] : data[0]}</p>
 		)

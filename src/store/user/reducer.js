@@ -4,6 +4,7 @@ const initialState = {
   usersByRefer: [],
   loading: false,
   error: false,
+  data: [],
 };
 
 const Category = (state = initialState, action) => {
@@ -25,6 +26,21 @@ const Category = (state = initialState, action) => {
         loading: false,
         error: true,
         usersByRefer: [],
+      };
+      case actionTypes.POST_USER_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        success: true,
+        data: action.payload,
+      };
+    case actionTypes.POST_USER_FAILURE:
+      return {
+        ...state,
+        loading: false,
+        error: true,
+        data: [],
+  success: false,
       };
     default:
       return { ...state };

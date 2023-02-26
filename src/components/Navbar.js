@@ -7,11 +7,7 @@ import {
     NavbarBrand,
     Nav,
     NavLink,
-    NavItem,
-    UncontrolledDropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem } from 'reactstrap';
+    NavItem,} from 'reactstrap';
 
 
 const NavCom = (args) => {
@@ -21,9 +17,9 @@ const NavCom = (args) => {
 
       return (
           <Navbar id="navbar" expand="md" variant="light">
-            <NavbarBrand id="logo" href="https://app.healgratefully.com">HealGratefully</NavbarBrand>
+            <NavbarBrand id="logo" href="https://www.healgratefully.com">HealGratefully</NavbarBrand>
             <NavbarToggler id="toggler" onClick={toggle}>
-              <img id="nav-icon" src={require('../images/menu.png')} />
+              <img id="nav-icon" src={require('../images/menu.png')} alt=":::"/>
             </NavbarToggler>
             <Collapse isOpen={isOpen} navbar>
               <Nav className="ml-auto" navbar>
