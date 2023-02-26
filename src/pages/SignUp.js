@@ -29,9 +29,9 @@ const SignUp = (props) => {
     email: "",
   })
 
- 
+  const { data, assessmentLoading, success } = useSelector((state)=> state.Assessment);
 
-  const { data, loading, success } = useSelector((state)=> state.Assessment);
+  const { userLoading } = useSelector((state)=> state.Category);
 
   const location = useLocation();
   
@@ -65,35 +65,49 @@ const SignUp = (props) => {
   }, [success])
  // will get this from uselocalstorage
 
+  const validation = () => {
+     return String(form.email)
+    .toLowerCase()
+    .match(
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    );
+  }
+
   const handleSubmit = () => {
 
-  setAssessment((r)=>({...assessment, email: form.email}))
+  if(validation()){
 
-if(window.localStorage.getItem("answers")){
-    dispatch(postAssessmentAction(assessment));
-}
+    setAssessment((r)=>({...assessment, email: form.email}))
+  
+  if(window.localStorage.getItem("answers")){
+      dispatch(postAssessmentAction(assessment));
+  }
+  
+  dispatch(postUserAction(form));
+  
+      const message = `answers: ${JSON.stringify(assessment)} ||||| signup: ${JSON.stringify(form)}`
+              const templateParams = {
+                  message
+              };
+              //need to put credentials in environment variables
+              emailjs.send('service_wsqyd68', 'template_aw5wtxm', templateParams, 'igzjQsnj1cF-26O7F')
+                  .then(response => {
+                  })
+                  .then(error => {
+                    if(error){
+                    window.alert('Something went wrong, please try again.');
+                  }
+                });
 
-dispatch(postUserAction(form));
-
-    const message = `answers: ${JSON.stringify(assessment)} ||||| signup: ${JSON.stringify(form)}`
-            const templateParams = {
-                message
-            };
-            //need to put credentials in environment variables
-            emailjs.send('service_wsqyd68', 'template_aw5wtxm', templateParams, 'igzjQsnj1cF-26O7F')
-                .then(response => {
-                })
-                .then(error => {
-                  if(error){
-                  window.alert('Something went wrong, please try again.');
+                }else{
+                  window.alert("Please fill all the fields correctly.");
                 }
-              });
   }
     
 
   return (
 
-    loading ?  <Loader /> : 
+    (assessmentLoading || userLoading) ?  <Loader /> : 
 
     <div id="login-body">
       <div id="login-box">

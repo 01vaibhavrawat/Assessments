@@ -2,7 +2,7 @@ import * as actionTypes from "./actionTypes";
 
 const initialState = {
   usersByRefer: [],
-  loading: false,
+  userLoading: false,
   error: false,
   data: [],
 };
@@ -12,32 +12,32 @@ const Category = (state = initialState, action) => {
     case actionTypes.SET_CATEGORY_LOADING:
       return {
         ...state,
-        loading: true,
+        userLoading: true,
       };
     case actionTypes.GET_USERS_BY_REFER_SUCCESS:
       return {
         ...state,
-        loading: false,
+        userLoading: false,
         usersByRefer: action.payload,
       };
     case actionTypes.GET_USERS_BY_REFER_FAILURE:
       return {
         ...state,
-        loading: false,
+        userLoading: false,
         error: true,
         usersByRefer: [],
       };
       case actionTypes.POST_USER_SUCCESS:
       return {
         ...state,
-        loading: false,
+        userLoading: false,
         success: true,
         data: action.payload,
       };
     case actionTypes.POST_USER_FAILURE:
       return {
         ...state,
-        loading: false,
+        userLoading: false,
         error: true,
         data: [],
   success: false,
