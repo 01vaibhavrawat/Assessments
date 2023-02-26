@@ -56,7 +56,7 @@ return(
   }}>
     Submit
   </Button>
-  <div id="forgot"><Link to="/forgotPassword">Forgot password?</Link></div> 
+  <div id="forgot"><Link to="/forgot-password">Forgot password?</Link></div> 
 </Form>
 </div>
 </div>

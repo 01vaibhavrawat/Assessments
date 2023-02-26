@@ -6,6 +6,7 @@ import Story from "../pages/StoryPage";
 import Assessment from "../pages/Assessment";
 import Assessment2 from "../pages/Assessment2";
 import SignUp from "../pages/SignUp";
+import ForgotPass from "../pages/ForgotPass";
 import Complete from "../pages/Complete";
 import ContactUs from "../pages/ContactUs";
 import JoinProgram from "../pages/JoinProgram";
@@ -23,6 +24,7 @@ const authProtectedRoutes = [
         { path:"/join-premium-plan" , exact : true , component: <JoinProgram/> },
         { path:"/story" , exact : true , component: <Story/> },
         { path:"/login" , exact : true , component: <LoginForm/> },
+        { path:"/forgot-password" , exact : true , component: <ForgotPass/> },
         { path:"/details" , exact : true , component: <SignUp/> },
         { path:"/conversion" , exact : true , component: <Conversion/> },
         { path:"/assessment" , exact : true , component: <Assessment/> },
