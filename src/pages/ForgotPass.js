@@ -5,8 +5,7 @@ import {
 	Input,
 	Button
 } from 'reactstrap';
-import { useEffect, useState, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 
 function ForgotPass(){
@@ -119,7 +118,6 @@ function ForgotPass(){
         {' '}
         <Button 
           id="login-submit" 
-          onClick={null}
           type="submit"
         >
           Submit
