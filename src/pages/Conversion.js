@@ -10,7 +10,7 @@ import Loader from "../components/Loader";
 function Conversion() {
 
     const dispatch = useDispatch();
-    const { usersByRefer, loading } = useSelector((state)=> state.Category);
+    const { usersByRefer, userLoading } = useSelector((state)=> state.Category);
 
     React.useEffect(()=>{
             dispatch(getUsersByReferAction({refer: "hw"}));
@@ -18,7 +18,7 @@ function Conversion() {
 
     return (
         <>
-        {loading ? <Loader /> :
+        {userLoading ? <Loader /> :
             
         <div style={{
             display: 'block', margin: "2% 5%",

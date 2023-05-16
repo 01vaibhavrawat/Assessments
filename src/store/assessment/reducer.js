@@ -2,7 +2,7 @@ import * as actionTypes from "./actionTypes";
 
 const initialState = {
   data: [],
-  loading: false,
+  assessmentLoading: false,
   error: false,
   success: false,
 };
@@ -12,19 +12,19 @@ const Assessment = (state = initialState, action) => {
     case actionTypes.SET_ASSESSMENT_LOADING:
       return {
         ...state,
-        loading: true,
+        assessmentLoading: true,
       };
     case actionTypes.POST_ASSESSMENT_SUCCESS:
       return {
         ...state,
-        loading: false,
+        assessmentLoading: false,
   success: true,
         data: action.payload,
       };
     case actionTypes.POST_ASSESSMENT_FAILURE:
       return {
         ...state,
-        loading: false,
+        assessmentLoading: false,
         error: true,
         data: [],
   success: false,
@@ -32,6 +32,9 @@ const Assessment = (state = initialState, action) => {
     case actionTypes.RESET_ASSESSMENT:
       return {
         ...state,
+        data: [],
+        assessmentLoading: false,
+        error: false,
         success: false,
       };
     default:

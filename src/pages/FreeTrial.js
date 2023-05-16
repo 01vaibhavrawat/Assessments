@@ -26,7 +26,7 @@ const SignUp = () => {
     email: "",
   })
 
-  const { data, assessmentLoading, success } = useSelector((state)=> state.Assessment);
+  const { assessmentLoading, success } = useSelector((state)=> state.Assessment);
 
   const { userLoading } = useSelector((state)=> state.Category);
 
@@ -114,7 +114,7 @@ const SignUp = () => {
             <Input
               id="name"
               name='fullname'
-              placeholder="Full Name"
+              placeholder="Name"
               type="text"
               onChange={handleChange}
               required
@@ -134,41 +134,22 @@ const SignUp = () => {
             />
           </FormGroup>{" "}
           <FormGroup>
-            <Label for="exampleEmail" hidden></Label>
+            <Label for="exampleEmail" hidden>
+              Phone Number
+            </Label>
             <Input
-              id="country"
-              name="country"
-              placeholder="Country Name"
-              type="text"
+              id="exampleNumber"
+              name="number"
+              placeholder="Phone Number"
+              type="number"
               onChange={handleChange}
               required
             />
-          </FormGroup>{" "}
-          <FormGroup>
-            <Label for="exampleDate">Date of Birth</Label>
-            <Input
-              type="date"
-              name="dob"
-              id="exampleDate"
-              placeholder="date placeholder"
-              onChange={handleChange}
-              required
-            />
-          </FormGroup>{" "}
-          <FormGroup>
-            <Label for="exampleSelect">What are your pronouns?</Label>
-            <Input type="select" name="pronouns" id="exampleSelect" onChange={handleChange} required>
-              <option>Click to select</option>
-              <option>She/her</option>
-              <option>He/him</option>
-              <option>They/them</option>
-            </Input>
           </FormGroup>{" "}
             <Button id="login-submit" onClick={()=> {
               const arr = Object.keys(form)
               for(let x of arr){
                 if(form[x] == ""){
-                  var stop = true;
                 }
               }
               if(false){
