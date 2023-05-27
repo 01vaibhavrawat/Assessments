@@ -106,8 +106,8 @@ const SignUp = () => {
 
     (assessmentLoading || userLoading) ?  <Loader /> : 
 
-    <div id="login-body">
-      <div id="login-box">
+    <div id="login-body" style={{height:"100%"}}>
+      <div id="login-box" style={{margin:"2% 15%"}}>  {/* for join program page */}
         <Form inline id="login-form">
           <FormGroup>
             <Label for="exampleEmail" hidden></Label>

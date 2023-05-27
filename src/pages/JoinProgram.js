@@ -1,11 +1,12 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
 import { Row, Col, Button, Input } from "reactstrap";
 import emailjs from "emailjs-com";
+import FreeTrial from "./FreeTrial";
 
 const JoinProgram = (plan = { plan: "free" }) => {
-  //because it has to be named message for the emaailjs
-  const [text, setText] = React.useState("");
+  //because it has to be named message for the emailjs
+  const [text, setText] = useState("");
+  const [readMore, setReadMore] = useState(false);
 
   const handleSubmit = () => {
     const message = `${text}, ${plan.plan}`;
@@ -45,20 +46,23 @@ const JoinProgram = (plan = { plan: "free" }) => {
   without the anxiety brought on by the negative habits of procrastination and perfectionism.
   `,
     email:
-      "Join the program by submitting the email you used for the assessment",
+      "Register for the trial :",
   };
 
   return (
     <div id="home">
       <div className="intro">
         <img id="procrastionation_img" src={require("../images/program.jpg")} />
-        <h1 className="title">{data.heading}</h1>
+        <h3 style={{fontSize:"1.5rem"}} className="title">{data.heading}</h3>
         <p className="story">{data.para}</p>
 
-        <h1 className="second_h">{data.heading1}</h1>
-        <p className="story">{data.para1}</p>
+        <h3 style={{fontSize:"1.5rem"}} className="second_h">{data.heading1}</h3>
+        <p className="story" style={{marginBottom:"1px"}}>{data.para1}</p>
+      
+        {!readMore && <span className="read-more-link" onClick={()=> setReadMore(true)}>Read more</span>}
+        <br></br>
 
-        <p className="story">
+      { readMore && <> <p className="story">
           Whether you are a professional, an entrepreneur, a middle manager, a
           writer, or a student who wants to overcome problems with
           procrastination—or if you simply want to be more efficient in
@@ -98,7 +102,7 @@ const JoinProgram = (plan = { plan: "free" }) => {
           your leisure time free of guilt. This program will provide you with
           powerful tools for overcoming procrastination.
         </p>
-        <ol>
+        <ol className="story">
           <li>
             Creating safety: Put a psychological safety net under your high-wire
             act to lessen your fear of failure and learn how to bounce back from
@@ -144,10 +148,14 @@ const JoinProgram = (plan = { plan: "free" }) => {
             Working in the flow state: Move beyond stress and low motivation to
             a state of focused energy, interest, and concentration
           </li>
-        </ol>
+        </ol> </>}
 
-        <h1 className="second_h">{data.email}</h1>
-        <Row id="email-submit">
+        <br></br>
+
+        <strong  style={{fontSize:"1rem"}}>{data.email}</strong>
+        
+         <FreeTrial />
+        {/* <Row id="email-submit">
           <Col>
             <Input
               id="exampleEmail"
@@ -161,7 +169,7 @@ const JoinProgram = (plan = { plan: "free" }) => {
           <Col>
             <Button onClick={() => handleSubmit()}>Submit</Button>
           </Col>
-        </Row>
+        </Row> */}
       </div>
     </div>
   );
