@@ -69,7 +69,7 @@ const JoinProgram = (plan = { plan: "free" }) => {
           completing complex and challenging projects—this program will help you
           get results. If you are organized in your larger work projects, but
           find that the small, essential tasks of everyday living get ignored,
-          Overcoming Procrastination will help you set priorities for, start,
+          Overcome Procrastination will help you set priorities for, start,
           and complete these tasks as well. If you are a professional whose busy
           schedule doesn't allow for leisure time, this strategic program will
           legitimize guilt-free play while it improves the quality and
@@ -90,7 +90,7 @@ const JoinProgram = (plan = { plan: "free" }) => {
           delay—or totally escape.
         </p>
         <p className="story">
-          Overcoming Procrastination is a strategic system—that is, it goes
+          Overcome Procrastination is a strategic system—that is, it goes
           beyond tactical advice and presents a plan based on the dynamics of
           procrastination and motivation. The program shows you how to shift
           gears into a higher level of functioning so you can go faster, and
@@ -100,54 +100,37 @@ const JoinProgram = (plan = { plan: "free" }) => {
           improving the quality of work, and stirring motivation. With this
           strategy, you will be able to work virtually free of stress and enjoy
           your leisure time free of guilt. This program will provide you with
-          powerful tools for overcoming procrastination.
+          powerful tools for overcome procrastination.
         </p>
         <ol className="story">
-          <li>
-            Creating safety: Put a psychological safety net under your high-wire
-            act to lessen your fear of failure and learn how to bounce back from
-            mistakes with renewed purpose.
-          </li>
-          <li>
-            Reprogramming negative attitudes through positive self-talk:
-            Identify your negative messages to yourself and develop positive
-            phrasing that directs your energy toward task-oriented thoughts and
-            rapid solutions.
-          </li>
-          <li>
-            Using the symptom to trigger the cure: Use old habits to evoke and
-            strengthen the formation of new, positive habits.
-          </li>
-          <li>
-            Guilt-free play: Strategically schedule your leisure time to shift
-            the pressure from work to play and create a subconscious urge to
-            return to work.
-          </li>
-          <li>
-            Three-dimensional thinking and the reverse calendar: Control the
-            terror of being overwhelmed by important tasks by creating a
-            step-by-step calendar of your path to achievement, with adequate
-            time to rest and fully appreciate your accomplishment.
-          </li>
-          <li>
-            Making worry work for you: Develop alternative plans for achieving
-            your goals and strengthen confidence in your ability to face the
-            worst that could happen.
-          </li>
-          <li>
-            The Unschedule: Schedule guilt-free play, visualize the amount of
-            time available, and track quality time on projects to see how much
-            you've accomplished.
-          </li>
-          <li>
-            Setting realistic goals: Clear your mind of guilt-producing goals
-            that cannot be worked on in the present and direct your energies
-            toward the few worthwhile goals that deserve your attention now.
-          </li>
-          <li>
-            Working in the flow state: Move beyond stress and low motivation to
-            a state of focused energy, interest, and concentration
-          </li>
+        <li>
+  <strong>Creating safety:</strong> Put a psychological safety net under your high-wire act to lessen your fear of failure and learn how to bounce back from mistakes with renewed purpose.
+</li>
+<li>
+  <strong>Reprogramming negative attitudes through positive self-talk:</strong> Identify your negative messages to yourself and develop positive phrasing that directs your energy toward task-oriented thoughts and rapid solutions.
+</li>
+<li>
+  <strong>Using the symptom to trigger the cure:</strong> Use old habits to evoke and strengthen the formation of new, positive habits.
+</li>
+<li>
+  <strong>Guilt-free play:</strong> Strategically schedule your leisure time to shift the pressure from work to play and create a subconscious urge to return to work.
+</li>
+<li>
+  <strong>Three-dimensional thinking and the reverse calendar:</strong> Control the terror of being overwhelmed by important tasks by creating a step-by-step calendar of your path to achievement, with adequate time to rest and fully appreciate your accomplishment.
+</li>
+<li>
+  <strong>Making worry work for you:</strong> Develop alternative plans for achieving your goals and strengthen confidence in your ability to face the worst that could happen.
+</li>
+<li>
+  <strong>The Unschedule:</strong> Schedule guilt-free play, visualize the amount of time available, and track quality time on projects to see how much you've accomplished.
+</li>
+<li>
+  <strong>Setting realistic goals:</strong> Clear your mind of guilt-producing goals that cannot be worked on in the present and direct your energies toward the few worthwhile goals that deserve your attention now.
+</li>
+<li>
+  <strong>Working in the flow state:</strong> Move beyond stress and low motivation to a state of focused energy, interest, and concentration.
+</li>
+
         </ol> </>}
 
         <br></br>
