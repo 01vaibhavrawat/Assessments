@@ -30,7 +30,7 @@ const NavCom = (args) => {
                   <NavLink tag={Link} to="/ContactUs">Contact Us</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink tag={Link} to="/login">Sign In</NavLink>
+                  <NavLink tag={Link} to="/login">Sign in</NavLink>
                 </NavItem>
               </Nav>
             </Collapse>

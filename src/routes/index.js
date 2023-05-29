@@ -28,7 +28,7 @@ const authProtectedRoutes = [
         { path:"/contactUs" , exact : true , component: <ContactUs /> }, 
         { path:"/complete" , exact : true , component: <Complete /> }, 
         { path:"/signedup" , exact : true , component: <Complete /> }, 
-        { path:"/free-trial" , exact : true , component: <FreeTrial /> }, 
+        { path:"/overcome-procrastination-free-trial" , exact : true , component: <JoinProgram /> }, 
         { path:"*" , exact : true , component: <Notfound /> },
 ];
 

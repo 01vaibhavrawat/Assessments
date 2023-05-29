@@ -26,6 +26,19 @@
   }
 }
 
+.read-more-link {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.read-more-link:hover {
+  color: darkblue;
+}
+
+ol li {
+  margin-bottom: 5px;
+}
 
 @media only screen and (max-width: 768px) {
 

@@ -18,7 +18,7 @@
 
 $font: (
   "h1": 2.2rem,
-  "p": 18px,
+  "p": 1rem,
   "h2": 1.6rem,
 );
 
@@ -43,7 +43,6 @@ $font: (
 @mixin p() {
   font-size: map-get($font, "p");
   font-weight: 400;
-  line-height: 32px;
   letter-spacing: -0.003em;
   font-family: (arial, sans-serif);
   display: block;
