@@ -26,7 +26,7 @@ const SignUp = () => {
     email: "",
   })
 
-  const { data, assessmentLoading, success } = useSelector((state)=> state.Assessment);
+  const { assessmentLoading, success } = useSelector((state)=> state.Assessment);
 
   const { userLoading } = useSelector((state)=> state.Category);
 
