@@ -15,8 +15,8 @@ import OnlyAssessment from "../pages/OnlyAssessment";
 
 const authProtectedRoutes = [
         { path:"/" , exact : true , component: <SignUp/> },
-        { path:"/procrastination-assessment-signup" , exact : true , component: <Procrastination /> },
-        { path:"/procrastination-assessment/:refer" , exact : true , component: <Procrastination /> },
+        { path:"/procrastination-assessment-intro" , exact : true , component: <Procrastination /> },
+        { path:"/procrastination-assessment-signup/:refer" , exact : true , component: <Procrastination /> },
         { path:"/about" , exact : true , component: <About /> },
         { path:"/contactUs" , exact : true , component: <Footer /> },
         { path:"/join-basic-plan" , exact : true , component: <JoinProgram /> },
