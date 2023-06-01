@@ -10,11 +10,12 @@ import JoinProgram from "../pages/JoinProgram";
 import Footer from "../components/Footer";
 import Procrastination from "../pages/Procrastination";
 import Conversion from "../pages/Conversion";
-import FreeTrial from "../pages/FreeTrial";
+import OnlyAssessment from "../pages/OnlyAssessment";
+//import FreeTrial from "../pages/FreeTrial";
 
 const authProtectedRoutes = [
         { path:"/" , exact : true , component: <SignUp/> },
-        { path:"/procrastination-assessment" , exact : true , component: <Procrastination /> },
+        { path:"/procrastination-assessment-signup" , exact : true , component: <Procrastination /> },
         { path:"/procrastination-assessment/:refer" , exact : true , component: <Procrastination /> },
         { path:"/about" , exact : true , component: <About /> },
         { path:"/contactUs" , exact : true , component: <Footer /> },
@@ -29,6 +30,7 @@ const authProtectedRoutes = [
         { path:"/complete" , exact : true , component: <Complete /> }, 
         { path:"/signedup" , exact : true , component: <Complete /> }, 
         { path:"/overcome-procrastination-free-trial" , exact : true , component: <JoinProgram /> }, 
+        { path:"/procrastination-assessment" , exact : true , component: <OnlyAssessment /> }, 
         { path:"*" , exact : true , component: <Notfound /> },
 ];
 
