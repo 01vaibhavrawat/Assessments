@@ -144,7 +144,7 @@
 ]},
 {
     n: '17',
-    question: "II sometimes have to wash or clean myself simply because I feel contaminated.",
+    question: "I sometimes have to wash or clean myself simply because I feel contaminated.",
     options: [ "Not at all",
      "A little",
      "Moderately",
